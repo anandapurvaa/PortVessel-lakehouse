@@ -1,0 +1,13 @@
+query_name,iteration,wall_clock_seconds,result_rows
+daily_ping_count,1,0.025769300060346723,1
+daily_ping_count,2,0.010537199908867478,1
+daily_ping_count,3,0.01006460003554821,1
+anchorage_vessel_count,1,0.009328099898993969,1
+anchorage_vessel_count,2,0.0025470000691711903,1
+anchorage_vessel_count,3,0.002128200023435056,1
+daily_congestion,1,0.0014433000469580293,4
+daily_congestion,2,0.0011254999553784728,4
+daily_congestion,3,0.0010593000333756208,4
+persistent_dwell_metrics,1,0.002211500075645745,15
+persistent_dwell_metrics,2,0.0020418999483808875,15
+persistent_dwell_metrics,3,0.0022968000266700983,15

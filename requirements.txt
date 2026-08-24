@@ -6,7 +6,7 @@ polars>=1.20,<2.0
 pyarrow>=18.0,<21.0
 
 # Local analytical warehouse
- duckdb>=1.1,<2.0
+duckdb>=1.1,<2.0
 
 # Geospatial processing
 shapely>=2.0,<3.0
