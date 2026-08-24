@@ -1,0 +1,13 @@
+{
+  "run_id": "20260824T012849Z",
+  "input": "data\\extracted\\2024-12-28\\AIS_2024_12_28.csv",
+  "input_bytes": 721449359,
+  "rows_read": 6553329,
+  "valid_rows_before_deduplication": 6553329,
+  "valid_rows_after_deduplication": 6551984,
+  "quarantined_rows": 0,
+  "duplicate_rows_removed": 1345,
+  "quality_flag_counts": [],
+  "valid_output": "data\\processed\\ais\\year=2024\\month=12\\day=28\\ais_ping.parquet",
+  "quarantine_output": "data\\quarantine\\ais\\year=2024\\month=12\\day=28\\ais_quarantine.parquet"
+}
