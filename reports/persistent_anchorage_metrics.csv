@@ -1,0 +1,16 @@
+anchorage_object_id,anchorage_name,persistent_episode_count,persistent_vessel_count,median_persistent_dwell_minutes,p90_persistent_dwell_minutes,mean_persistent_dwell_minutes,max_persistent_dwell_minutes,persistent_pings
+314,Long Beach Harbor Anchorage B,29,29,16.0,918.9999999999998,176.72413793103448,1381,1839.0
+297,Commercial Anchorage F (outside of Long Beach Breakwater),14,14,28.0,830.9000000000002,236.5,1361,1186.0
+311,[unnamed feature],13,13,45.0,757.2000000000004,256.61538461538464,1722,1360.0
+304,Long Beach Harbor Anchorage D,8,8,75.0,1044.0999999999997,378.625,1896,970.0
+313,Long Beach Harbor Anchorage E,6,6,24.0,32.5,23.666666666666668,33,69.0
+293,Long Beach Harbor Anchorage D,4,4,21.5,24.1,21.75,25,45.0
+307,Commercial Anchorage F (outside of Long Beach Breakwater),3,3,12.0,24.8,17.0,28,21.0
+68,Outside Breakwater Anchorage Area G,3,3,16.0,28.8,21.0,32,45.0
+298,Long Beach Harbor Anchorage Area Q,3,3,14.0,28.400000000000002,19.333333333333332,32,21.0
+296,[unnamed feature],2,2,10.5,10.9,10.5,11,12.0
+299,Long Beach Harbor Anchorage  Area P,1,1,12.0,12.0,12.0,12,10.0
+309,[unnamed feature],1,1,21.0,21.0,21.0,21,4.0
+303,Los Angeles and Long Beach Harbor Anchorage Area E-1,1,1,28.0,28.0,28.0,28,4.0
+306,Long Beach Harbor Anchorage C and Los Angeles and Long Beach Harbor Area C-1,1,1,32.0,32.0,32.0,32,4.0
+310,Los Angeles and Long Beach Harbor Area A-2,1,1,10.0,10.0,10.0,10,4.0
