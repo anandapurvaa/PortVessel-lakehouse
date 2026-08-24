@@ -1,0 +1,84 @@
+{
+  "generated_at_utc": "2026-08-24T23:53:31.510784+00:00",
+  "datasets": {
+    "canonical_ping_counts": [
+      {
+        "rows": 19546638,
+        "unique_records": 19546638,
+        "vessels": 18940,
+        "null_mmsi": 0,
+        "null_timestamp": 0,
+        "invalid_latitude": 0,
+        "invalid_longitude": 0
+      }
+    ],
+    "port_state_counts": [
+      {
+        "vessel_state": "anchorage",
+        "rows": 24932,
+        "vessels": 125
+      },
+      {
+        "vessel_state": "port_area_unclassified",
+        "rows": 345966,
+        "vessels": 425
+      }
+    ],
+    "dwell_quality_counts": [
+      {
+        "dwell_quality": "complete_observed",
+        "eligible_for_complete_metrics": true,
+        "eligible_for_persistent_metrics": false,
+        "episodes": 200,
+        "vessels": 80
+      },
+      {
+        "dwell_quality": "complete_observed",
+        "eligible_for_complete_metrics": true,
+        "eligible_for_persistent_metrics": true,
+        "episodes": 90,
+        "vessels": 64
+      },
+      {
+        "dwell_quality": "gap_uncertain",
+        "eligible_for_complete_metrics": false,
+        "eligible_for_persistent_metrics": false,
+        "episodes": 425,
+        "vessels": 75
+      },
+      {
+        "dwell_quality": "partial_end",
+        "eligible_for_complete_metrics": false,
+        "eligible_for_persistent_metrics": false,
+        "episodes": 41,
+        "vessels": 23
+      }
+    ],
+    "port_call_quality_counts": [
+      {
+        "port_call_quality": "observed_port_area_only",
+        "port_calls": 175,
+        "vessels": 113,
+        "invalid_durations": 0
+      },
+      {
+        "port_call_quality": "observed_with_anchorage",
+        "port_calls": 100,
+        "vessels": 73,
+        "invalid_durations": 0
+      },
+      {
+        "port_call_quality": "partial_end",
+        "port_calls": 279,
+        "vessels": 279,
+        "invalid_durations": 0
+      },
+      {
+        "port_call_quality": "partial_start",
+        "port_calls": 3,
+        "vessels": 3,
+        "invalid_durations": 0
+      }
+    ]
+  }
+}
