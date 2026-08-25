@@ -1,0 +1,21 @@
+
+    
+    
+
+with dbt_test__target as (
+
+  select anchorage_dwell_id as unique_field
+  from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_anchorage_dwell`
+  where anchorage_dwell_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+

@@ -1,0 +1,13 @@
+portvessel:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: cloudprojects-506123
+      dataset: portvessel_dev
+      location: europe-west3
+      threads: 4
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      priority: interactive

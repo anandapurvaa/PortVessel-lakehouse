@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: mart_port_congestion
+    description: "Daily port congestion mart."
+    columns:
+      - name: metric_date
+        tests:
+          - not_null
+
+      - name: port_id
+        tests:
+          - not_null
+
+      - name: anchorage_call_rate
+        tests:
+          - not_null
+
+      - name: anchorage_call_rate
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "between 0 and 1"
+
+  - name: mart_vessel_risk
+    description: "Vessel operational risk mart."
+    columns:
+      - name: mmsi
+        tests:
+          - not_null
+          - unique
+
+      - name: operational_flag
+        tests:
+          - not_null
+
+      - name: anchorage_call_rate
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "between 0 and 1"

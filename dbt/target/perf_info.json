@@ -1,0 +1,51 @@
+{
+    "path_count": 175,
+    "parsed_path_count": 175,
+    "static_analysis_path_count": 2,
+    "static_analysis_parsed_path_count": 2,
+    "is_partial_parse_enabled": true,
+    "is_static_analysis_enabled": true,
+    "read_files_elapsed": 0.048761800047941506,
+    "load_macros_elapsed": 0.6888007000088692,
+    "parse_project_elapsed": 0.32468320010229945,
+    "patch_sources_elapsed": 0.1484161999542266,
+    "process_manifest_elapsed": 0.029255300061777234,
+    "load_all_elapsed": 1.3131680000806227,
+    "projects": [
+        {
+            "project_name": "portvessel",
+            "elapsed": 0.32261430006474257,
+            "parsers": [
+                {
+                    "parser": "model",
+                    "elapsed": 0.2292784999590367,
+                    "parsed_path_count": 2
+                },
+                {
+                    "parser": "test",
+                    "elapsed": 0.09218779997900128,
+                    "parsed_path_count": 1
+                }
+            ],
+            "parsed_path_count": 3
+        },
+        {
+            "project_name": "dbt_bigquery",
+            "elapsed": 0.0008303000358864665,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt",
+            "elapsed": 0.0011591000948101282,
+            "parsers": [
+                {
+                    "parser": "doc",
+                    "elapsed": 0.00017180002760142088,
+                    "parsed_path_count": 1
+                }
+            ],
+            "parsed_path_count": 1
+        }
+    ]
+}

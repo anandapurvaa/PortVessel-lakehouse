@@ -1,0 +1,25 @@
+name: portvessel
+version: '1.0.0'
+config-version: 2
+
+profile: portvessel
+
+model-paths: ["models"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+analysis-paths: ["analyses"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  portvessel:
+    marts:
+      +materialized: table
+      +schema: portvessel_dev_marts
+      +persist_docs:
+        relation: true
+        columns: true
