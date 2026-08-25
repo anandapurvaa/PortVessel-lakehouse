@@ -15,9 +15,6 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
-flags:
-  bigquery_use_batch_source_freshness: true
-
 models:
   portvessel:
     marts:

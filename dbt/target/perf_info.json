@@ -5,25 +5,25 @@
     "static_analysis_parsed_path_count": 2,
     "is_partial_parse_enabled": false,
     "is_static_analysis_enabled": true,
-    "read_files_elapsed": 0.15990659990347922,
-    "load_macros_elapsed": 0.6616479000076652,
-    "parse_project_elapsed": 0.5054481000406668,
-    "patch_sources_elapsed": 0.034370899898931384,
-    "process_manifest_elapsed": 0.029004700016230345,
-    "load_all_elapsed": 1.4496922000544146,
+    "read_files_elapsed": 0.11154300009366125,
+    "load_macros_elapsed": 0.6650456000352278,
+    "parse_project_elapsed": 0.4984820999670774,
+    "patch_sources_elapsed": 0.034446500008925796,
+    "process_manifest_elapsed": 0.02930609998293221,
+    "load_all_elapsed": 1.3978140000253916,
     "projects": [
         {
             "project_name": "portvessel",
-            "elapsed": 0.5028952000429854,
+            "elapsed": 0.49586609995458275,
             "parsers": [
                 {
                     "parser": "model",
-                    "elapsed": 0.1811388999922201,
+                    "elapsed": 0.18106459989212453,
                     "parsed_path_count": 2
                 },
                 {
                     "parser": "test",
-                    "elapsed": 0.3207240999909118,
+                    "elapsed": 0.3137416000245139,
                     "parsed_path_count": 2
                 }
             ],
@@ -31,17 +31,17 @@
         },
         {
             "project_name": "dbt_bigquery",
-            "elapsed": 0.0007392000406980515,
+            "elapsed": 0.0007572999456897378,
             "parsers": [],
             "parsed_path_count": 0
         },
         {
             "project_name": "dbt",
-            "elapsed": 0.0009365000296384096,
+            "elapsed": 0.0009665000252425671,
             "parsers": [
                 {
                     "parser": "doc",
-                    "elapsed": 0.00013880000915378332,
+                    "elapsed": 0.00013860000763088465,
                     "parsed_path_count": 1
                 }
             ],
@@ -49,7 +49,7 @@
         },
         {
             "project_name": "dbt_utils",
-            "elapsed": 0.0007911999709904194,
+            "elapsed": 0.0008003999246284366,
             "parsers": [],
             "parsed_path_count": 0
         }
