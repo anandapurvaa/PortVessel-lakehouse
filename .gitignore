@@ -1,2 +1,11 @@
 data/
 .venv/
+
+# Terraform local state and plugins
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+!example.tfvars
+.terraform.lock.hcl
