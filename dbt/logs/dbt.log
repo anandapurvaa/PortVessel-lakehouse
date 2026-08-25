@@ -4659,3 +4659,2444 @@ where port_id is null
 [0m05:15:20.834053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023964721010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000239663CF860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002391C71CC20>]}
 [0m05:15:20.834053 [debug] [MainThread]: Flushing usage events
 [0m05:15:21.485223 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:22:58.837670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169B18A7080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169B18A6000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169B18A59D0>]}
+
+
+============================== 05:22:58.840672 | 8c62057c-33aa-4812-868d-3cafac9f06ed ==============================
+[0m05:22:58.840672 [info ] [MainThread]: Running with dbt=1.12.3
+[0m05:22:58.841671 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'invocation_command': 'dbt source freshness', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m05:23:00.040066 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8c62057c-33aa-4812-868d-3cafac9f06ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169E63ACE60>]}
+[0m05:23:00.092278 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8c62057c-33aa-4812-868d-3cafac9f06ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169B3C7A3C0>]}
+[0m05:23:00.093277 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m05:23:00.546632 [debug] [MainThread]: checksum: 5f143da5afd1a6b6298bff390d2cac426bc2fa3cddb0281a2f93c038cc305c8b, vars: {}, profile: portvessel, target: dev, version: 1.12.3
+[0m05:23:00.737789 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:23:00.737789 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m05:23:00.737789 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:23:00.745789 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8c62057c-33aa-4812-868d-3cafac9f06ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169E6707530>]}
+[0m05:23:00.882838 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:23:00.886837 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:23:00.913837 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:23:00.927840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8c62057c-33aa-4812-868d-3cafac9f06ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169E6AE0D10>]}
+[0m05:23:00.927840 [info ] [MainThread]: Found 2 models, 22 data tests, 4 sources, 678 macros
+[0m05:23:00.928838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8c62057c-33aa-4812-868d-3cafac9f06ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169E6724800>]}
+[0m05:23:00.930839 [info ] [MainThread]: 
+[0m05:23:00.930839 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m05:23:00.931838 [info ] [MainThread]: 
+[0m05:23:00.932838 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m05:23:00.935839 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123_portvessel_dev_marts'
+[0m05:23:00.935839 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:23:02.695825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8c62057c-33aa-4812-868d-3cafac9f06ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169E6726540>]}
+[0m05:23:02.696826 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:23:02.696826 [info ] [MainThread]: Pulling freshness from warehouse metadata tables for 0 sources
+[0m05:23:02.697827 [warn ] [MainThread]: [[33mWARNING[0m]: Use information schema TABLE_STORAGE table to calculate source freshness in batch.
+You may opt into the new behavior sooner by setting `flags.bigquery_use_batch_source_freshness` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m05:23:02.697827 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '8c62057c-33aa-4812-868d-3cafac9f06ed', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169E6AE12E0>]}
+[0m05:23:02.701827 [debug] [Thread-1 (]: Began running node source.portvessel.portvessel_gold.agg_port_congestion_daily
+[0m05:23:02.702826 [debug] [Thread-2 (]: Began running node source.portvessel.portvessel_gold.fct_anchorage_dwell
+[0m05:23:02.702826 [info ] [Thread-1 (]: 1 of 2 START freshness of portvessel_gold.agg_port_congestion_daily ............ [RUN]
+[0m05:23:02.704825 [debug] [Thread-1 (]: Acquiring new bigquery connection 'source.portvessel.portvessel_gold.agg_port_congestion_daily'
+[0m05:23:02.703824 [info ] [Thread-2 (]: 2 of 2 START freshness of portvessel_gold.fct_anchorage_dwell .................. [RUN]
+[0m05:23:02.704825 [debug] [Thread-1 (]: Began compiling node source.portvessel.portvessel_gold.agg_port_congestion_daily
+[0m05:23:02.705827 [debug] [Thread-2 (]: Acquiring new bigquery connection 'source.portvessel.portvessel_gold.fct_anchorage_dwell'
+[0m05:23:02.705827 [debug] [Thread-1 (]: Began executing node source.portvessel.portvessel_gold.agg_port_congestion_daily
+[0m05:23:02.706827 [debug] [Thread-2 (]: Began compiling node source.portvessel.portvessel_gold.fct_anchorage_dwell
+[0m05:23:02.718824 [debug] [Thread-1 (]: On source.portvessel.portvessel_gold.agg_port_congestion_daily: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "source.portvessel.portvessel_gold.agg_port_congestion_daily"} */
+select
+      max(loaded_at_utc) as max_loaded_at,
+      current_timestamp() as snapshotted_at
+    from `cloudprojects-506123`.`portvessel_dev_gold`.`agg_port_congestion_daily`
+    
+  
+[0m05:23:02.718824 [debug] [Thread-2 (]: Began executing node source.portvessel.portvessel_gold.fct_anchorage_dwell
+[0m05:23:02.719827 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m05:23:02.720826 [debug] [Thread-2 (]: On source.portvessel.portvessel_gold.fct_anchorage_dwell: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "source.portvessel.portvessel_gold.fct_anchorage_dwell"} */
+select
+      max(loaded_at_utc) as max_loaded_at,
+      current_timestamp() as snapshotted_at
+    from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_anchorage_dwell`
+    
+  
+[0m05:23:02.721827 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m05:23:03.546469 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:e7cf9713-7d51-49c5-a49c-8a525cd2b0ef&page=queryresults
+[0m05:23:03.601986 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:23f0a7ea-9cc4-432e-a7de-81b2c0391a5e&page=queryresults
+[0m05:23:03.702247 [debug] [Thread-2 (]: SQL status: OK in 0.155 seconds
+[0m05:23:03.715247 [debug] [Thread-1 (]: SQL status: OK in 0.114 seconds
+[0m05:23:04.045832 [info ] [Thread-2 (]: 2 of 2 PASS freshness of portvessel_gold.fct_anchorage_dwell ................... [[32mPASS[0m in 1.34s]
+[0m05:23:04.046833 [debug] [Thread-2 (]: Finished running node source.portvessel.portvessel_gold.fct_anchorage_dwell
+[0m05:23:04.055837 [info ] [Thread-1 (]: 1 of 2 PASS freshness of portvessel_gold.agg_port_congestion_daily ............. [[32mPASS[0m in 1.35s]
+[0m05:23:04.056840 [debug] [Thread-1 (]: Finished running node source.portvessel.portvessel_gold.agg_port_congestion_daily
+[0m05:23:04.057839 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m05:23:04.058839 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:23:04.058839 [debug] [MainThread]: Connection 'list_cloudprojects-506123_portvessel_dev_marts' was properly closed.
+[0m05:23:04.058839 [debug] [MainThread]: Connection 'source.portvessel.portvessel_gold.agg_port_congestion_daily' was properly closed.
+[0m05:23:04.058839 [debug] [MainThread]: Connection 'source.portvessel.portvessel_gold.fct_anchorage_dwell' was properly closed.
+[0m05:23:04.058839 [info ] [MainThread]: 
+[0m05:23:04.059838 [info ] [MainThread]: Finished running 2 sources in 0 hours 0 minutes and 3.13 seconds (3.13s).
+[0m05:23:04.101376 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:23:04.104374 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:23:04.107377 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:23:04.113373 [debug] [MainThread]: Wrote artifact FreshnessResult to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\sources.json
+[0m05:23:04.113373 [info ] [MainThread]: Done.
+[0m05:23:04.114376 [debug] [MainThread]: Command `dbt source freshness` succeeded at 05:23:04.114376 after 5.39 seconds
+[0m05:23:04.115375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169B3BBF2F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169E6F37440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169B25AE9F0>]}
+[0m05:23:04.115375 [debug] [MainThread]: Flushing usage events
+[0m05:23:04.861421 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:23:07.901730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFFA1A810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFFA184A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFFA1AD20>]}
+
+
+============================== 05:23:07.905733 | 86852f42-7e3a-44dc-99a0-f66e9ed46f50 ==============================
+[0m05:23:07.905733 [info ] [MainThread]: Running with dbt=1.12.3
+[0m05:23:07.905733 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt build --select marts', 'log_path': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m05:23:09.082624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '86852f42-7e3a-44dc-99a0-f66e9ed46f50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFB373530>]}
+[0m05:23:09.138624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '86852f42-7e3a-44dc-99a0-f66e9ed46f50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFFBFE3F0>]}
+[0m05:23:09.139622 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m05:23:09.539918 [debug] [MainThread]: checksum: 5f143da5afd1a6b6298bff390d2cac426bc2fa3cddb0281a2f93c038cc305c8b, vars: {}, profile: portvessel, target: dev, version: 1.12.3
+[0m05:23:09.690072 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:23:09.691071 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m05:23:09.691071 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:23:09.699071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '86852f42-7e3a-44dc-99a0-f66e9ed46f50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFE15E450>]}
+[0m05:23:09.833588 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:23:09.837586 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:23:09.862590 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:23:09.890714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '86852f42-7e3a-44dc-99a0-f66e9ed46f50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DB2CF0AA0>]}
+[0m05:23:09.891712 [info ] [MainThread]: Found 2 models, 22 data tests, 4 sources, 678 macros
+[0m05:23:09.893714 [info ] [MainThread]: 
+[0m05:23:09.893714 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m05:23:09.894712 [info ] [MainThread]: 
+[0m05:23:09.894712 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m05:23:09.898712 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123'
+[0m05:23:09.898712 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:23:11.600556 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123_portvessel_dev_marts'
+[0m05:23:11.601556 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:23:12.149662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '86852f42-7e3a-44dc-99a0-f66e9ed46f50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFB466CF0>]}
+[0m05:23:12.149662 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:23:12.153663 [debug] [Thread-1 (]: Began running node model.portvessel.mart_port_congestion
+[0m05:23:12.154662 [debug] [Thread-2 (]: Began running node model.portvessel.mart_vessel_risk
+[0m05:23:12.155663 [info ] [Thread-1 (]: 1 of 10 START sql table model portvessel_dev_marts.mart_port_congestion ........ [RUN]
+[0m05:23:12.156664 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.portvessel.mart_port_congestion'
+[0m05:23:12.155663 [info ] [Thread-2 (]: 2 of 10 START sql table model portvessel_dev_marts.mart_vessel_risk ............ [RUN]
+[0m05:23:12.156664 [debug] [Thread-1 (]: Began compiling node model.portvessel.mart_port_congestion
+[0m05:23:12.156664 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.portvessel.mart_vessel_risk'
+[0m05:23:12.167666 [debug] [Thread-1 (]: Writing injected SQL for node "model.portvessel.mart_port_congestion"
+[0m05:23:12.168666 [debug] [Thread-2 (]: Began compiling node model.portvessel.mart_vessel_risk
+[0m05:23:12.170667 [debug] [Thread-2 (]: Writing injected SQL for node "model.portvessel.mart_vessel_risk"
+[0m05:23:12.170667 [debug] [Thread-1 (]: Began executing node model.portvessel.mart_port_congestion
+[0m05:23:12.195180 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m05:23:12.195180 [debug] [Thread-2 (]: Began executing node model.portvessel.mart_vessel_risk
+[0m05:23:12.197182 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m05:23:12.763170 [debug] [Thread-1 (]: Writing runtime sql for node "model.portvessel.mart_port_congestion"
+[0m05:23:12.765175 [debug] [Thread-2 (]: Writing runtime sql for node "model.portvessel.mart_vessel_risk"
+[0m05:23:12.765175 [debug] [Thread-1 (]: On model.portvessel.mart_port_congestion: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "model.portvessel.mart_port_congestion"} */
+
+  
+    
+
+    create or replace table `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+      
+    partition by metric_date
+    cluster by port_id
+
+    
+    OPTIONS(
+      description="""Daily port congestion mart."""
+    )
+    as (
+      
+
+with source_data as (
+    select
+        metric_date,
+        port_id,
+        port_name,
+        observed_port_calls,
+        observed_vessels,
+        port_calls_with_anchorage,
+        median_port_duration_minutes,
+        p90_port_duration_minutes,
+        mean_port_duration_minutes,
+        observed_with_anchorage_calls,
+        partial_calls,
+        source_object,
+        source_sha256,
+        loaded_at_utc,
+        ingestion_run_id
+    from `cloudprojects-506123`.`portvessel_dev_gold`.`agg_port_congestion_daily`
+),
+
+final as (
+    select
+        metric_date,
+        port_id,
+        port_name,
+        observed_port_calls,
+        observed_vessels,
+        port_calls_with_anchorage,
+        safe_divide(port_calls_with_anchorage, nullif(observed_port_calls, 0))
+            as anchorage_call_rate,
+        median_port_duration_minutes,
+        p90_port_duration_minutes,
+        mean_port_duration_minutes,
+        observed_with_anchorage_calls,
+        partial_calls,
+        source_object,
+        source_sha256,
+        loaded_at_utc,
+        ingestion_run_id
+    from source_data
+)
+
+select * from final
+    );
+  
+[0m05:23:12.767175 [debug] [Thread-2 (]: On model.portvessel.mart_vessel_risk: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "model.portvessel.mart_vessel_risk"} */
+
+  
+    
+
+    create or replace table `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+      
+    
+    cluster by mmsi, operational_flag
+
+    
+    OPTIONS(
+      description="""Vessel operational risk mart."""
+    )
+    as (
+      
+
+with risk_data as (
+    select
+        mmsi,
+        port_call_count,
+        port_calls_with_anchorage,
+        partial_port_calls,
+        persistent_anchorage_episode_count,
+        max_port_duration_minutes,
+        mean_port_duration_minutes,
+        max_persistent_anchorage_dwell_minutes,
+        mean_persistent_anchorage_dwell_minutes,
+        max_observation_gap_minutes,
+        operational_flag,
+        source_object,
+        source_sha256,
+        loaded_at_utc,
+        ingestion_run_id
+    from `cloudprojects-506123`.`portvessel_dev_gold`.`vessel_operational_risk_flags`
+),
+
+final as (
+    select
+        mmsi,
+        port_call_count,
+        port_calls_with_anchorage,
+        safe_divide(
+            port_calls_with_anchorage,
+            nullif(port_call_count, 0)
+        ) as anchorage_call_rate,
+        partial_port_calls,
+        persistent_anchorage_episode_count,
+        max_port_duration_minutes,
+        mean_port_duration_minutes,
+        max_persistent_anchorage_dwell_minutes,
+        mean_persistent_anchorage_dwell_minutes,
+        max_observation_gap_minutes,
+        operational_flag,
+        source_object,
+        source_sha256,
+        loaded_at_utc,
+        ingestion_run_id
+    from risk_data
+)
+
+select * from final
+    );
+  
+[0m05:23:13.078013 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:31839a6e-2c97-4358-8a91-ca74f6c32914&page=queryresults
+[0m05:23:13.179790 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:155c3125-a8f2-42cc-90c1-420bd2ed31e0&page=queryresults
+[0m05:23:14.126962 [debug] [Thread-2 (]: SQL status: OK in 1.047 seconds
+[0m05:23:14.356404 [debug] [Thread-1 (]: SQL status: OK in 1.176 seconds
+[0m05:23:15.164564 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '86852f42-7e3a-44dc-99a0-f66e9ed46f50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DB245D2E0>]}
+[0m05:23:15.165566 [info ] [Thread-2 (]: 2 of 10 OK created sql table model portvessel_dev_marts.mart_vessel_risk ....... [[32mCREATE TABLE (428.0 rows, 117.3 KiB processed)[0m in 3.01s]
+[0m05:23:15.166570 [debug] [Thread-2 (]: Finished running node model.portvessel.mart_vessel_risk
+[0m05:23:15.167570 [debug] [Thread-4 (]: Began running node test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33
+[0m05:23:15.167570 [debug] [Thread-3 (]: Began running node test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30
+[0m05:23:15.168570 [debug] [Thread-2 (]: Began running node test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd
+[0m05:23:15.167570 [info ] [Thread-4 (]: 3 of 10 START test dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1  [RUN]
+[0m05:23:15.168570 [info ] [Thread-3 (]: 4 of 10 START test not_null_mart_vessel_risk_mmsi .............................. [RUN]
+[0m05:23:15.169569 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33'
+[0m05:23:15.169569 [info ] [Thread-2 (]: 5 of 10 START test not_null_mart_vessel_risk_operational_flag .................. [RUN]
+[0m05:23:15.170573 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30'
+[0m05:23:15.170573 [debug] [Thread-4 (]: Began compiling node test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33
+[0m05:23:15.171575 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.portvessel.mart_vessel_risk, now test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd)
+[0m05:23:15.171575 [debug] [Thread-3 (]: Began compiling node test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30
+[0m05:23:15.191080 [debug] [Thread-4 (]: Writing injected SQL for node "test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33"
+[0m05:23:15.192082 [debug] [Thread-2 (]: Began compiling node test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd
+[0m05:23:15.202080 [debug] [Thread-3 (]: Writing injected SQL for node "test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30"
+[0m05:23:15.208079 [debug] [Thread-2 (]: Writing injected SQL for node "test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd"
+[0m05:23:15.208079 [debug] [Thread-4 (]: Began executing node test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33
+[0m05:23:15.223079 [debug] [Thread-4 (]: Writing runtime sql for node "test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33"
+[0m05:23:15.223079 [debug] [Thread-2 (]: Began executing node test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd
+[0m05:23:15.225080 [debug] [Thread-2 (]: Writing runtime sql for node "test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd"
+[0m05:23:15.225080 [debug] [Thread-3 (]: Began executing node test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30
+[0m05:23:15.227080 [debug] [Thread-3 (]: Writing runtime sql for node "test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30"
+[0m05:23:15.228080 [debug] [Thread-4 (]: On test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+select
+    1
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+
+where not(anchorage_call_rate between 0 and 1)
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:23:15.228080 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m05:23:15.229081 [debug] [Thread-2 (]: On test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select operational_flag
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+where operational_flag is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:23:15.230080 [debug] [Thread-3 (]: On test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select mmsi
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+where mmsi is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:23:15.230080 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:23:15.231081 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m05:23:15.322626 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '86852f42-7e3a-44dc-99a0-f66e9ed46f50', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DB290C890>]}
+[0m05:23:15.322626 [info ] [Thread-1 (]: 1 of 10 OK created sql table model portvessel_dev_marts.mart_port_congestion ... [[32mCREATE TABLE (4.0 rows, 1.3 KiB processed)[0m in 3.17s]
+[0m05:23:15.323627 [debug] [Thread-1 (]: Finished running node model.portvessel.mart_port_congestion
+[0m05:23:15.324626 [debug] [Thread-1 (]: Began running node test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568
+[0m05:23:15.324626 [info ] [Thread-1 (]: 6 of 10 START test unique_mart_vessel_risk_mmsi ................................ [RUN]
+[0m05:23:15.325626 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.portvessel.mart_port_congestion, now test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568)
+[0m05:23:15.326625 [debug] [Thread-1 (]: Began compiling node test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568
+[0m05:23:15.335625 [debug] [Thread-1 (]: Writing injected SQL for node "test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568"
+[0m05:23:15.336626 [debug] [Thread-1 (]: Began executing node test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568
+[0m05:23:15.338626 [debug] [Thread-1 (]: Writing runtime sql for node "test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568"
+[0m05:23:15.339625 [debug] [Thread-1 (]: On test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select mmsi as unique_field
+  from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+  where mmsi is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:23:15.340625 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:23:16.020264 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:33bd4119-20f4-4f27-8f2f-fc692ff3989d&page=queryresults
+[0m05:23:16.100393 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:d23b5b42-eab1-4fce-bdff-c410fadba57c&page=queryresults
+[0m05:23:16.102395 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:cf2f0046-5986-495b-8976-764e214017c8&page=queryresults
+[0m05:23:16.138394 [debug] [Thread-2 (]: SQL status: OK in 0.118 seconds
+[0m05:23:16.198461 [debug] [Thread-3 (]: SQL status: OK in 0.096 seconds
+[0m05:23:16.227037 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:840a70ec-db3c-4c0f-9a78-2a84037d29b9&page=queryresults
+[0m05:23:16.229037 [debug] [Thread-1 (]: SQL status: OK in 0.128 seconds
+[0m05:23:16.320955 [debug] [Thread-4 (]: SQL status: OK in 0.094 seconds
+[0m05:23:16.337954 [info ] [Thread-2 (]: 5 of 10 PASS not_null_mart_vessel_risk_operational_flag ........................ [[32mPASS[0m in 1.17s]
+[0m05:23:16.338953 [debug] [Thread-2 (]: Finished running node test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd
+[0m05:23:16.338953 [debug] [Thread-2 (]: Began running node test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065
+[0m05:23:16.339955 [info ] [Thread-2 (]: 7 of 10 START test dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1  [RUN]
+[0m05:23:16.339955 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd, now test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065)
+[0m05:23:16.340956 [debug] [Thread-2 (]: Began compiling node test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065
+[0m05:23:16.345954 [debug] [Thread-2 (]: Writing injected SQL for node "test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065"
+[0m05:23:16.346954 [debug] [Thread-2 (]: Began executing node test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065
+[0m05:23:16.348956 [debug] [Thread-2 (]: Writing runtime sql for node "test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065"
+[0m05:23:16.349956 [debug] [Thread-2 (]: On test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+select
+    1
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+
+where not(anchorage_call_rate between 0 and 1)
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:23:16.350956 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:23:16.413586 [info ] [Thread-3 (]: 4 of 10 PASS not_null_mart_vessel_risk_mmsi .................................... [[32mPASS[0m in 1.24s]
+[0m05:23:16.414586 [debug] [Thread-3 (]: Finished running node test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30
+[0m05:23:16.414586 [debug] [Thread-3 (]: Began running node test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1
+[0m05:23:16.415584 [info ] [Thread-3 (]: 8 of 10 START test not_null_mart_port_congestion_anchorage_call_rate ........... [RUN]
+[0m05:23:16.415584 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30, now test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1)
+[0m05:23:16.416585 [debug] [Thread-3 (]: Began compiling node test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1
+[0m05:23:16.423584 [debug] [Thread-3 (]: Writing injected SQL for node "test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1"
+[0m05:23:16.424585 [debug] [Thread-3 (]: Began executing node test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1
+[0m05:23:16.425584 [debug] [Thread-3 (]: Writing runtime sql for node "test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1"
+[0m05:23:16.426583 [debug] [Thread-3 (]: On test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select anchorage_call_rate
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+where anchorage_call_rate is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:23:16.427588 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m05:23:16.518795 [info ] [Thread-1 (]: 6 of 10 PASS unique_mart_vessel_risk_mmsi ...................................... [[32mPASS[0m in 1.19s]
+[0m05:23:16.518795 [debug] [Thread-1 (]: Finished running node test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568
+[0m05:23:16.519796 [debug] [Thread-1 (]: Began running node test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2
+[0m05:23:16.519796 [info ] [Thread-1 (]: 9 of 10 START test not_null_mart_port_congestion_metric_date ................... [RUN]
+[0m05:23:16.520795 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568, now test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2)
+[0m05:23:16.520795 [debug] [Thread-1 (]: Began compiling node test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2
+[0m05:23:16.528796 [debug] [Thread-1 (]: Writing injected SQL for node "test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2"
+[0m05:23:16.529796 [debug] [Thread-1 (]: Began executing node test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2
+[0m05:23:16.531796 [debug] [Thread-1 (]: Writing runtime sql for node "test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2"
+[0m05:23:16.532796 [debug] [Thread-1 (]: On test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select metric_date
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+where metric_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:23:16.532796 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:23:16.626314 [info ] [Thread-4 (]: 3 of 10 PASS dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1  [[32mPASS[0m in 1.46s]
+[0m05:23:16.627315 [debug] [Thread-4 (]: Finished running node test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33
+[0m05:23:16.628314 [debug] [Thread-4 (]: Began running node test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79
+[0m05:23:16.628314 [info ] [Thread-4 (]: 10 of 10 START test not_null_mart_port_congestion_port_id ...................... [RUN]
+[0m05:23:16.629313 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33, now test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79)
+[0m05:23:16.629313 [debug] [Thread-4 (]: Began compiling node test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79
+[0m05:23:16.635313 [debug] [Thread-4 (]: Writing injected SQL for node "test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79"
+[0m05:23:16.636313 [debug] [Thread-4 (]: Began executing node test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79
+[0m05:23:16.638315 [debug] [Thread-4 (]: Writing runtime sql for node "test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79"
+[0m05:23:16.639313 [debug] [Thread-4 (]: On test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select port_id
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+where port_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:23:16.640314 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m05:23:17.124077 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:d73ad922-758d-4483-b55d-5cfeebe54500&page=queryresults
+[0m05:23:17.256893 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:87cf5128-6814-403a-ac86-f98cd19adb9a&page=queryresults
+[0m05:23:17.260892 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:05da2599-259a-4a0e-94cb-0404479c5f2b&page=queryresults
+[0m05:23:17.367522 [debug] [Thread-3 (]: SQL status: OK in 0.106 seconds
+[0m05:23:17.392034 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:16eeec26-7aa5-4d45-ac1c-d88f0fd67781&page=queryresults
+[0m05:23:17.405840 [debug] [Thread-1 (]: SQL status: OK in 0.148 seconds
+[0m05:23:17.457841 [debug] [Thread-2 (]: SQL status: OK in 0.333 seconds
+[0m05:23:17.513080 [debug] [Thread-4 (]: SQL status: OK in 0.120 seconds
+[0m05:23:17.609388 [info ] [Thread-1 (]: 9 of 10 PASS not_null_mart_port_congestion_metric_date ......................... [[32mPASS[0m in 1.09s]
+[0m05:23:17.610389 [debug] [Thread-1 (]: Finished running node test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2
+[0m05:23:17.622388 [info ] [Thread-3 (]: 8 of 10 PASS not_null_mart_port_congestion_anchorage_call_rate ................. [[32mPASS[0m in 1.21s]
+[0m05:23:17.623388 [debug] [Thread-3 (]: Finished running node test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1
+[0m05:23:17.671392 [info ] [Thread-4 (]: 10 of 10 PASS not_null_mart_port_congestion_port_id ............................ [[32mPASS[0m in 1.04s]
+[0m05:23:17.672391 [debug] [Thread-4 (]: Finished running node test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79
+[0m05:23:17.728046 [info ] [Thread-2 (]: 7 of 10 PASS dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1  [[32mPASS[0m in 1.39s]
+[0m05:23:17.729045 [debug] [Thread-2 (]: Finished running node test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065
+[0m05:23:17.730047 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m05:23:17.731045 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:23:17.731045 [debug] [MainThread]: Connection 'list_cloudprojects-506123' was properly closed.
+[0m05:23:17.731045 [debug] [MainThread]: Connection 'list_cloudprojects-506123_portvessel_dev_marts' was properly closed.
+[0m05:23:17.731045 [debug] [MainThread]: Connection 'test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2' was properly closed.
+[0m05:23:17.732045 [debug] [MainThread]: Connection 'test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065' was properly closed.
+[0m05:23:17.732045 [debug] [MainThread]: Connection 'test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79' was properly closed.
+[0m05:23:17.732045 [debug] [MainThread]: Connection 'test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1' was properly closed.
+[0m05:23:17.732045 [info ] [MainThread]: 
+[0m05:23:17.733045 [info ] [MainThread]: Finished running 2 table models, 8 data tests in 0 hours 0 minutes and 7.84 seconds (7.84s).
+[0m05:23:17.735046 [debug] [MainThread]: Command end result
+[0m05:23:17.781049 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:23:17.784051 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:23:17.788561 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:23:17.794562 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\run_results.json
+[0m05:23:17.794562 [info ] [MainThread]: 
+[0m05:23:17.794562 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:23:17.795562 [info ] [MainThread]: 
+[0m05:23:17.795562 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=10
+[0m05:23:17.796561 [debug] [MainThread]: Command `dbt build` succeeded at 05:23:17.796561 after 10.00 seconds
+[0m05:23:17.796561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFCE3F440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DFDF1B0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021DB291CAA0>]}
+[0m05:23:17.797562 [debug] [MainThread]: Flushing usage events
+[0m05:23:18.516784 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:49:46.775278 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FFEDEA20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FE1BF860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000028780FEAF30>]}
+
+
+============================== 05:49:46.778373 | 11ad6c1f-d13d-4434-bc02-adfdfe40d88a ==============================
+[0m05:49:46.778373 [info ] [MainThread]: Running with dbt=1.12.3
+[0m05:49:46.779373 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'invocation_command': 'dbt source freshness', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m05:49:47.788057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '11ad6c1f-d13d-4434-bc02-adfdfe40d88a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287B1A781D0>]}
+[0m05:49:47.836581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '11ad6c1f-d13d-4434-bc02-adfdfe40d88a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FC8664B0>]}
+[0m05:49:47.836581 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m05:49:48.184983 [debug] [MainThread]: checksum: 5f143da5afd1a6b6298bff390d2cac426bc2fa3cddb0281a2f93c038cc305c8b, vars: {}, profile: portvessel, target: dev, version: 1.12.3
+[0m05:49:48.278169 [warn ] [MainThread]: [[33mWARNING[0m][PropertyMovedToConfigDeprecation]: Deprecated functionality
+Found `loaded_at_field` as a top-level property of `sources[0].tables[0]` in
+file `models\sources.yml`. The `loaded_at_field` top-level property should be
+moved into the `config` of `sources[0].tables[0]`.
+[0m05:49:48.278169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '11ad6c1f-d13d-4434-bc02-adfdfe40d88a', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287B3AED7F0>]}
+[0m05:49:48.325491 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m05:49:48.326490 [debug] [MainThread]: Partial parsing: updated file: portvessel://models\sources.yml
+[0m05:49:48.699559 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `dbt_utils.expression_is_true` defined on
+'mart_port_congestion' in package 'portvessel' (models\schema.yml). Arguments to
+generic tests should be nested under the `arguments` property.
+[0m05:49:48.699559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '11ad6c1f-d13d-4434-bc02-adfdfe40d88a', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287B43BF2C0>]}
+[0m05:49:48.881488 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '11ad6c1f-d13d-4434-bc02-adfdfe40d88a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287B4530950>]}
+[0m05:49:48.962840 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:49:48.965018 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:49:48.985534 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:49:48.996824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '11ad6c1f-d13d-4434-bc02-adfdfe40d88a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287B463E600>]}
+[0m05:49:48.996824 [info ] [MainThread]: Found 2 models, 22 data tests, 4 sources, 678 macros
+[0m05:49:48.996824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '11ad6c1f-d13d-4434-bc02-adfdfe40d88a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287B4567230>]}
+[0m05:49:48.998823 [info ] [MainThread]: 
+[0m05:49:48.998823 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m05:49:48.999826 [info ] [MainThread]: 
+[0m05:49:48.999826 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m05:49:49.002824 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123_portvessel_dev_marts'
+[0m05:49:49.003826 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:49:50.530728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '11ad6c1f-d13d-4434-bc02-adfdfe40d88a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287B44788C0>]}
+[0m05:49:50.531728 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:49:50.531728 [info ] [MainThread]: Pulling freshness from warehouse metadata tables for 0 sources
+[0m05:49:50.532729 [warn ] [MainThread]: [[33mWARNING[0m]: Use information schema TABLE_STORAGE table to calculate source freshness in batch.
+You may opt into the new behavior sooner by setting `flags.bigquery_use_batch_source_freshness` to `True` in `dbt_project.yml`.
+Visit https://docs.getdbt.com/reference/global-configs/behavior-changes for more information.
+[0m05:49:50.532729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'BehaviorChangeEvent', 'label': '11ad6c1f-d13d-4434-bc02-adfdfe40d88a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287B4567230>]}
+[0m05:49:50.536731 [debug] [Thread-1 (]: Began running node source.portvessel.portvessel_gold.agg_port_congestion_daily
+[0m05:49:50.536731 [debug] [Thread-2 (]: Began running node source.portvessel.portvessel_gold.fct_anchorage_dwell
+[0m05:49:50.536731 [info ] [Thread-1 (]: 1 of 2 START freshness of portvessel_gold.agg_port_congestion_daily ............ [RUN]
+[0m05:49:50.537732 [debug] [Thread-1 (]: Acquiring new bigquery connection 'source.portvessel.portvessel_gold.agg_port_congestion_daily'
+[0m05:49:50.537732 [info ] [Thread-2 (]: 2 of 2 START freshness of portvessel_gold.fct_anchorage_dwell .................. [RUN]
+[0m05:49:50.538729 [debug] [Thread-1 (]: Began compiling node source.portvessel.portvessel_gold.agg_port_congestion_daily
+[0m05:49:50.538729 [debug] [Thread-2 (]: Acquiring new bigquery connection 'source.portvessel.portvessel_gold.fct_anchorage_dwell'
+[0m05:49:50.538729 [debug] [Thread-1 (]: Began executing node source.portvessel.portvessel_gold.agg_port_congestion_daily
+[0m05:49:50.539728 [debug] [Thread-2 (]: Began compiling node source.portvessel.portvessel_gold.fct_anchorage_dwell
+[0m05:49:50.548728 [debug] [Thread-1 (]: On source.portvessel.portvessel_gold.agg_port_congestion_daily: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "source.portvessel.portvessel_gold.agg_port_congestion_daily"} */
+select
+      max(loaded_at_utc) as max_loaded_at,
+      current_timestamp() as snapshotted_at
+    from `cloudprojects-506123`.`portvessel_dev_gold`.`agg_port_congestion_daily`
+    
+  
+[0m05:49:50.549729 [debug] [Thread-2 (]: Began executing node source.portvessel.portvessel_gold.fct_anchorage_dwell
+[0m05:49:50.549729 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m05:49:50.551729 [debug] [Thread-2 (]: On source.portvessel.portvessel_gold.fct_anchorage_dwell: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "source.portvessel.portvessel_gold.fct_anchorage_dwell"} */
+select
+      max(loaded_at_utc) as max_loaded_at,
+      current_timestamp() as snapshotted_at
+    from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_anchorage_dwell`
+    
+  
+[0m05:49:50.552730 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m05:49:51.224115 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:70f8af1e-7b48-4baa-887f-91f2ea9a2af1&page=queryresults
+[0m05:49:51.360896 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:0cc23f27-bd4a-4952-8d92-bfe3413e3866&page=queryresults
+[0m05:49:51.380544 [debug] [Thread-2 (]: SQL status: OK in 0.155 seconds
+[0m05:49:51.539036 [debug] [Thread-1 (]: SQL status: OK in 0.178 seconds
+[0m05:49:51.658504 [info ] [Thread-2 (]: 2 of 2 PASS freshness of portvessel_gold.fct_anchorage_dwell ................... [[32mPASS[0m in 1.12s]
+[0m05:49:51.658504 [debug] [Thread-2 (]: Finished running node source.portvessel.portvessel_gold.fct_anchorage_dwell
+[0m05:49:51.773339 [info ] [Thread-1 (]: 1 of 2 PASS freshness of portvessel_gold.agg_port_congestion_daily ............. [[32mPASS[0m in 1.24s]
+[0m05:49:51.774338 [debug] [Thread-1 (]: Finished running node source.portvessel.portvessel_gold.agg_port_congestion_daily
+[0m05:49:51.775340 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m05:49:51.775340 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:49:51.775340 [debug] [MainThread]: Connection 'list_cloudprojects-506123_portvessel_dev_marts' was properly closed.
+[0m05:49:51.776339 [debug] [MainThread]: Connection 'source.portvessel.portvessel_gold.agg_port_congestion_daily' was properly closed.
+[0m05:49:51.776339 [debug] [MainThread]: Connection 'source.portvessel.portvessel_gold.fct_anchorage_dwell' was properly closed.
+[0m05:49:51.776339 [info ] [MainThread]: 
+[0m05:49:51.777341 [info ] [MainThread]: Finished running 2 sources in 0 hours 0 minutes and 2.78 seconds (2.78s).
+[0m05:49:51.812601 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:49:51.814938 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:49:51.817495 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:49:51.820503 [debug] [MainThread]: Wrote artifact FreshnessResult to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\sources.json
+[0m05:49:51.820503 [info ] [MainThread]: Done.
+[0m05:49:51.821504 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- PropertyMovedToConfigDeprecation: 2 occurrences
+- MissingArgumentsPropertyInGenericTestDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m05:49:51.822501 [debug] [MainThread]: Command `dbt source freshness` succeeded at 05:49:51.822501 after 5.16 seconds
+[0m05:49:51.822501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FFE51C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FFFCE540>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000287FF33B080>]}
+[0m05:49:51.822501 [debug] [MainThread]: Flushing usage events
+[0m05:49:52.513579 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:49:55.408458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF1874A7B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF1571EB70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF186495B0>]}
+
+
+============================== 05:49:55.412458 | 0356df02-d7a3-4e50-a639-b7e616f565a5 ==============================
+[0m05:49:55.412458 [info ] [MainThread]: Running with dbt=1.12.3
+[0m05:49:55.412458 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt build --select marts', 'log_path': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m05:49:56.413207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0356df02-d7a3-4e50-a639-b7e616f565a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF18345700>]}
+[0m05:49:56.463815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0356df02-d7a3-4e50-a639-b7e616f565a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF4B5F6240>]}
+[0m05:49:56.464816 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m05:49:56.804018 [debug] [MainThread]: checksum: 5f143da5afd1a6b6298bff390d2cac426bc2fa3cddb0281a2f93c038cc305c8b, vars: {}, profile: portvessel, target: dev, version: 1.12.3
+[0m05:49:56.903414 [warn ] [MainThread]: [[33mWARNING[0m][PropertyMovedToConfigDeprecation]: Deprecated functionality
+Found `loaded_at_field` as a top-level property of `sources[0].tables[0]` in
+file `models\sources.yml`. The `loaded_at_field` top-level property should be
+moved into the `config` of `sources[0].tables[0]`.
+[0m05:49:56.904416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '0356df02-d7a3-4e50-a639-b7e616f565a5', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF4CDB6F90>]}
+[0m05:49:56.947977 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:49:56.947977 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m05:49:56.947977 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:49:56.954976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0356df02-d7a3-4e50-a639-b7e616f565a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF4CFC45F0>]}
+[0m05:49:57.067457 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:49:57.069456 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:49:57.088971 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:49:57.109238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0356df02-d7a3-4e50-a639-b7e616f565a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF4D11A390>]}
+[0m05:49:57.110239 [info ] [MainThread]: Found 2 models, 22 data tests, 4 sources, 678 macros
+[0m05:49:57.111237 [info ] [MainThread]: 
+[0m05:49:57.112238 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m05:49:57.112238 [info ] [MainThread]: 
+[0m05:49:57.112238 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m05:49:57.116236 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123'
+[0m05:49:57.116236 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:49:58.678473 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123_portvessel_dev_marts'
+[0m05:49:58.679474 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:49:59.151426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0356df02-d7a3-4e50-a639-b7e616f565a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF1A31DDF0>]}
+[0m05:49:59.151426 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:49:59.155429 [debug] [Thread-1 (]: Began running node model.portvessel.mart_port_congestion
+[0m05:49:59.155429 [debug] [Thread-2 (]: Began running node model.portvessel.mart_vessel_risk
+[0m05:49:59.155429 [info ] [Thread-1 (]: 1 of 10 START sql table model portvessel_dev_marts.mart_port_congestion ........ [RUN]
+[0m05:49:59.156428 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.portvessel.mart_port_congestion'
+[0m05:49:59.156428 [info ] [Thread-2 (]: 2 of 10 START sql table model portvessel_dev_marts.mart_vessel_risk ............ [RUN]
+[0m05:49:59.156428 [debug] [Thread-1 (]: Began compiling node model.portvessel.mart_port_congestion
+[0m05:49:59.157427 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.portvessel.mart_vessel_risk'
+[0m05:49:59.163675 [debug] [Thread-1 (]: Writing injected SQL for node "model.portvessel.mart_port_congestion"
+[0m05:49:59.163675 [debug] [Thread-2 (]: Began compiling node model.portvessel.mart_vessel_risk
+[0m05:49:59.165680 [debug] [Thread-2 (]: Writing injected SQL for node "model.portvessel.mart_vessel_risk"
+[0m05:49:59.165680 [debug] [Thread-1 (]: Began executing node model.portvessel.mart_port_congestion
+[0m05:49:59.180685 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m05:49:59.181685 [debug] [Thread-2 (]: Began executing node model.portvessel.mart_vessel_risk
+[0m05:49:59.182684 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m05:49:59.604890 [debug] [Thread-2 (]: Writing runtime sql for node "model.portvessel.mart_vessel_risk"
+[0m05:49:59.606891 [debug] [Thread-1 (]: Writing runtime sql for node "model.portvessel.mart_port_congestion"
+[0m05:49:59.607898 [debug] [Thread-2 (]: On model.portvessel.mart_vessel_risk: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "model.portvessel.mart_vessel_risk"} */
+
+  
+    
+
+    create or replace table `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+      
+    
+    cluster by mmsi, operational_flag
+
+    
+    OPTIONS(
+      description="""Vessel operational risk mart."""
+    )
+    as (
+      
+
+with risk_data as (
+    select
+        mmsi,
+        port_call_count,
+        port_calls_with_anchorage,
+        partial_port_calls,
+        persistent_anchorage_episode_count,
+        max_port_duration_minutes,
+        mean_port_duration_minutes,
+        max_persistent_anchorage_dwell_minutes,
+        mean_persistent_anchorage_dwell_minutes,
+        max_observation_gap_minutes,
+        operational_flag,
+        source_object,
+        source_sha256,
+        loaded_at_utc,
+        ingestion_run_id
+    from `cloudprojects-506123`.`portvessel_dev_gold`.`vessel_operational_risk_flags`
+),
+
+final as (
+    select
+        mmsi,
+        port_call_count,
+        port_calls_with_anchorage,
+        safe_divide(
+            port_calls_with_anchorage,
+            nullif(port_call_count, 0)
+        ) as anchorage_call_rate,
+        partial_port_calls,
+        persistent_anchorage_episode_count,
+        max_port_duration_minutes,
+        mean_port_duration_minutes,
+        max_persistent_anchorage_dwell_minutes,
+        mean_persistent_anchorage_dwell_minutes,
+        max_observation_gap_minutes,
+        operational_flag,
+        source_object,
+        source_sha256,
+        loaded_at_utc,
+        ingestion_run_id
+    from risk_data
+)
+
+select * from final
+    );
+  
+[0m05:49:59.608896 [debug] [Thread-1 (]: On model.portvessel.mart_port_congestion: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "model.portvessel.mart_port_congestion"} */
+
+  
+    
+
+    create or replace table `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+      
+    partition by metric_date
+    cluster by port_id
+
+    
+    OPTIONS(
+      description="""Daily port congestion mart."""
+    )
+    as (
+      
+
+with source_data as (
+    select
+        metric_date,
+        port_id,
+        port_name,
+        observed_port_calls,
+        observed_vessels,
+        port_calls_with_anchorage,
+        median_port_duration_minutes,
+        p90_port_duration_minutes,
+        mean_port_duration_minutes,
+        observed_with_anchorage_calls,
+        partial_calls,
+        source_object,
+        source_sha256,
+        loaded_at_utc,
+        ingestion_run_id
+    from `cloudprojects-506123`.`portvessel_dev_gold`.`agg_port_congestion_daily`
+),
+
+final as (
+    select
+        metric_date,
+        port_id,
+        port_name,
+        observed_port_calls,
+        observed_vessels,
+        port_calls_with_anchorage,
+        safe_divide(port_calls_with_anchorage, nullif(observed_port_calls, 0))
+            as anchorage_call_rate,
+        median_port_duration_minutes,
+        p90_port_duration_minutes,
+        mean_port_duration_minutes,
+        observed_with_anchorage_calls,
+        partial_calls,
+        source_object,
+        source_sha256,
+        loaded_at_utc,
+        ingestion_run_id
+    from source_data
+)
+
+select * from final
+    );
+  
+[0m05:50:00.007443 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:6daf4d82-7526-4af4-9689-1bdbd979675d&page=queryresults
+[0m05:50:00.015065 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:be867999-36d4-4c60-9194-97337ff40072&page=queryresults
+[0m05:50:01.047013 [debug] [Thread-1 (]: SQL status: OK in 1.039 seconds
+[0m05:50:01.104779 [debug] [Thread-2 (]: SQL status: OK in 1.088 seconds
+[0m05:50:01.870020 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0356df02-d7a3-4e50-a639-b7e616f565a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF4CB0D640>]}
+[0m05:50:01.871017 [info ] [Thread-2 (]: 2 of 10 OK created sql table model portvessel_dev_marts.mart_vessel_risk ....... [[32mCREATE TABLE (428.0 rows, 117.3 KiB processed)[0m in 2.71s]
+[0m05:50:01.872017 [debug] [Thread-2 (]: Finished running node model.portvessel.mart_vessel_risk
+[0m05:50:01.872017 [debug] [Thread-4 (]: Began running node test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33
+[0m05:50:01.873017 [debug] [Thread-3 (]: Began running node test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30
+[0m05:50:01.873017 [debug] [Thread-2 (]: Began running node test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd
+[0m05:50:01.873017 [info ] [Thread-4 (]: 3 of 10 START test dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1  [RUN]
+[0m05:50:01.873017 [info ] [Thread-3 (]: 4 of 10 START test not_null_mart_vessel_risk_mmsi .............................. [RUN]
+[0m05:50:01.874017 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33'
+[0m05:50:01.874017 [info ] [Thread-2 (]: 5 of 10 START test not_null_mart_vessel_risk_operational_flag .................. [RUN]
+[0m05:50:01.875017 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30'
+[0m05:50:01.875017 [debug] [Thread-4 (]: Began compiling node test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33
+[0m05:50:01.875017 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.portvessel.mart_vessel_risk, now test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd)
+[0m05:50:01.876021 [debug] [Thread-3 (]: Began compiling node test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30
+[0m05:50:01.889025 [debug] [Thread-4 (]: Writing injected SQL for node "test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33"
+[0m05:50:01.889025 [debug] [Thread-2 (]: Began compiling node test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd
+[0m05:50:01.895249 [debug] [Thread-3 (]: Writing injected SQL for node "test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30"
+[0m05:50:01.900249 [debug] [Thread-2 (]: Writing injected SQL for node "test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd"
+[0m05:50:01.900249 [debug] [Thread-4 (]: Began executing node test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33
+[0m05:50:01.912248 [debug] [Thread-4 (]: Writing runtime sql for node "test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33"
+[0m05:50:01.913248 [debug] [Thread-3 (]: Began executing node test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30
+[0m05:50:01.915248 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0356df02-d7a3-4e50-a639-b7e616f565a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF4D171910>]}
+[0m05:50:01.915248 [debug] [Thread-2 (]: Began executing node test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd
+[0m05:50:01.916247 [debug] [Thread-3 (]: Writing runtime sql for node "test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30"
+[0m05:50:01.917245 [debug] [Thread-2 (]: Writing runtime sql for node "test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd"
+[0m05:50:01.918246 [debug] [Thread-4 (]: On test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+select
+    1
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+
+where not(anchorage_call_rate between 0 and 1)
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:50:01.916247 [info ] [Thread-1 (]: 1 of 10 OK created sql table model portvessel_dev_marts.mart_port_congestion ... [[32mCREATE TABLE (4.0 rows, 1.3 KiB processed)[0m in 2.76s]
+[0m05:50:01.918246 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m05:50:01.919245 [debug] [Thread-1 (]: Finished running node model.portvessel.mart_port_congestion
+[0m05:50:01.919245 [debug] [Thread-1 (]: Began running node test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568
+[0m05:50:01.920245 [debug] [Thread-3 (]: On test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select mmsi
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+where mmsi is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:50:01.920245 [debug] [Thread-2 (]: On test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select operational_flag
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+where operational_flag is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:50:01.920245 [info ] [Thread-1 (]: 6 of 10 START test unique_mart_vessel_risk_mmsi ................................ [RUN]
+[0m05:50:01.921245 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m05:50:01.922245 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:50:01.922245 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.portvessel.mart_port_congestion, now test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568)
+[0m05:50:01.923533 [debug] [Thread-1 (]: Began compiling node test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568
+[0m05:50:01.929534 [debug] [Thread-1 (]: Writing injected SQL for node "test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568"
+[0m05:50:01.930532 [debug] [Thread-1 (]: Began executing node test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568
+[0m05:50:01.931534 [debug] [Thread-1 (]: Writing runtime sql for node "test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568"
+[0m05:50:01.932530 [debug] [Thread-1 (]: On test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select mmsi as unique_field
+  from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+  where mmsi is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:50:01.932530 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:50:02.603808 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:e9021886-a266-44cf-baa1-d4550a1168ec&page=queryresults
+[0m05:50:02.610809 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:9371e3d7-f5a7-4f78-b04c-ac359c64c08b&page=queryresults
+[0m05:50:02.692621 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:09e04a21-37c3-41c3-a1c4-7e90738e6c70&page=queryresults
+[0m05:50:02.712622 [debug] [Thread-3 (]: SQL status: OK in 0.109 seconds
+[0m05:50:02.755225 [debug] [Thread-1 (]: SQL status: OK in 0.144 seconds
+[0m05:50:02.793884 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:c75612d1-4360-4032-835a-e203fc799e85&page=queryresults
+[0m05:50:02.807677 [debug] [Thread-2 (]: SQL status: OK in 0.115 seconds
+[0m05:50:02.881424 [debug] [Thread-4 (]: SQL status: OK in 0.088 seconds
+[0m05:50:02.937197 [info ] [Thread-3 (]: 4 of 10 PASS not_null_mart_vessel_risk_mmsi .................................... [[32mPASS[0m in 1.06s]
+[0m05:50:02.938200 [debug] [Thread-3 (]: Finished running node test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30
+[0m05:50:02.938200 [debug] [Thread-3 (]: Began running node test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065
+[0m05:50:02.939199 [info ] [Thread-3 (]: 7 of 10 START test dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1  [RUN]
+[0m05:50:02.939199 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30, now test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065)
+[0m05:50:02.939199 [debug] [Thread-3 (]: Began compiling node test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065
+[0m05:50:02.944200 [debug] [Thread-3 (]: Writing injected SQL for node "test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065"
+[0m05:50:02.945199 [debug] [Thread-3 (]: Began executing node test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065
+[0m05:50:02.946197 [debug] [Thread-3 (]: Writing runtime sql for node "test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065"
+[0m05:50:02.947197 [debug] [Thread-3 (]: On test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+select
+    1
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+
+where not(anchorage_call_rate between 0 and 1)
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:50:02.947197 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m05:50:02.959260 [info ] [Thread-1 (]: 6 of 10 PASS unique_mart_vessel_risk_mmsi ...................................... [[32mPASS[0m in 1.04s]
+[0m05:50:02.960260 [debug] [Thread-1 (]: Finished running node test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568
+[0m05:50:02.960260 [debug] [Thread-1 (]: Began running node test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1
+[0m05:50:02.960260 [info ] [Thread-1 (]: 8 of 10 START test not_null_mart_port_congestion_anchorage_call_rate ........... [RUN]
+[0m05:50:02.961260 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568, now test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1)
+[0m05:50:02.961260 [debug] [Thread-1 (]: Began compiling node test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1
+[0m05:50:02.966261 [debug] [Thread-1 (]: Writing injected SQL for node "test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1"
+[0m05:50:02.967261 [debug] [Thread-1 (]: Began executing node test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1
+[0m05:50:02.968261 [debug] [Thread-1 (]: Writing runtime sql for node "test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1"
+[0m05:50:02.968261 [debug] [Thread-1 (]: On test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select anchorage_call_rate
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+where anchorage_call_rate is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:50:02.969264 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:50:03.031279 [info ] [Thread-2 (]: 5 of 10 PASS not_null_mart_vessel_risk_operational_flag ........................ [[32mPASS[0m in 1.16s]
+[0m05:50:03.032280 [debug] [Thread-2 (]: Finished running node test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd
+[0m05:50:03.032280 [debug] [Thread-2 (]: Began running node test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2
+[0m05:50:03.032280 [info ] [Thread-2 (]: 9 of 10 START test not_null_mart_port_congestion_metric_date ................... [RUN]
+[0m05:50:03.033278 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd, now test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2)
+[0m05:50:03.033278 [debug] [Thread-2 (]: Began compiling node test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2
+[0m05:50:03.038279 [debug] [Thread-2 (]: Writing injected SQL for node "test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2"
+[0m05:50:03.039814 [debug] [Thread-2 (]: Began executing node test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2
+[0m05:50:03.040821 [debug] [Thread-2 (]: Writing runtime sql for node "test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2"
+[0m05:50:03.041821 [debug] [Thread-2 (]: On test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select metric_date
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+where metric_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:50:03.041821 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:50:03.081180 [info ] [Thread-4 (]: 3 of 10 PASS dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1  [[32mPASS[0m in 1.21s]
+[0m05:50:03.082180 [debug] [Thread-4 (]: Finished running node test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33
+[0m05:50:03.082180 [debug] [Thread-4 (]: Began running node test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79
+[0m05:50:03.082180 [info ] [Thread-4 (]: 10 of 10 START test not_null_mart_port_congestion_port_id ...................... [RUN]
+[0m05:50:03.083180 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33, now test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79)
+[0m05:50:03.083180 [debug] [Thread-4 (]: Began compiling node test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79
+[0m05:50:03.089180 [debug] [Thread-4 (]: Writing injected SQL for node "test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79"
+[0m05:50:03.090182 [debug] [Thread-4 (]: Began executing node test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79
+[0m05:50:03.091182 [debug] [Thread-4 (]: Writing runtime sql for node "test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79"
+[0m05:50:03.092182 [debug] [Thread-4 (]: On test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select port_id
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+where port_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:50:03.092182 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m05:50:03.580945 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:2b57cf4a-a828-4cd1-9337-6b2b61fb0011&page=queryresults
+[0m05:50:03.589945 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:e113b011-ef9c-489b-a781-f306fb0773cc&page=queryresults
+[0m05:50:03.686440 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:3e3372b7-aa95-4646-86fe-3d52fd4123b4&page=queryresults
+[0m05:50:03.687440 [debug] [Thread-1 (]: SQL status: OK in 0.106 seconds
+[0m05:50:03.707953 [debug] [Thread-3 (]: SQL status: OK in 0.118 seconds
+[0m05:50:03.836596 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:47f5a6f1-a405-413e-a4ac-3bdec2f974ef&page=queryresults
+[0m05:50:03.868277 [debug] [Thread-2 (]: SQL status: OK in 0.182 seconds
+[0m05:50:03.871339 [info ] [Thread-1 (]: 8 of 10 PASS not_null_mart_port_congestion_anchorage_call_rate ................. [[32mPASS[0m in 0.91s]
+[0m05:50:03.871339 [debug] [Thread-1 (]: Finished running node test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1
+[0m05:50:03.952137 [debug] [Thread-4 (]: SQL status: OK in 0.115 seconds
+[0m05:50:03.978512 [info ] [Thread-3 (]: 7 of 10 PASS dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1  [[32mPASS[0m in 1.04s]
+[0m05:50:03.978512 [debug] [Thread-3 (]: Finished running node test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065
+[0m05:50:04.068186 [info ] [Thread-2 (]: 9 of 10 PASS not_null_mart_port_congestion_metric_date ......................... [[32mPASS[0m in 1.03s]
+[0m05:50:04.069186 [debug] [Thread-2 (]: Finished running node test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2
+[0m05:50:04.142710 [info ] [Thread-4 (]: 10 of 10 PASS not_null_mart_port_congestion_port_id ............................ [[32mPASS[0m in 1.06s]
+[0m05:50:04.143885 [debug] [Thread-4 (]: Finished running node test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79
+[0m05:50:04.144886 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m05:50:04.144886 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:50:04.145884 [debug] [MainThread]: Connection 'list_cloudprojects-506123' was properly closed.
+[0m05:50:04.145884 [debug] [MainThread]: Connection 'list_cloudprojects-506123_portvessel_dev_marts' was properly closed.
+[0m05:50:04.145884 [debug] [MainThread]: Connection 'test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1' was properly closed.
+[0m05:50:04.145884 [debug] [MainThread]: Connection 'test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2' was properly closed.
+[0m05:50:04.146886 [debug] [MainThread]: Connection 'test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79' was properly closed.
+[0m05:50:04.146886 [debug] [MainThread]: Connection 'test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065' was properly closed.
+[0m05:50:04.146886 [info ] [MainThread]: 
+[0m05:50:04.147885 [info ] [MainThread]: Finished running 2 table models, 8 data tests in 0 hours 0 minutes and 7.03 seconds (7.03s).
+[0m05:50:04.148886 [debug] [MainThread]: Command end result
+[0m05:50:04.185082 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:50:04.187082 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:50:04.190082 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:50:04.195283 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\run_results.json
+[0m05:50:04.195283 [info ] [MainThread]: 
+[0m05:50:04.196283 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:50:04.196283 [info ] [MainThread]: 
+[0m05:50:04.196283 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=10
+[0m05:50:04.197284 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- PropertyMovedToConfigDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m05:50:04.197284 [debug] [MainThread]: Command `dbt build` succeeded at 05:50:04.197284 after 8.90 seconds
+[0m05:50:04.198283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF18589A00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF161817F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DF15E70380>]}
+[0m05:50:04.198283 [debug] [MainThread]: Flushing usage events
+[0m05:50:04.836381 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:56:36.119022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C593C97CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C593C95E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C593C97F50>]}
+
+
+============================== 05:56:36.123022 | 44a59923-c645-4551-aeee-3d7b1c11cb75 ==============================
+[0m05:56:36.123022 [info ] [MainThread]: Running with dbt=1.12.3
+[0m05:56:36.123022 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt clean', 'log_path': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m05:56:36.245709 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '44a59923-c645-4551-aeee-3d7b1c11cb75', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C593CE2EA0>]}
+[0m05:56:36.318785 [debug] [MainThread]: Command `dbt clean` succeeded at 05:56:36.318785 after 0.32 seconds
+[0m05:56:36.318785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5919F3E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C593EA4470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5920E2F60>]}
+[0m05:56:36.319783 [debug] [MainThread]: Flushing usage events
+[0m05:56:37.112020 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:56:40.994864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209A7F467E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209A7F467B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209A76DDD60>]}
+
+
+============================== 05:56:40.998865 | 47a57cf7-77c4-44b0-b319-a80028d15c2e ==============================
+[0m05:56:40.998865 [info ] [MainThread]: Running with dbt=1.12.3
+[0m05:56:40.998865 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt parse --no-partial-parse', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m05:56:42.240871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '47a57cf7-77c4-44b0-b319-a80028d15c2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209DCFA0410>]}
+[0m05:56:42.292785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '47a57cf7-77c4-44b0-b319-a80028d15c2e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209A89D5D90>]}
+[0m05:56:42.293785 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m05:56:42.632377 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Compilation Error
+  dbt expects 1 package(s) based on packages specified in packages.yml, but found only 0 package(s) installed in dbt_packages. Following packages were not found: dbt_utils. Run "dbt deps" to install package dependencies.
+[0m05:56:42.633377 [debug] [MainThread]: Command `dbt parse` failed at 05:56:42.633377 after 1.76 seconds
+[0m05:56:42.633377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209AA4FD1F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209DD231DF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000209DBBD2000>]}
+[0m05:56:42.634377 [debug] [MainThread]: Flushing usage events
+[0m05:56:43.285861 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:57:05.282147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002587CC6E1E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002587EC5DC40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002587D471F40>]}
+
+
+============================== 05:57:05.285366 | a15caceb-33f0-42d2-89cd-6ffc89dbf412 ==============================
+[0m05:57:05.285366 [info ] [MainThread]: Running with dbt=1.12.3
+[0m05:57:05.286367 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt deps', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m05:57:05.403948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a15caceb-33f0-42d2-89cd-6ffc89dbf412', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002580160C3B0>]}
+[0m05:57:05.428951 [debug] [MainThread]: Set downloads directory='C:\Users\magic\AppData\Local\Temp\dbt-downloads-r_n2tw0o'
+[0m05:57:05.428951 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m05:57:05.756697 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m05:57:05.757697 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m05:57:06.018915 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m05:57:06.023915 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m05:57:07.130281 [info ] [MainThread]: Installed from version 1.4.1
+[0m05:57:07.131279 [info ] [MainThread]: Up to date!
+[0m05:57:07.131279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'a15caceb-33f0-42d2-89cd-6ffc89dbf412', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002580185A240>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000258017B3DA0>]}
+[0m05:57:07.133280 [debug] [MainThread]: Command `dbt deps` succeeded at 05:57:07.133280 after 1.96 seconds
+[0m05:57:07.133280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002587F384470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002587F9A6BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002587EE2BCE0>]}
+[0m05:57:07.133280 [debug] [MainThread]: Flushing usage events
+[0m05:57:07.764419 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:57:14.383378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022310951610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223137FB560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022313265700>]}
+
+
+============================== 05:57:14.386378 | d0c45fe7-476a-41cb-9246-496ec005e922 ==============================
+[0m05:57:14.386378 [info ] [MainThread]: Running with dbt=1.12.3
+[0m05:57:14.387378 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt parse --no-partial-parse', 'log_path': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m05:57:15.387461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd0c45fe7-476a-41cb-9246-496ec005e922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022310CD6ED0>]}
+[0m05:57:15.437320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd0c45fe7-476a-41cb-9246-496ec005e922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022346490FB0>]}
+[0m05:57:15.438321 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m05:57:15.774402 [debug] [MainThread]: checksum: 5f143da5afd1a6b6298bff390d2cac426bc2fa3cddb0281a2f93c038cc305c8b, vars: {}, profile: portvessel, target: dev, version: 1.12.3
+[0m05:57:15.774402 [debug] [MainThread]: Partial parsing not enabled
+[0m05:57:15.781402 [warn ] [MainThread]: [[33mWARNING[0m][PropertyMovedToConfigDeprecation]: Deprecated functionality
+Found `loaded_at_field` as a top-level property of `sources[0].tables[0]` in
+file `models\sources.yml`. The `loaded_at_field` top-level property should be
+moved into the `config` of `sources[0].tables[0]`.
+[0m05:57:15.782403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'd0c45fe7-476a-41cb-9246-496ec005e922', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022348188170>]}
+[0m05:57:17.214308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd0c45fe7-476a-41cb-9246-496ec005e922', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022347D33710>]}
+[0m05:57:17.216821 [info ] [MainThread]: Performance info: C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\perf_info.json
+[0m05:57:17.304483 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:57:17.306485 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:57:17.328238 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:57:17.329240 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- PropertyMovedToConfigDeprecation: 2 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m05:57:17.330236 [debug] [MainThread]: Command `dbt parse` succeeded at 05:57:17.329240 after 3.06 seconds
+[0m05:57:17.330236 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223154D4AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223131B3860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000223131B1E50>]}
+[0m05:57:17.330236 [debug] [MainThread]: Flushing usage events
+[0m05:57:17.969084 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:57:23.844766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020715CA3140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207148D9220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020715A34470>]}
+
+
+============================== 05:57:23.847764 | a6839c08-ba0c-45f5-8a6c-50f6834bdfce ==============================
+[0m05:57:23.847764 [info ] [MainThread]: Running with dbt=1.12.3
+[0m05:57:23.848764 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt source freshness', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m05:57:25.009371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a6839c08-ba0c-45f5-8a6c-50f6834bdfce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020749DD6F00>]}
+[0m05:57:25.067631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a6839c08-ba0c-45f5-8a6c-50f6834bdfce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002074A01DBB0>]}
+[0m05:57:25.069160 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m05:57:25.562209 [debug] [MainThread]: checksum: 5f143da5afd1a6b6298bff390d2cac426bc2fa3cddb0281a2f93c038cc305c8b, vars: {}, profile: portvessel, target: dev, version: 1.12.3
+[0m05:57:25.735246 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:57:25.735246 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m05:57:25.736247 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:57:25.745246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a6839c08-ba0c-45f5-8a6c-50f6834bdfce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207130FDA00>]}
+[0m05:57:25.895326 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:57:25.899327 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:57:25.927408 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:57:25.943409 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a6839c08-ba0c-45f5-8a6c-50f6834bdfce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002074A76D6A0>]}
+[0m05:57:25.943409 [info ] [MainThread]: Found 2 models, 22 data tests, 4 sources, 678 macros
+[0m05:57:25.944410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a6839c08-ba0c-45f5-8a6c-50f6834bdfce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002074A3A0DA0>]}
+[0m05:57:25.946408 [info ] [MainThread]: 
+[0m05:57:25.947407 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m05:57:25.947407 [info ] [MainThread]: 
+[0m05:57:25.948407 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m05:57:25.951409 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123_portvessel_dev_marts'
+[0m05:57:25.952409 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:57:27.799185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a6839c08-ba0c-45f5-8a6c-50f6834bdfce', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002074A58CB30>]}
+[0m05:57:27.800184 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:57:27.800184 [info ] [MainThread]: Pulling freshness from warehouse metadata tables for 0 sources
+[0m05:57:27.808188 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+macro get_relation_last_modified
+[0m05:57:27.809197 [debug] [MainThread]: BigQuery adapter: Compilation Error
+  list object has no element 0
+  
+  > in macro get_relation_last_modified (macros\adapters\metadata.sql)
+  > called by <Unknown>
+[0m05:57:27.809197 [warn ] [MainThread]: Metadata freshness could not be computed in batch: Compilation Error
+  list object has no element 0
+  
+  > in macro get_relation_last_modified (macros\adapters\metadata.sql)
+  > called by <Unknown>
+[0m05:57:27.809197 [info ] [MainThread]: 1 of 2 SKIP source agg_port_congestion_daily ................................... [[33mSKIP[0m]
+[0m05:57:27.810196 [info ] [MainThread]: 2 of 2 SKIP source fct_anchorage_dwell ......................................... [[33mSKIP[0m]
+[0m05:57:27.810196 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:57:27.811193 [debug] [MainThread]: Connection 'list_cloudprojects-506123_portvessel_dev_marts' was properly closed.
+[0m05:57:27.811193 [info ] [MainThread]: 
+[0m05:57:27.811193 [info ] [MainThread]: Finished running 2 sources in 0 hours 0 minutes and 1.86 seconds (1.86s).
+[0m05:57:27.849064 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:57:27.852066 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:57:27.855065 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:57:27.857063 [debug] [MainThread]: Wrote artifact FreshnessResult to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\sources.json
+[0m05:57:27.858064 [info ] [MainThread]: Done.
+[0m05:57:27.858064 [debug] [MainThread]: Command `dbt source freshness` failed at 05:57:27.858064 after 4.12 seconds
+[0m05:57:27.859063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207176B6E70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020714F3A0C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020712E2C4A0>]}
+[0m05:57:27.859063 [debug] [MainThread]: Flushing usage events
+[0m05:57:28.500981 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m05:57:34.804448 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA2D68C170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA2F55EC60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA2F55E600>]}
+
+
+============================== 05:57:34.808448 | 1fbdc365-f5fe-41f9-9011-c833170b352d ==============================
+[0m05:57:34.808448 [info ] [MainThread]: Running with dbt=1.12.3
+[0m05:57:34.808448 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt build', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m05:57:35.795146 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1fbdc365-f5fe-41f9-9011-c833170b352d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA6383A4B0>]}
+[0m05:57:35.844427 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1fbdc365-f5fe-41f9-9011-c833170b352d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA649D2180>]}
+[0m05:57:35.845428 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m05:57:36.182553 [debug] [MainThread]: checksum: 5f143da5afd1a6b6298bff390d2cac426bc2fa3cddb0281a2f93c038cc305c8b, vars: {}, profile: portvessel, target: dev, version: 1.12.3
+[0m05:57:36.312072 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m05:57:36.312072 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m05:57:36.312072 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m05:57:36.319078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1fbdc365-f5fe-41f9-9011-c833170b352d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA2DC1B680>]}
+[0m05:57:36.428099 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:57:36.431100 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:57:36.449214 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:57:36.470090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1fbdc365-f5fe-41f9-9011-c833170b352d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA65538B30>]}
+[0m05:57:36.470090 [info ] [MainThread]: Found 2 models, 22 data tests, 4 sources, 678 macros
+[0m05:57:36.473090 [info ] [MainThread]: 
+[0m05:57:36.473090 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m05:57:36.474090 [info ] [MainThread]: 
+[0m05:57:36.474090 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m05:57:36.477091 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123'
+[0m05:57:36.477091 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:57:37.956119 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123_portvessel_dev_marts'
+[0m05:57:37.956119 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m05:57:38.482174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1fbdc365-f5fe-41f9-9011-c833170b352d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA64E600B0>]}
+[0m05:57:38.482174 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m05:57:38.487172 [debug] [Thread-1 (]: Began running node test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_metric_date.48383edd63
+[0m05:57:38.487172 [debug] [Thread-2 (]: Began running node test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_port_id.f09a7249f2
+[0m05:57:38.487172 [debug] [Thread-3 (]: Began running node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.f53942bfac
+[0m05:57:38.488173 [debug] [Thread-4 (]: Began running node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_entry_observed_at_utc.246bf70a3b
+[0m05:57:38.488173 [info ] [Thread-1 (]: 1 of 24 START test source_not_null_portvessel_gold_agg_port_congestion_daily_metric_date  [RUN]
+[0m05:57:38.488173 [info ] [Thread-2 (]: 2 of 24 START test source_not_null_portvessel_gold_agg_port_congestion_daily_port_id  [RUN]
+[0m05:57:38.489174 [info ] [Thread-3 (]: 3 of 24 START test source_not_null_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id  [RUN]
+[0m05:57:38.490172 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_metric_date.48383edd63'
+[0m05:57:38.489174 [info ] [Thread-4 (]: 4 of 24 START test source_not_null_portvessel_gold_fct_anchorage_dwell_entry_observed_at_utc  [RUN]
+[0m05:57:38.490172 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_port_id.f09a7249f2'
+[0m05:57:38.490172 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.f53942bfac'
+[0m05:57:38.491172 [debug] [Thread-1 (]: Began compiling node test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_metric_date.48383edd63
+[0m05:57:38.491172 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_entry_observed_at_utc.246bf70a3b'
+[0m05:57:38.491172 [debug] [Thread-2 (]: Began compiling node test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_port_id.f09a7249f2
+[0m05:57:38.492175 [debug] [Thread-3 (]: Began compiling node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.f53942bfac
+[0m05:57:38.505402 [debug] [Thread-1 (]: Writing injected SQL for node "test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_metric_date.48383edd63"
+[0m05:57:38.506403 [debug] [Thread-4 (]: Began compiling node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_entry_observed_at_utc.246bf70a3b
+[0m05:57:38.510918 [debug] [Thread-2 (]: Writing injected SQL for node "test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_port_id.f09a7249f2"
+[0m05:57:38.515914 [debug] [Thread-3 (]: Writing injected SQL for node "test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.f53942bfac"
+[0m05:57:38.519924 [debug] [Thread-4 (]: Writing injected SQL for node "test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_entry_observed_at_utc.246bf70a3b"
+[0m05:57:38.524565 [debug] [Thread-2 (]: Began executing node test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_port_id.f09a7249f2
+[0m05:57:38.524565 [debug] [Thread-4 (]: Began executing node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_entry_observed_at_utc.246bf70a3b
+[0m05:57:38.540072 [debug] [Thread-2 (]: Writing runtime sql for node "test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_port_id.f09a7249f2"
+[0m05:57:38.540072 [debug] [Thread-1 (]: Began executing node test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_metric_date.48383edd63
+[0m05:57:38.541074 [debug] [Thread-4 (]: Writing runtime sql for node "test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_entry_observed_at_utc.246bf70a3b"
+[0m05:57:38.542073 [debug] [Thread-3 (]: Began executing node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.f53942bfac
+[0m05:57:38.543074 [debug] [Thread-1 (]: Writing runtime sql for node "test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_metric_date.48383edd63"
+[0m05:57:38.544073 [debug] [Thread-3 (]: Writing runtime sql for node "test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.f53942bfac"
+[0m05:57:38.547074 [debug] [Thread-2 (]: On test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_port_id.f09a7249f2: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_port_id.f09a7249f2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select port_id
+from `cloudprojects-506123`.`portvessel_dev_gold`.`agg_port_congestion_daily`
+where port_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:38.547074 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m05:57:38.548073 [debug] [Thread-4 (]: On test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_entry_observed_at_utc.246bf70a3b: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_entry_observed_at_utc.246bf70a3b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select entry_observed_at_utc
+from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_anchorage_dwell`
+where entry_observed_at_utc is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:38.548073 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m05:57:38.549075 [debug] [Thread-1 (]: On test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_metric_date.48383edd63: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_metric_date.48383edd63"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select metric_date
+from `cloudprojects-506123`.`portvessel_dev_gold`.`agg_port_congestion_daily`
+where metric_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:38.549075 [debug] [Thread-3 (]: On test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.f53942bfac: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.f53942bfac"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select anchorage_dwell_id
+from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_anchorage_dwell`
+where anchorage_dwell_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:38.550072 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m05:57:38.550072 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m05:57:39.231144 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:741b9133-7d61-4ca5-84fb-091cb3a834d8&page=queryresults
+[0m05:57:39.235651 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:b1cbe058-6048-4663-af65-a01ed4e793fe&page=queryresults
+[0m05:57:39.247345 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:f28ef389-b7fc-4e26-ac4d-f74d28a5551e&page=queryresults
+[0m05:57:39.262983 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:1f1e03c1-a32e-43f6-83d3-69b667351f6e&page=queryresults
+[0m05:57:39.399233 [debug] [Thread-2 (]: SQL status: OK in 0.163 seconds
+[0m05:57:39.399233 [debug] [Thread-3 (]: SQL status: OK in 0.168 seconds
+[0m05:57:39.401231 [debug] [Thread-1 (]: SQL status: OK in 0.153 seconds
+[0m05:57:39.412231 [debug] [Thread-4 (]: SQL status: OK in 0.148 seconds
+[0m05:57:39.657842 [info ] [Thread-2 (]: 2 of 24 PASS source_not_null_portvessel_gold_agg_port_congestion_daily_port_id . [[32mPASS[0m in 1.17s]
+[0m05:57:39.658841 [debug] [Thread-2 (]: Finished running node test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_port_id.f09a7249f2
+[0m05:57:39.659837 [debug] [Thread-2 (]: Began running node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_exit_observed_at_utc.4ce86b2423
+[0m05:57:39.659837 [info ] [Thread-2 (]: 5 of 24 START test source_not_null_portvessel_gold_fct_anchorage_dwell_exit_observed_at_utc  [RUN]
+[0m05:57:39.659837 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_port_id.f09a7249f2, now test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_exit_observed_at_utc.4ce86b2423)
+[0m05:57:39.660838 [debug] [Thread-2 (]: Began compiling node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_exit_observed_at_utc.4ce86b2423
+[0m05:57:39.666020 [debug] [Thread-2 (]: Writing injected SQL for node "test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_exit_observed_at_utc.4ce86b2423"
+[0m05:57:39.667022 [debug] [Thread-2 (]: Began executing node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_exit_observed_at_utc.4ce86b2423
+[0m05:57:39.668020 [debug] [Thread-2 (]: Writing runtime sql for node "test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_exit_observed_at_utc.4ce86b2423"
+[0m05:57:39.669019 [debug] [Thread-2 (]: On test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_exit_observed_at_utc.4ce86b2423: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_exit_observed_at_utc.4ce86b2423"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select exit_observed_at_utc
+from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_anchorage_dwell`
+where exit_observed_at_utc is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:39.669019 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:57:39.711822 [info ] [Thread-1 (]: 1 of 24 PASS source_not_null_portvessel_gold_agg_port_congestion_daily_metric_date  [[32mPASS[0m in 1.22s]
+[0m05:57:39.711822 [debug] [Thread-1 (]: Finished running node test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_metric_date.48383edd63
+[0m05:57:39.712828 [debug] [Thread-1 (]: Began running node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_mmsi.22b13e5ded
+[0m05:57:39.712828 [info ] [Thread-1 (]: 6 of 24 START test source_not_null_portvessel_gold_fct_anchorage_dwell_mmsi .... [RUN]
+[0m05:57:39.713827 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.portvessel.source_not_null_portvessel_gold_agg_port_congestion_daily_metric_date.48383edd63, now test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_mmsi.22b13e5ded)
+[0m05:57:39.713827 [debug] [Thread-1 (]: Began compiling node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_mmsi.22b13e5ded
+[0m05:57:39.719425 [debug] [Thread-1 (]: Writing injected SQL for node "test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_mmsi.22b13e5ded"
+[0m05:57:39.720426 [debug] [Thread-1 (]: Began executing node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_mmsi.22b13e5ded
+[0m05:57:39.721425 [debug] [Thread-1 (]: Writing runtime sql for node "test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_mmsi.22b13e5ded"
+[0m05:57:39.722426 [debug] [Thread-1 (]: On test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_mmsi.22b13e5ded: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_mmsi.22b13e5ded"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select mmsi
+from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_anchorage_dwell`
+where mmsi is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:39.722426 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:57:39.735238 [info ] [Thread-4 (]: 4 of 24 PASS source_not_null_portvessel_gold_fct_anchorage_dwell_entry_observed_at_utc  [[32mPASS[0m in 1.24s]
+[0m05:57:39.735238 [debug] [Thread-4 (]: Finished running node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_entry_observed_at_utc.246bf70a3b
+[0m05:57:39.736239 [debug] [Thread-4 (]: Began running node test.portvessel.source_not_null_portvessel_gold_fct_port_call_arrival_observed_at_utc.912518b878
+[0m05:57:39.736239 [info ] [Thread-4 (]: 7 of 24 START test source_not_null_portvessel_gold_fct_port_call_arrival_observed_at_utc  [RUN]
+[0m05:57:39.737238 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_entry_observed_at_utc.246bf70a3b, now test.portvessel.source_not_null_portvessel_gold_fct_port_call_arrival_observed_at_utc.912518b878)
+[0m05:57:39.737238 [debug] [Thread-4 (]: Began compiling node test.portvessel.source_not_null_portvessel_gold_fct_port_call_arrival_observed_at_utc.912518b878
+[0m05:57:39.743238 [debug] [Thread-4 (]: Writing injected SQL for node "test.portvessel.source_not_null_portvessel_gold_fct_port_call_arrival_observed_at_utc.912518b878"
+[0m05:57:39.744239 [debug] [Thread-4 (]: Began executing node test.portvessel.source_not_null_portvessel_gold_fct_port_call_arrival_observed_at_utc.912518b878
+[0m05:57:39.745239 [debug] [Thread-4 (]: Writing runtime sql for node "test.portvessel.source_not_null_portvessel_gold_fct_port_call_arrival_observed_at_utc.912518b878"
+[0m05:57:39.746239 [debug] [Thread-4 (]: On test.portvessel.source_not_null_portvessel_gold_fct_port_call_arrival_observed_at_utc.912518b878: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_not_null_portvessel_gold_fct_port_call_arrival_observed_at_utc.912518b878"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select arrival_observed_at_utc
+from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_port_call`
+where arrival_observed_at_utc is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:39.746239 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m05:57:39.781239 [info ] [Thread-3 (]: 3 of 24 PASS source_not_null_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id  [[32mPASS[0m in 1.29s]
+[0m05:57:39.782238 [debug] [Thread-3 (]: Finished running node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.f53942bfac
+[0m05:57:39.782238 [debug] [Thread-3 (]: Began running node test.portvessel.source_not_null_portvessel_gold_fct_port_call_mmsi.a3782606f6
+[0m05:57:39.783239 [info ] [Thread-3 (]: 8 of 24 START test source_not_null_portvessel_gold_fct_port_call_mmsi .......... [RUN]
+[0m05:57:39.783239 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.f53942bfac, now test.portvessel.source_not_null_portvessel_gold_fct_port_call_mmsi.a3782606f6)
+[0m05:57:39.783239 [debug] [Thread-3 (]: Began compiling node test.portvessel.source_not_null_portvessel_gold_fct_port_call_mmsi.a3782606f6
+[0m05:57:39.789533 [debug] [Thread-3 (]: Writing injected SQL for node "test.portvessel.source_not_null_portvessel_gold_fct_port_call_mmsi.a3782606f6"
+[0m05:57:39.790532 [debug] [Thread-3 (]: Began executing node test.portvessel.source_not_null_portvessel_gold_fct_port_call_mmsi.a3782606f6
+[0m05:57:39.791533 [debug] [Thread-3 (]: Writing runtime sql for node "test.portvessel.source_not_null_portvessel_gold_fct_port_call_mmsi.a3782606f6"
+[0m05:57:39.792534 [debug] [Thread-3 (]: On test.portvessel.source_not_null_portvessel_gold_fct_port_call_mmsi.a3782606f6: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_not_null_portvessel_gold_fct_port_call_mmsi.a3782606f6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select mmsi
+from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_port_call`
+where mmsi is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:39.792534 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m05:57:40.234837 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:3f1f54d6-2106-48a7-afee-bb3ad379dec0&page=queryresults
+[0m05:57:40.250494 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:62896a82-c606-4527-9577-5f45ccc60983&page=queryresults
+[0m05:57:40.322700 [debug] [Thread-1 (]: SQL status: OK in 0.072 seconds
+[0m05:57:40.363645 [debug] [Thread-2 (]: SQL status: OK in 0.129 seconds
+[0m05:57:40.374644 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:420a4fed-d5bd-4710-a853-7bbe45ceb949&page=queryresults
+[0m05:57:40.385944 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:95574ff9-a30f-4a97-9005-19584843a196&page=queryresults
+[0m05:57:40.494577 [debug] [Thread-3 (]: SQL status: OK in 0.109 seconds
+[0m05:57:40.518227 [debug] [Thread-4 (]: SQL status: OK in 0.143 seconds
+[0m05:57:40.585467 [info ] [Thread-2 (]: 5 of 24 PASS source_not_null_portvessel_gold_fct_anchorage_dwell_exit_observed_at_utc  [[32mPASS[0m in 0.93s]
+[0m05:57:40.586467 [debug] [Thread-2 (]: Finished running node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_exit_observed_at_utc.4ce86b2423
+[0m05:57:40.586467 [debug] [Thread-2 (]: Began running node test.portvessel.source_not_null_portvessel_gold_fct_port_call_port_call_id.7a5ddefa85
+[0m05:57:40.586467 [info ] [Thread-2 (]: 9 of 24 START test source_not_null_portvessel_gold_fct_port_call_port_call_id .. [RUN]
+[0m05:57:40.587468 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_exit_observed_at_utc.4ce86b2423, now test.portvessel.source_not_null_portvessel_gold_fct_port_call_port_call_id.7a5ddefa85)
+[0m05:57:40.587468 [debug] [Thread-2 (]: Began compiling node test.portvessel.source_not_null_portvessel_gold_fct_port_call_port_call_id.7a5ddefa85
+[0m05:57:40.592468 [debug] [Thread-2 (]: Writing injected SQL for node "test.portvessel.source_not_null_portvessel_gold_fct_port_call_port_call_id.7a5ddefa85"
+[0m05:57:40.593624 [info ] [Thread-1 (]: 6 of 24 PASS source_not_null_portvessel_gold_fct_anchorage_dwell_mmsi .......... [[32mPASS[0m in 0.88s]
+[0m05:57:40.594626 [debug] [Thread-1 (]: Finished running node test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_mmsi.22b13e5ded
+[0m05:57:40.594626 [debug] [Thread-1 (]: Began running node test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_mmsi.5de8d6a52f
+[0m05:57:40.595626 [info ] [Thread-1 (]: 10 of 24 START test source_not_null_portvessel_gold_vessel_operational_risk_flags_mmsi  [RUN]
+[0m05:57:40.595626 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.portvessel.source_not_null_portvessel_gold_fct_anchorage_dwell_mmsi.22b13e5ded, now test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_mmsi.5de8d6a52f)
+[0m05:57:40.596624 [debug] [Thread-2 (]: Began executing node test.portvessel.source_not_null_portvessel_gold_fct_port_call_port_call_id.7a5ddefa85
+[0m05:57:40.596624 [debug] [Thread-1 (]: Began compiling node test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_mmsi.5de8d6a52f
+[0m05:57:40.597623 [debug] [Thread-2 (]: Writing runtime sql for node "test.portvessel.source_not_null_portvessel_gold_fct_port_call_port_call_id.7a5ddefa85"
+[0m05:57:40.602623 [debug] [Thread-1 (]: Writing injected SQL for node "test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_mmsi.5de8d6a52f"
+[0m05:57:40.603625 [debug] [Thread-1 (]: Began executing node test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_mmsi.5de8d6a52f
+[0m05:57:40.604623 [debug] [Thread-2 (]: On test.portvessel.source_not_null_portvessel_gold_fct_port_call_port_call_id.7a5ddefa85: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_not_null_portvessel_gold_fct_port_call_port_call_id.7a5ddefa85"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select port_call_id
+from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_port_call`
+where port_call_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:40.605626 [debug] [Thread-1 (]: Writing runtime sql for node "test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_mmsi.5de8d6a52f"
+[0m05:57:40.605626 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:57:40.606622 [debug] [Thread-1 (]: On test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_mmsi.5de8d6a52f: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_mmsi.5de8d6a52f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select mmsi
+from `cloudprojects-506123`.`portvessel_dev_gold`.`vessel_operational_risk_flags`
+where mmsi is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:40.607622 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:57:40.678631 [info ] [Thread-3 (]: 8 of 24 PASS source_not_null_portvessel_gold_fct_port_call_mmsi ................ [[32mPASS[0m in 0.90s]
+[0m05:57:40.679633 [debug] [Thread-3 (]: Finished running node test.portvessel.source_not_null_portvessel_gold_fct_port_call_mmsi.a3782606f6
+[0m05:57:40.679633 [debug] [Thread-3 (]: Began running node test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_operational_flag.0da4b168a1
+[0m05:57:40.679633 [info ] [Thread-3 (]: 11 of 24 START test source_not_null_portvessel_gold_vessel_operational_risk_flags_operational_flag  [RUN]
+[0m05:57:40.680631 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.portvessel.source_not_null_portvessel_gold_fct_port_call_mmsi.a3782606f6, now test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_operational_flag.0da4b168a1)
+[0m05:57:40.680631 [debug] [Thread-3 (]: Began compiling node test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_operational_flag.0da4b168a1
+[0m05:57:40.685907 [debug] [Thread-3 (]: Writing injected SQL for node "test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_operational_flag.0da4b168a1"
+[0m05:57:40.686906 [debug] [Thread-3 (]: Began executing node test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_operational_flag.0da4b168a1
+[0m05:57:40.687906 [debug] [Thread-3 (]: Writing runtime sql for node "test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_operational_flag.0da4b168a1"
+[0m05:57:40.688907 [debug] [Thread-3 (]: On test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_operational_flag.0da4b168a1: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_operational_flag.0da4b168a1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select operational_flag
+from `cloudprojects-506123`.`portvessel_dev_gold`.`vessel_operational_risk_flags`
+where operational_flag is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:40.689906 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m05:57:40.816095 [info ] [Thread-4 (]: 7 of 24 PASS source_not_null_portvessel_gold_fct_port_call_arrival_observed_at_utc  [[32mPASS[0m in 1.08s]
+[0m05:57:40.817096 [debug] [Thread-4 (]: Finished running node test.portvessel.source_not_null_portvessel_gold_fct_port_call_arrival_observed_at_utc.912518b878
+[0m05:57:40.817096 [debug] [Thread-4 (]: Began running node test.portvessel.source_unique_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.c6b3ee12e6
+[0m05:57:40.817096 [info ] [Thread-4 (]: 12 of 24 START test source_unique_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id  [RUN]
+[0m05:57:40.818094 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.portvessel.source_not_null_portvessel_gold_fct_port_call_arrival_observed_at_utc.912518b878, now test.portvessel.source_unique_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.c6b3ee12e6)
+[0m05:57:40.818094 [debug] [Thread-4 (]: Began compiling node test.portvessel.source_unique_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.c6b3ee12e6
+[0m05:57:40.825100 [debug] [Thread-4 (]: Writing injected SQL for node "test.portvessel.source_unique_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.c6b3ee12e6"
+[0m05:57:40.826099 [debug] [Thread-4 (]: Began executing node test.portvessel.source_unique_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.c6b3ee12e6
+[0m05:57:40.827100 [debug] [Thread-4 (]: Writing runtime sql for node "test.portvessel.source_unique_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.c6b3ee12e6"
+[0m05:57:40.828099 [debug] [Thread-4 (]: On test.portvessel.source_unique_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.c6b3ee12e6: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_unique_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.c6b3ee12e6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select anchorage_dwell_id as unique_field
+  from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_anchorage_dwell`
+  where anchorage_dwell_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:40.828099 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m05:57:41.162870 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:7f89c69e-d8f9-47bf-87a8-9069c0a7d9ed&page=queryresults
+[0m05:57:41.230140 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:12fd759f-a22d-4d23-8f46-2043baf146aa&page=queryresults
+[0m05:57:41.269598 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:12f1d06d-299c-4831-ab40-b6f289b92570&page=queryresults
+[0m05:57:41.305877 [debug] [Thread-2 (]: SQL status: OK in 0.143 seconds
+[0m05:57:41.314534 [debug] [Thread-1 (]: SQL status: OK in 0.084 seconds
+[0m05:57:41.414595 [debug] [Thread-3 (]: SQL status: OK in 0.144 seconds
+[0m05:57:41.432599 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:d1a7ccaf-7125-47c7-ac14-875386234de7&page=queryresults
+[0m05:57:41.472011 [info ] [Thread-2 (]: 9 of 24 PASS source_not_null_portvessel_gold_fct_port_call_port_call_id ........ [[32mPASS[0m in 0.88s]
+[0m05:57:41.473011 [debug] [Thread-2 (]: Finished running node test.portvessel.source_not_null_portvessel_gold_fct_port_call_port_call_id.7a5ddefa85
+[0m05:57:41.473011 [debug] [Thread-2 (]: Began running node test.portvessel.source_unique_portvessel_gold_fct_port_call_port_call_id.953d20cae7
+[0m05:57:41.473011 [info ] [Thread-2 (]: 13 of 24 START test source_unique_portvessel_gold_fct_port_call_port_call_id ... [RUN]
+[0m05:57:41.474013 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.portvessel.source_not_null_portvessel_gold_fct_port_call_port_call_id.7a5ddefa85, now test.portvessel.source_unique_portvessel_gold_fct_port_call_port_call_id.953d20cae7)
+[0m05:57:41.474013 [debug] [Thread-2 (]: Began compiling node test.portvessel.source_unique_portvessel_gold_fct_port_call_port_call_id.953d20cae7
+[0m05:57:41.479015 [debug] [Thread-2 (]: Writing injected SQL for node "test.portvessel.source_unique_portvessel_gold_fct_port_call_port_call_id.953d20cae7"
+[0m05:57:41.484063 [info ] [Thread-1 (]: 10 of 24 PASS source_not_null_portvessel_gold_vessel_operational_risk_flags_mmsi  [[32mPASS[0m in 0.89s]
+[0m05:57:41.484063 [debug] [Thread-1 (]: Finished running node test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_mmsi.5de8d6a52f
+[0m05:57:41.484063 [debug] [Thread-1 (]: Began running node test.portvessel.source_unique_portvessel_gold_vessel_operational_risk_flags_mmsi.2659b8de7c
+[0m05:57:41.485576 [info ] [Thread-1 (]: 14 of 24 START test source_unique_portvessel_gold_vessel_operational_risk_flags_mmsi  [RUN]
+[0m05:57:41.485576 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_mmsi.5de8d6a52f, now test.portvessel.source_unique_portvessel_gold_vessel_operational_risk_flags_mmsi.2659b8de7c)
+[0m05:57:41.485576 [debug] [Thread-1 (]: Began compiling node test.portvessel.source_unique_portvessel_gold_vessel_operational_risk_flags_mmsi.2659b8de7c
+[0m05:57:41.490619 [debug] [Thread-1 (]: Writing injected SQL for node "test.portvessel.source_unique_portvessel_gold_vessel_operational_risk_flags_mmsi.2659b8de7c"
+[0m05:57:41.491620 [debug] [Thread-2 (]: Began executing node test.portvessel.source_unique_portvessel_gold_fct_port_call_port_call_id.953d20cae7
+[0m05:57:41.492950 [debug] [Thread-2 (]: Writing runtime sql for node "test.portvessel.source_unique_portvessel_gold_fct_port_call_port_call_id.953d20cae7"
+[0m05:57:41.492950 [debug] [Thread-1 (]: Began executing node test.portvessel.source_unique_portvessel_gold_vessel_operational_risk_flags_mmsi.2659b8de7c
+[0m05:57:41.493953 [debug] [Thread-1 (]: Writing runtime sql for node "test.portvessel.source_unique_portvessel_gold_vessel_operational_risk_flags_mmsi.2659b8de7c"
+[0m05:57:41.494953 [debug] [Thread-2 (]: On test.portvessel.source_unique_portvessel_gold_fct_port_call_port_call_id.953d20cae7: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_unique_portvessel_gold_fct_port_call_port_call_id.953d20cae7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select port_call_id as unique_field
+  from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_port_call`
+  where port_call_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:41.494953 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:57:41.495952 [debug] [Thread-1 (]: On test.portvessel.source_unique_portvessel_gold_vessel_operational_risk_flags_mmsi.2659b8de7c: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.source_unique_portvessel_gold_vessel_operational_risk_flags_mmsi.2659b8de7c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select mmsi as unique_field
+  from `cloudprojects-506123`.`portvessel_dev_gold`.`vessel_operational_risk_flags`
+  where mmsi is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:41.495952 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:57:41.527541 [debug] [Thread-4 (]: SQL status: OK in 0.094 seconds
+[0m05:57:41.598443 [info ] [Thread-3 (]: 11 of 24 PASS source_not_null_portvessel_gold_vessel_operational_risk_flags_operational_flag  [[32mPASS[0m in 0.92s]
+[0m05:57:41.599444 [debug] [Thread-3 (]: Finished running node test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_operational_flag.0da4b168a1
+[0m05:57:41.599444 [debug] [Thread-3 (]: Began running node model.portvessel.mart_port_congestion
+[0m05:57:41.600444 [info ] [Thread-3 (]: 15 of 24 START sql table model portvessel_dev_marts.mart_port_congestion ....... [RUN]
+[0m05:57:41.600444 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.portvessel.source_not_null_portvessel_gold_vessel_operational_risk_flags_operational_flag.0da4b168a1, now model.portvessel.mart_port_congestion)
+[0m05:57:41.600444 [debug] [Thread-3 (]: Began compiling node model.portvessel.mart_port_congestion
+[0m05:57:41.603443 [debug] [Thread-3 (]: Writing injected SQL for node "model.portvessel.mart_port_congestion"
+[0m05:57:41.604444 [debug] [Thread-3 (]: Began executing node model.portvessel.mart_port_congestion
+[0m05:57:41.618709 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m05:57:41.701767 [info ] [Thread-4 (]: 12 of 24 PASS source_unique_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id  [[32mPASS[0m in 0.88s]
+[0m05:57:41.702768 [debug] [Thread-4 (]: Finished running node test.portvessel.source_unique_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.c6b3ee12e6
+[0m05:57:42.020225 [debug] [Thread-3 (]: Writing runtime sql for node "model.portvessel.mart_port_congestion"
+[0m05:57:42.021224 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:b27112eb-37fd-49f1-bc18-9c034b8eb7c2&page=queryresults
+[0m05:57:42.022224 [debug] [Thread-3 (]: On model.portvessel.mart_port_congestion: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "model.portvessel.mart_port_congestion"} */
+
+  
+    
+
+    create or replace table `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+      
+    partition by metric_date
+    cluster by port_id
+
+    
+    OPTIONS(
+      description="""Daily port congestion mart."""
+    )
+    as (
+      
+
+with source_data as (
+    select
+        metric_date,
+        port_id,
+        port_name,
+        observed_port_calls,
+        observed_vessels,
+        port_calls_with_anchorage,
+        median_port_duration_minutes,
+        p90_port_duration_minutes,
+        mean_port_duration_minutes,
+        observed_with_anchorage_calls,
+        partial_calls,
+        source_object,
+        source_sha256,
+        loaded_at_utc,
+        ingestion_run_id
+    from `cloudprojects-506123`.`portvessel_dev_gold`.`agg_port_congestion_daily`
+),
+
+final as (
+    select
+        metric_date,
+        port_id,
+        port_name,
+        observed_port_calls,
+        observed_vessels,
+        port_calls_with_anchorage,
+        safe_divide(port_calls_with_anchorage, nullif(observed_port_calls, 0))
+            as anchorage_call_rate,
+        median_port_duration_minutes,
+        p90_port_duration_minutes,
+        mean_port_duration_minutes,
+        observed_with_anchorage_calls,
+        partial_calls,
+        source_object,
+        source_sha256,
+        loaded_at_utc,
+        ingestion_run_id
+    from source_data
+)
+
+select * from final
+    );
+  
+[0m05:57:42.065709 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:63458995-7bbf-4976-a3a5-3715ae818777&page=queryresults
+[0m05:57:42.091625 [debug] [Thread-1 (]: SQL status: OK in 0.070 seconds
+[0m05:57:42.160074 [debug] [Thread-2 (]: SQL status: OK in 0.094 seconds
+[0m05:57:42.236935 [info ] [Thread-1 (]: 14 of 24 PASS source_unique_portvessel_gold_vessel_operational_risk_flags_mmsi . [[32mPASS[0m in 0.75s]
+[0m05:57:42.236935 [debug] [Thread-1 (]: Finished running node test.portvessel.source_unique_portvessel_gold_vessel_operational_risk_flags_mmsi.2659b8de7c
+[0m05:57:42.237937 [debug] [Thread-4 (]: Began running node model.portvessel.mart_vessel_risk
+[0m05:57:42.237937 [info ] [Thread-4 (]: 16 of 24 START sql table model portvessel_dev_marts.mart_vessel_risk ........... [RUN]
+[0m05:57:42.238935 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.portvessel.source_unique_portvessel_gold_fct_anchorage_dwell_anchorage_dwell_id.c6b3ee12e6, now model.portvessel.mart_vessel_risk)
+[0m05:57:42.238935 [debug] [Thread-4 (]: Began compiling node model.portvessel.mart_vessel_risk
+[0m05:57:42.240935 [debug] [Thread-4 (]: Writing injected SQL for node "model.portvessel.mart_vessel_risk"
+[0m05:57:42.241936 [debug] [Thread-4 (]: Began executing node model.portvessel.mart_vessel_risk
+[0m05:57:42.242936 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m05:57:42.361566 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:914db88f-e590-4be9-85e3-dddcf355343f&page=queryresults
+[0m05:57:42.365745 [info ] [Thread-2 (]: 13 of 24 PASS source_unique_portvessel_gold_fct_port_call_port_call_id ......... [[32mPASS[0m in 0.89s]
+[0m05:57:42.365745 [debug] [Thread-2 (]: Finished running node test.portvessel.source_unique_portvessel_gold_fct_port_call_port_call_id.953d20cae7
+[0m05:57:42.563009 [debug] [Thread-4 (]: Writing runtime sql for node "model.portvessel.mart_vessel_risk"
+[0m05:57:42.564008 [debug] [Thread-4 (]: On model.portvessel.mart_vessel_risk: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "model.portvessel.mart_vessel_risk"} */
+
+  
+    
+
+    create or replace table `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+      
+    
+    cluster by mmsi, operational_flag
+
+    
+    OPTIONS(
+      description="""Vessel operational risk mart."""
+    )
+    as (
+      
+
+with risk_data as (
+    select
+        mmsi,
+        port_call_count,
+        port_calls_with_anchorage,
+        partial_port_calls,
+        persistent_anchorage_episode_count,
+        max_port_duration_minutes,
+        mean_port_duration_minutes,
+        max_persistent_anchorage_dwell_minutes,
+        mean_persistent_anchorage_dwell_minutes,
+        max_observation_gap_minutes,
+        operational_flag,
+        source_object,
+        source_sha256,
+        loaded_at_utc,
+        ingestion_run_id
+    from `cloudprojects-506123`.`portvessel_dev_gold`.`vessel_operational_risk_flags`
+),
+
+final as (
+    select
+        mmsi,
+        port_call_count,
+        port_calls_with_anchorage,
+        safe_divide(
+            port_calls_with_anchorage,
+            nullif(port_call_count, 0)
+        ) as anchorage_call_rate,
+        partial_port_calls,
+        persistent_anchorage_episode_count,
+        max_port_duration_minutes,
+        mean_port_duration_minutes,
+        max_persistent_anchorage_dwell_minutes,
+        mean_persistent_anchorage_dwell_minutes,
+        max_observation_gap_minutes,
+        operational_flag,
+        source_object,
+        source_sha256,
+        loaded_at_utc,
+        ingestion_run_id
+    from risk_data
+)
+
+select * from final
+    );
+  
+[0m05:57:42.818079 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:e4087b73-956c-455c-b1e8-69150ffef57f&page=queryresults
+[0m05:57:43.413340 [debug] [Thread-3 (]: SQL status: OK in 1.052 seconds
+[0m05:57:43.830328 [debug] [Thread-4 (]: SQL status: OK in 1.012 seconds
+[0m05:57:44.231153 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1fbdc365-f5fe-41f9-9011-c833170b352d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA6559F0B0>]}
+[0m05:57:44.231153 [info ] [Thread-3 (]: 15 of 24 OK created sql table model portvessel_dev_marts.mart_port_congestion .. [[32mCREATE TABLE (4.0 rows, 1.3 KiB processed)[0m in 2.63s]
+[0m05:57:44.232155 [debug] [Thread-3 (]: Finished running node model.portvessel.mart_port_congestion
+[0m05:57:44.233154 [debug] [Thread-1 (]: Began running node test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065
+[0m05:57:44.233154 [debug] [Thread-2 (]: Began running node test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1
+[0m05:57:44.233154 [debug] [Thread-3 (]: Began running node test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2
+[0m05:57:44.233154 [info ] [Thread-1 (]: 17 of 24 START test dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1  [RUN]
+[0m05:57:44.234153 [info ] [Thread-2 (]: 18 of 24 START test not_null_mart_port_congestion_anchorage_call_rate .......... [RUN]
+[0m05:57:44.234153 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.portvessel.source_unique_portvessel_gold_vessel_operational_risk_flags_mmsi.2659b8de7c, now test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065)
+[0m05:57:44.235154 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.portvessel.source_unique_portvessel_gold_fct_port_call_port_call_id.953d20cae7, now test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1)
+[0m05:57:44.234153 [info ] [Thread-3 (]: 19 of 24 START test not_null_mart_port_congestion_metric_date .................. [RUN]
+[0m05:57:44.235154 [debug] [Thread-1 (]: Began compiling node test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065
+[0m05:57:44.235154 [debug] [Thread-2 (]: Began compiling node test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1
+[0m05:57:44.236155 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.portvessel.mart_port_congestion, now test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2)
+[0m05:57:44.245666 [debug] [Thread-1 (]: Writing injected SQL for node "test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065"
+[0m05:57:44.251665 [debug] [Thread-2 (]: Writing injected SQL for node "test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1"
+[0m05:57:44.252666 [debug] [Thread-3 (]: Began compiling node test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2
+[0m05:57:44.256665 [debug] [Thread-3 (]: Writing injected SQL for node "test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2"
+[0m05:57:44.257667 [debug] [Thread-2 (]: Began executing node test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1
+[0m05:57:44.258363 [debug] [Thread-2 (]: Writing runtime sql for node "test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1"
+[0m05:57:44.259367 [debug] [Thread-2 (]: On test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select anchorage_call_rate
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+where anchorage_call_rate is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:44.259367 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:57:44.266969 [debug] [Thread-1 (]: Began executing node test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065
+[0m05:57:44.267976 [debug] [Thread-1 (]: Writing runtime sql for node "test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065"
+[0m05:57:44.267976 [debug] [Thread-3 (]: Began executing node test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2
+[0m05:57:44.269974 [debug] [Thread-3 (]: Writing runtime sql for node "test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2"
+[0m05:57:44.269974 [debug] [Thread-1 (]: On test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+select
+    1
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+
+where not(anchorage_call_rate between 0 and 1)
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:44.270975 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:57:44.270975 [debug] [Thread-3 (]: On test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select metric_date
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+where metric_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:44.271975 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m05:57:44.631568 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1fbdc365-f5fe-41f9-9011-c833170b352d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA65539FD0>]}
+[0m05:57:44.632568 [info ] [Thread-4 (]: 16 of 24 OK created sql table model portvessel_dev_marts.mart_vessel_risk ...... [[32mCREATE TABLE (428.0 rows, 117.3 KiB processed)[0m in 2.39s]
+[0m05:57:44.632568 [debug] [Thread-4 (]: Finished running node model.portvessel.mart_vessel_risk
+[0m05:57:44.632568 [debug] [Thread-4 (]: Began running node test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79
+[0m05:57:44.633567 [info ] [Thread-4 (]: 20 of 24 START test not_null_mart_port_congestion_port_id ...................... [RUN]
+[0m05:57:44.633567 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.portvessel.mart_vessel_risk, now test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79)
+[0m05:57:44.634567 [debug] [Thread-4 (]: Began compiling node test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79
+[0m05:57:44.638649 [debug] [Thread-4 (]: Writing injected SQL for node "test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79"
+[0m05:57:44.639650 [debug] [Thread-4 (]: Began executing node test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79
+[0m05:57:44.640652 [debug] [Thread-4 (]: Writing runtime sql for node "test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79"
+[0m05:57:44.641650 [debug] [Thread-4 (]: On test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select port_id
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_port_congestion`
+where port_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:44.641650 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m05:57:44.831435 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:68b0e7a4-77cf-4af0-869a-23d82451b3a6&page=queryresults
+[0m05:57:44.885358 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:345f4263-3c78-4175-af0e-77c3a6b4a079&page=queryresults
+[0m05:57:44.896358 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:c69f884a-f12a-40f2-8873-63d7e20e380c&page=queryresults
+[0m05:57:44.959577 [debug] [Thread-3 (]: SQL status: OK in 0.074 seconds
+[0m05:57:44.994864 [debug] [Thread-2 (]: SQL status: OK in 0.163 seconds
+[0m05:57:45.008038 [debug] [Thread-1 (]: SQL status: OK in 0.112 seconds
+[0m05:57:45.135976 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:86144f56-f506-4cc5-8c71-db483b2b7308&page=queryresults
+[0m05:57:45.150003 [info ] [Thread-2 (]: 18 of 24 PASS not_null_mart_port_congestion_anchorage_call_rate ................ [[32mPASS[0m in 0.91s]
+[0m05:57:45.151004 [debug] [Thread-2 (]: Finished running node test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1
+[0m05:57:45.151004 [debug] [Thread-2 (]: Began running node test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33
+[0m05:57:45.152004 [info ] [Thread-2 (]: 21 of 24 START test dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1  [RUN]
+[0m05:57:45.152004 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.portvessel.not_null_mart_port_congestion_anchorage_call_rate.f16ef228d1, now test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33)
+[0m05:57:45.153004 [debug] [Thread-2 (]: Began compiling node test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33
+[0m05:57:45.157177 [debug] [Thread-2 (]: Writing injected SQL for node "test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33"
+[0m05:57:45.158178 [debug] [Thread-2 (]: Began executing node test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33
+[0m05:57:45.160179 [debug] [Thread-2 (]: Writing runtime sql for node "test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33"
+[0m05:57:45.162179 [info ] [Thread-3 (]: 19 of 24 PASS not_null_mart_port_congestion_metric_date ........................ [[32mPASS[0m in 0.93s]
+[0m05:57:45.162179 [debug] [Thread-2 (]: On test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+
+
+
+select
+    1
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+
+where not(anchorage_call_rate between 0 and 1)
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:45.163179 [debug] [Thread-3 (]: Finished running node test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2
+[0m05:57:45.163179 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m05:57:45.164182 [debug] [Thread-3 (]: Began running node test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30
+[0m05:57:45.164182 [info ] [Thread-3 (]: 22 of 24 START test not_null_mart_vessel_risk_mmsi ............................. [RUN]
+[0m05:57:45.165180 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.portvessel.not_null_mart_port_congestion_metric_date.7325c852e2, now test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30)
+[0m05:57:45.166178 [debug] [Thread-3 (]: Began compiling node test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30
+[0m05:57:45.171179 [debug] [Thread-3 (]: Writing injected SQL for node "test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30"
+[0m05:57:45.172178 [debug] [Thread-3 (]: Began executing node test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30
+[0m05:57:45.173180 [debug] [Thread-3 (]: Writing runtime sql for node "test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30"
+[0m05:57:45.174178 [debug] [Thread-3 (]: On test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select mmsi
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+where mmsi is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:45.174178 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m05:57:45.211524 [debug] [Thread-4 (]: SQL status: OK in 0.075 seconds
+[0m05:57:45.211524 [info ] [Thread-1 (]: 17 of 24 PASS dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1  [[32mPASS[0m in 0.98s]
+[0m05:57:45.212524 [debug] [Thread-1 (]: Finished running node test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065
+[0m05:57:45.213752 [debug] [Thread-1 (]: Began running node test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd
+[0m05:57:45.213752 [info ] [Thread-1 (]: 23 of 24 START test not_null_mart_vessel_risk_operational_flag ................. [RUN]
+[0m05:57:45.213752 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.portvessel.dbt_utils_expression_is_true_mart_port_congestion_anchorage_call_rate__between_0_and_1.69e0fdf065, now test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd)
+[0m05:57:45.214752 [debug] [Thread-1 (]: Began compiling node test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd
+[0m05:57:45.219751 [debug] [Thread-1 (]: Writing injected SQL for node "test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd"
+[0m05:57:45.220750 [debug] [Thread-1 (]: Began executing node test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd
+[0m05:57:45.221751 [debug] [Thread-1 (]: Writing runtime sql for node "test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd"
+[0m05:57:45.222751 [debug] [Thread-1 (]: On test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select operational_flag
+from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+where operational_flag is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:45.222751 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m05:57:45.358672 [info ] [Thread-4 (]: 20 of 24 PASS not_null_mart_port_congestion_port_id ............................ [[32mPASS[0m in 0.72s]
+[0m05:57:45.358672 [debug] [Thread-4 (]: Finished running node test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79
+[0m05:57:45.359673 [debug] [Thread-4 (]: Began running node test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568
+[0m05:57:45.359673 [info ] [Thread-4 (]: 24 of 24 START test unique_mart_vessel_risk_mmsi ............................... [RUN]
+[0m05:57:45.360673 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.portvessel.not_null_mart_port_congestion_port_id.85d8a4aa79, now test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568)
+[0m05:57:45.360673 [debug] [Thread-4 (]: Began compiling node test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568
+[0m05:57:45.365942 [debug] [Thread-4 (]: Writing injected SQL for node "test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568"
+[0m05:57:45.366941 [debug] [Thread-4 (]: Began executing node test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568
+[0m05:57:45.367942 [debug] [Thread-4 (]: Writing runtime sql for node "test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568"
+[0m05:57:45.367942 [debug] [Thread-4 (]: On test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select mmsi as unique_field
+  from `cloudprojects-506123`.`portvessel_dev_marts`.`mart_vessel_risk`
+  where mmsi is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m05:57:45.368942 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m05:57:45.712004 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:78ad163b-dfed-49e7-a9e1-bf9187247bc5&page=queryresults
+[0m05:57:45.806562 [debug] [Thread-3 (]: SQL status: OK in 0.094 seconds
+[0m05:57:45.829227 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:a312c23b-04de-4012-8a29-849f3cb83151&page=queryresults
+[0m05:57:45.849197 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:04d4d000-ef5a-4418-a5cd-85fb6ea018d2&page=queryresults
+[0m05:57:45.889096 [debug] [Thread-2 (]: SQL status: OK in 0.059 seconds
+[0m05:57:45.899744 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:7abb2a07-3577-443c-b638-8c423030d50c&page=queryresults
+[0m05:57:45.916264 [debug] [Thread-1 (]: SQL status: OK in 0.067 seconds
+[0m05:57:45.971546 [debug] [Thread-4 (]: SQL status: OK in 0.071 seconds
+[0m05:57:45.970547 [info ] [Thread-3 (]: 22 of 24 PASS not_null_mart_vessel_risk_mmsi ................................... [[32mPASS[0m in 0.81s]
+[0m05:57:45.972547 [debug] [Thread-3 (]: Finished running node test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30
+[0m05:57:46.037765 [info ] [Thread-2 (]: 21 of 24 PASS dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1  [[32mPASS[0m in 0.89s]
+[0m05:57:46.038764 [debug] [Thread-2 (]: Finished running node test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33
+[0m05:57:46.059258 [info ] [Thread-1 (]: 23 of 24 PASS not_null_mart_vessel_risk_operational_flag ....................... [[32mPASS[0m in 0.85s]
+[0m05:57:46.060258 [debug] [Thread-1 (]: Finished running node test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd
+[0m05:57:46.113356 [info ] [Thread-4 (]: 24 of 24 PASS unique_mart_vessel_risk_mmsi ..................................... [[32mPASS[0m in 0.75s]
+[0m05:57:46.114355 [debug] [Thread-4 (]: Finished running node test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568
+[0m05:57:46.115355 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m05:57:46.115355 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m05:57:46.116355 [debug] [MainThread]: Connection 'list_cloudprojects-506123' was properly closed.
+[0m05:57:46.116355 [debug] [MainThread]: Connection 'list_cloudprojects-506123_portvessel_dev_marts' was properly closed.
+[0m05:57:46.116355 [debug] [MainThread]: Connection 'test.portvessel.not_null_mart_vessel_risk_operational_flag.27efd1e7dd' was properly closed.
+[0m05:57:46.116355 [debug] [MainThread]: Connection 'test.portvessel.dbt_utils_expression_is_true_mart_vessel_risk_anchorage_call_rate__between_0_and_1.a744c8ae33' was properly closed.
+[0m05:57:46.116355 [debug] [MainThread]: Connection 'test.portvessel.not_null_mart_vessel_risk_mmsi.b745f77b30' was properly closed.
+[0m05:57:46.117354 [debug] [MainThread]: Connection 'test.portvessel.unique_mart_vessel_risk_mmsi.4f85864568' was properly closed.
+[0m05:57:46.117354 [info ] [MainThread]: 
+[0m05:57:46.117354 [info ] [MainThread]: Finished running 2 table models, 22 data tests in 0 hours 0 minutes and 9.64 seconds (9.64s).
+[0m05:57:46.120860 [debug] [MainThread]: Command end result
+[0m05:57:46.157236 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m05:57:46.160236 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m05:57:46.162236 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m05:57:46.168236 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\run_results.json
+[0m05:57:46.168236 [info ] [MainThread]: 
+[0m05:57:46.169236 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m05:57:46.169236 [info ] [MainThread]: 
+[0m05:57:46.170236 [info ] [MainThread]: Done. PASS=24 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=24
+[0m05:57:46.170236 [debug] [MainThread]: Command `dbt build` succeeded at 05:57:46.170236 after 11.47 seconds
+[0m05:57:46.171236 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA32303C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA64E97FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA63877230>]}
+[0m05:57:46.171236 [debug] [MainThread]: Flushing usage events
+[0m05:57:46.844965 [debug] [MainThread]: An error was encountered while trying to flush usage events

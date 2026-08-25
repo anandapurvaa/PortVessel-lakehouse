@@ -9,13 +9,14 @@ sources:
       - name: fct_anchorage_dwell
         description: "Observed anchorage dwell episodes derived from AIS pings."
         loaded_at_field: loaded_at_utc
-        freshness:
-          warn_after:
-            count: 48
-            period: hour
-          error_after:
-            count: 168
-            period: hour
+        config:
+          freshness:
+            warn_after:
+              count: 48
+              period: hour
+            error_after:
+              count: 168
+              period: hour
         columns:
           - name: anchorage_dwell_id
             tests:
@@ -48,13 +49,14 @@ sources:
       - name: agg_port_congestion_daily
         description: "Daily observed congestion metrics by port."
         loaded_at_field: loaded_at_utc
-        freshness:
-          warn_after:
-            count: 48
-            period: hour
-          error_after:
-            count: 168
-            period: hour
+        config:
+          freshness:
+            warn_after:
+              count: 48
+              period: hour
+            error_after:
+              count: 168
+              period: hour
         columns:
           - name: metric_date
             tests:
@@ -65,7 +67,6 @@ sources:
 
       - name: vessel_operational_risk_flags
         description: "Vessel-level operational risk indicators derived from observed port activity."
-        loaded_at_field: loaded_at_utc
         columns:
           - name: mmsi
             tests:
