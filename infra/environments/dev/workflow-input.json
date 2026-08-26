@@ -1,0 +1,10 @@
+{
+  "project": "cloudprojects-506123",
+  "region": "europe-west3",
+  "ingestion_job": "portvessel-ingestion-dev",
+  "loader_job": "portvessel-bq-loader-dev",
+  "quality_job": "portvessel-quality-dev",
+  "cursor_dataset": "portvessel_dev_staging",
+  "cursor_table": "pipeline_cursor",
+  "pipeline_name": "portvessel_noaa_daily_ingestion"
+}
