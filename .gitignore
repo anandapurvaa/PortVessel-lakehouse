@@ -1,4 +1,3 @@
-data/
 .venv/
 
 # Terraform local state and plugins

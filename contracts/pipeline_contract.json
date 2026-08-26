@@ -1,0 +1,29 @@
+{
+  "contract_name": "portvessel.ais_pings",
+  "contract_version": "1.0.0",
+  "compatibility": "backward",
+  "owner": "portvessel-data-platform",
+  "source": {
+    "system": "NOAA AIS",
+    "format": "CSV.ZST",
+    "partition_key": "source_date",
+    "replayable": true
+  },
+  "required_columns": [
+    {"name": "mmsi", "type": "INT64", "nullable": true},
+    {"name": "observed_at_utc", "type": "TIMESTAMP", "nullable": true},
+    {"name": "latitude", "type": "FLOAT64", "nullable": true},
+    {"name": "longitude", "type": "FLOAT64", "nullable": true},
+    {"name": "sog_knots", "type": "FLOAT64", "nullable": true},
+    {"name": "record_hash", "type": "STRING", "nullable": true},
+    {"name": "ingestion_run_id", "type": "STRING", "nullable": true},
+    {"name": "ingested_at_utc", "type": "TIMESTAMP", "nullable": true},
+    {"name": "is_quarantined", "type": "BOOL", "nullable": true}
+  ],
+  "quality_rules": {
+    "latitude_range": [-90, 90],
+    "longitude_range": [-180, 180],
+    "duplicate_key": "record_hash",
+    "minimum_daily_rows": 1
+  }
+}

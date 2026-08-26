@@ -1,0 +1,15 @@
+FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    QUALITY_SQL_PATH=/app/sql/data_quality_checks.sql
+
+WORKDIR /app
+
+COPY services/quality/requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r /app/requirements.txt
+
+COPY services/quality/quality_runner.py /app/quality_runner.py
+COPY sql/data_quality_checks.sql /app/sql/data_quality_checks.sql
+
+ENTRYPOINT ["python", "/app/quality_runner.py"]

@@ -15,15 +15,12 @@ models:
       - name: anchorage_call_rate
         tests:
           - not_null
-
-      - name: anchorage_call_rate
-        tests:
           - dbt_utils.expression_is_true:
               arguments:
                 expression: "between 0 and 1"
 
   - name: mart_vessel_risk
-    description: "Vessel operational risk mart."
+    description: "Latest operational risk snapshot per vessel."
     columns:
       - name: mmsi
         tests:

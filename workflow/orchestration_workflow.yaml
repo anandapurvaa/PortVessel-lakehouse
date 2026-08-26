@@ -1,0 +1,104 @@
+main:
+  params: [args]
+  steps:
+    - init:
+        assign:
+          - project: ${args.project}
+          - region: ${args.region}
+          - ingestion_job: ${args.ingestion_job}
+          - loader_job: ${args.loader_job}
+          - quality_job: ${args.quality_job}
+          - cursor_dataset: ${args.cursor_dataset}
+          - cursor_table: ${args.cursor_table}
+          - pipeline_name: ${args.pipeline_name}
+          - run_id: ${string(sys.now())}
+
+    - get_cursor:
+        call: googleapis.bigquery.v2.jobs.query
+        args:
+          projectId: ${project}
+          body:
+            location: europe-west3
+            useLegacySql: false
+            parameterMode: NAMED
+            query: ${"SELECT CAST(next_source_date AS STRING) AS source_date FROM `" + project + "." + cursor_dataset + "." + cursor_table + "` WHERE pipeline_name=@pipeline_name AND status='ready' LIMIT 1"}
+            queryParameters:
+              - name: pipeline_name
+                parameterType:
+                  type: STRING
+                parameterValue:
+                  value: ${pipeline_name}
+        result: cursor_result
+
+    - validate_cursor:
+        switch:
+          - condition: ${len(cursor_result.rows) == 0}
+            next: fail_no_cursor
+        next: run_ingestion
+
+    - fail_no_cursor:
+        raise: "No ready pipeline cursor found"
+
+    - run_ingestion:
+        call: googleapis.run.v2.projects.locations.jobs.run
+        args:
+          name: ${"projects/" + project + "/locations/" + region + "/jobs/" + ingestion_job}
+          body:
+            overrides:
+              containerOverrides:
+                - env:
+                    - name: SOURCE_DATE
+                      value: ${cursor_result.rows[0].f[0].v}
+                    - name: RUN_ID
+                      value: ${run_id}
+        result: ingestion_result
+        next: run_loader
+
+    - run_loader:
+        call: googleapis.run.v2.projects.locations.jobs.run
+        args:
+          name: ${"projects/" + project + "/locations/" + region + "/jobs/" + loader_job}
+          body:
+            overrides:
+              containerOverrides:
+                - env:
+                    - name: SOURCE_DATE
+                      value: ${cursor_result.rows[0].f[0].v}
+                    - name: RUN_ID
+                      value: ${run_id}
+        result: loader_result
+        next: run_quality
+
+    - run_quality:
+        call: googleapis.run.v2.projects.locations.jobs.run
+        args:
+          name: ${"projects/" + project + "/locations/" + region + "/jobs/" + quality_job}
+          body:
+            overrides:
+              containerOverrides:
+                - env:
+                    - name: SOURCE_DATE
+                      value: ${cursor_result.rows[0].f[0].v}
+                    - name: RUN_ID
+                      value: ${run_id}
+        result: quality_result
+        next: advance_cursor
+
+    - advance_cursor:
+        call: googleapis.bigquery.v2.jobs.query
+        args:
+          projectId: ${project}
+          body:
+            location: europe-west3
+            useLegacySql: false
+            query: ${"UPDATE `" + project + "." + cursor_dataset + "." + cursor_table + "` SET next_source_date=DATE_ADD(DATE('" + cursor_result.rows[0].f[0].v + "'), INTERVAL 1 DAY), last_run_id='" + run_id + "', updated_at=CURRENT_TIMESTAMP() WHERE pipeline_name='" + pipeline_name + "' AND next_source_date=DATE('" + cursor_result.rows[0].f[0].v + "') AND status='ready'"}
+        result: cursor_update
+
+    - done:
+        return:
+          status: completed
+          source_date: ${cursor_result.rows[0].f[0].v}
+          ingestion: ${ingestion_result}
+          loader: ${loader_result}
+          quality: ${quality_result}
+          cursor_update: ${cursor_update}

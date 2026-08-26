@@ -19,8 +19,13 @@ with risk_data as (
         operational_flag,
         source_object,
         source_sha256,
+        source_retrieved_at_utc,
         loaded_at_utc,
-        ingestion_run_id
+        ingestion_run_id,
+        row_number() over (
+            partition by mmsi
+            order by loaded_at_utc desc, source_object desc, ingestion_run_id desc
+        ) as row_number
     from {{ source('portvessel_gold', 'vessel_operational_risk_flags') }}
 ),
 
@@ -43,9 +48,11 @@ final as (
         operational_flag,
         source_object,
         source_sha256,
+        source_retrieved_at_utc,
         loaded_at_utc,
         ingestion_run_id
     from risk_data
+    where row_number = 1
 )
 
 select * from final
