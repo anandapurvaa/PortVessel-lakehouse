@@ -1,0 +1,26 @@
+{
+  "contract_name": "portvessel.operational_zones",
+  "contract_version": "1.0.0",
+  "crs": "EPSG:4326",
+  "geometry_types": ["Polygon", "MultiPolygon"],
+  "required_properties": [
+    "zone_id",
+    "zone_name",
+    "zone_type",
+    "port_id",
+    "effective_from",
+    "effective_to",
+    "source_name",
+    "source_url",
+    "license"
+  ],
+  "allowed_zone_types": [
+  "port_boundary",
+  "terminal",
+  "berth",
+  "anchorage",
+  "restricted_area"
+],
+  "boundary_semantics": "covers",
+  "uniqueness_key": "zone_id"
+}

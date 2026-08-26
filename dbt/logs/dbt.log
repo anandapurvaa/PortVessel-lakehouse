@@ -14031,3 +14031,43 @@ where port_id is null
 [0m09:30:36.595656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017045D71250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017045D70EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017047E09760>]}
 [0m09:30:36.595656 [debug] [MainThread]: Flushing usage events
 [0m09:30:37.332914 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:28:31.936572 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5287DDE20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5287DE360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C525F32240>]}
+
+
+============================== 15:28:31.939571 | f947d06c-41eb-4882-9eb8-367d9e16417f ==============================
+[0m15:28:31.939571 [info ] [MainThread]: Running with dbt=1.12.3
+[0m15:28:31.939571 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'c:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt ', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'c:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m15:28:32.055574 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f947d06c-41eb-4882-9eb8-367d9e16417f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C52A4E9D00>]}
+[0m15:28:32.122469 [debug] [MainThread]: Set downloads directory='C:\Users\magic\AppData\Local\Temp\dbt-downloads-10hzl_sq'
+[0m15:28:32.122469 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:28:32.446135 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m15:28:32.447134 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m15:28:32.712094 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m15:28:32.716604 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m15:28:33.456569 [info ] [MainThread]: Installed from version 1.4.1
+[0m15:28:33.457568 [info ] [MainThread]: Up to date!
+[0m15:28:33.457568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'f947d06c-41eb-4882-9eb8-367d9e16417f', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C52809B500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C52809B3B0>]}
+[0m15:28:33.458569 [debug] [MainThread]: Command `cli deps` succeeded at 15:28:33.458569 after 1.63 seconds
+[0m15:28:33.458569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5287DDE20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C528040650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C5285D3A40>]}
+[0m15:28:33.458569 [debug] [MainThread]: Flushing usage events
+[0m15:28:34.152638 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:00:47.425248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4E191CB90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4E64F2F60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4E42CF2C0>]}
+
+
+============================== 17:00:47.428250 | f8510630-b0a1-4542-a617-ff6dfcf1714e ==============================
+[0m17:00:47.428250 [info ] [MainThread]: Running with dbt=1.12.3
+[0m17:00:47.428250 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'c:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt ', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'c:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m17:00:47.545559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f8510630-b0a1-4542-a617-ff6dfcf1714e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4E3849DF0>]}
+[0m17:00:47.607840 [debug] [MainThread]: Set downloads directory='C:\Users\magic\AppData\Local\Temp\dbt-downloads-56hbu6iv'
+[0m17:00:47.607840 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m17:00:47.927510 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m17:00:47.928850 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m17:00:48.205074 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m17:00:48.209077 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m17:00:48.930940 [info ] [MainThread]: Installed from version 1.4.1
+[0m17:00:48.930940 [info ] [MainThread]: Up to date!
+[0m17:00:48.931939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'f8510630-b0a1-4542-a617-ff6dfcf1714e', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4E68E21E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4E68AF350>]}
+[0m17:00:48.931939 [debug] [MainThread]: Command `cli deps` succeeded at 17:00:48.931939 after 1.62 seconds
+[0m17:00:48.933445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4E48CE240>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4E476FF80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4E3F05700>]}
+[0m17:00:48.933445 [debug] [MainThread]: Flushing usage events
+[0m17:00:49.608424 [debug] [MainThread]: An error was encountered while trying to flush usage events

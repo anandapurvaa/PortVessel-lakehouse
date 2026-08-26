@@ -1,0 +1,450 @@
+[
+  {
+    "layer": "Harbour_Harbour_Area_Administrative_area.shp",
+    "files": {
+      "Harbour_Harbour_Area_Administrative_area.shp": {
+        "bytes": 100,
+        "summary": null
+      },
+      "Harbour_Harbour_Area_Administrative_area.shx": {
+        "bytes": 100,
+        "summary": null
+      },
+      "Harbour_Harbour_Area_Administrative_area.dbf": {
+        "bytes": 322,
+        "summary": null
+      },
+      "Harbour_Harbour_Area_Administrative_area.prj": {
+        "bytes": 145,
+        "summary": null
+      },
+      "Harbour_Harbour_Area_Administrative_area.cpg": {
+        "bytes": 5,
+        "summary": null
+      },
+      "Harbour_Harbour_Area_Administrative_area.sbn": {
+        "bytes": 108,
+        "summary": null
+      },
+      "Harbour_Harbour_Area_Administrative_area.sbx": {
+        "bytes": 108,
+        "summary": null
+      },
+      "Harbour_Harbour_Area_Administrative_area.shp.xml": {
+        "bytes": 7365,
+        "summary": {
+          "exists": true,
+          "bytes": 7365,
+          "xml_root": "metadata",
+          "text_preview": "20260826 08060100 1.0 FALSE Harbour_Harbour_Area_Administrative_area 002 0.000 file://\\\\OCS-VS-AGS02\\C$\\Users\\OCS.SVC.AGS\\AppData\\Local\\Temp\\encdirect\\enc_gp_harbour_gpserver\\j52aceb1012cf47b585e222d3b5e98779\\scratch\\zipfolder\\Harbour_Harbour_Area_Administrative_area.shp Local Area Network Geographic GCS_WGS_1984 Angular Unit: Degree (0.017453) <GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.or"
+        }
+      }
+    },
+    "shapefile": {
+      "features": 0,
+      "crs": "EPSG:4326",
+      "columns": [
+        "OBJL",
+        "OBJNAM",
+        "INFORM",
+        "SCAMIN",
+        "SORDAT",
+        "SORIND",
+        "DSNM",
+        "SHAPE_AREA",
+        "SHAPE_LEN",
+        "geometry"
+      ],
+      "non_null_counts": {
+        "OBJL": 0,
+        "OBJNAM": 0,
+        "INFORM": 0,
+        "SCAMIN": 0,
+        "SORDAT": 0,
+        "SORIND": 0,
+        "DSNM": 0,
+        "SHAPE_AREA": 0,
+        "SHAPE_LEN": 0,
+        "geometry": 0
+      }
+    }
+  },
+  {
+    "layer": "Harbour_Anchorage_Area.shp",
+    "files": {
+      "Harbour_Anchorage_Area.shp": {
+        "bytes": 137544,
+        "summary": null
+      },
+      "Harbour_Anchorage_Area.shx": {
+        "bytes": 532,
+        "summary": null
+      },
+      "Harbour_Anchorage_Area.dbf": {
+        "bytes": 72876,
+        "summary": null
+      },
+      "Harbour_Anchorage_Area.prj": {
+        "bytes": 145,
+        "summary": null
+      },
+      "Harbour_Anchorage_Area.cpg": {
+        "bytes": 5,
+        "summary": null
+      },
+      "Harbour_Anchorage_Area.sbn": {
+        "bytes": 636,
+        "summary": null
+      },
+      "Harbour_Anchorage_Area.sbx": {
+        "bytes": 148,
+        "summary": null
+      },
+      "Harbour_Anchorage_Area.shp.xml": {
+        "bytes": 7473,
+        "summary": {
+          "exists": true,
+          "bytes": 7473,
+          "xml_root": "metadata",
+          "text_preview": "20260826 08060100 1.0 FALSE Harbour_Anchorage_Area 002 0.000 file://\\\\OCS-VS-AGS02\\C$\\Users\\OCS.SVC.AGS\\AppData\\Local\\Temp\\encdirect\\enc_gp_harbour_gpserver\\j52aceb1012cf47b585e222d3b5e98779\\scratch\\zipfolder\\Harbour_Anchorage_Area.shp Local Area Network Geographic GCS_WGS_1984 Angular Unit: Degree (0.017453) <GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http"
+        }
+      }
+    },
+    "shapefile": {
+      "features": 54,
+      "crs": "EPSG:4326",
+      "columns": [
+        "OBJL",
+        "CATACH",
+        "OBJNAM",
+        "INFORM",
+        "SCAMIN",
+        "SORDAT",
+        "SORIND",
+        "DSNM",
+        "SHAPE_AREA",
+        "SHAPE_LEN",
+        "geometry"
+      ],
+      "non_null_counts": {
+        "OBJL": 54,
+        "CATACH": 10,
+        "OBJNAM": 42,
+        "INFORM": 54,
+        "SCAMIN": 54,
+        "SORDAT": 54,
+        "SORIND": 54,
+        "DSNM": 54,
+        "SHAPE_AREA": 54,
+        "SHAPE_LEN": 54,
+        "geometry": 54
+      }
+    }
+  },
+  {
+    "layer": "Harbour_Restricted_Area_area.shp",
+    "files": {
+      "Harbour_Restricted_Area_area.shp": {
+        "bytes": 556828,
+        "summary": null
+      },
+      "Harbour_Restricted_Area_area.shx": {
+        "bytes": 540,
+        "summary": null
+      },
+      "Harbour_Restricted_Area_area.dbf": {
+        "bytes": 74219,
+        "summary": null
+      },
+      "Harbour_Restricted_Area_area.prj": {
+        "bytes": 145,
+        "summary": null
+      },
+      "Harbour_Restricted_Area_area.cpg": {
+        "bytes": 5,
+        "summary": null
+      },
+      "Harbour_Restricted_Area_area.sbn": {
+        "bytes": 652,
+        "summary": null
+      },
+      "Harbour_Restricted_Area_area.sbx": {
+        "bytes": 156,
+        "summary": null
+      },
+      "Harbour_Restricted_Area_area.shp.xml": {
+        "bytes": 7515,
+        "summary": {
+          "exists": true,
+          "bytes": 7515,
+          "xml_root": "metadata",
+          "text_preview": "20260826 08060200 1.0 FALSE Harbour_Restricted_Area_area 002 0.000 file://\\\\OCS-VS-AGS02\\C$\\Users\\OCS.SVC.AGS\\AppData\\Local\\Temp\\encdirect\\enc_gp_harbour_gpserver\\j52aceb1012cf47b585e222d3b5e98779\\scratch\\zipfolder\\Harbour_Restricted_Area_area.shp Local Area Network Geographic GCS_WGS_1984 Angular Unit: Degree (0.017453) <GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:"
+        }
+      }
+    },
+    "shapefile": {
+      "features": 55,
+      "crs": "EPSG:4326",
+      "columns": [
+        "OBJL",
+        "CATREA",
+        "OBJNAM",
+        "INFORM",
+        "SCAMIN",
+        "SORDAT",
+        "SORIND",
+        "DSNM",
+        "SHAPE_AREA",
+        "SHAPE_LEN",
+        "geometry"
+      ],
+      "non_null_counts": {
+        "OBJL": 55,
+        "CATREA": 25,
+        "OBJNAM": 1,
+        "INFORM": 49,
+        "SCAMIN": 55,
+        "SORDAT": 55,
+        "SORIND": 55,
+        "DSNM": 55,
+        "SHAPE_AREA": 55,
+        "SHAPE_LEN": 55,
+        "geometry": 55
+      }
+    }
+  },
+  {
+    "layer": "Harbour_Berth_area.shp",
+    "files": {
+      "Harbour_Berth_area.shp": {
+        "bytes": 100,
+        "summary": null
+      },
+      "Harbour_Berth_area.shx": {
+        "bytes": 100,
+        "summary": null
+      },
+      "Harbour_Berth_area.dbf": {
+        "bytes": 482,
+        "summary": null
+      },
+      "Harbour_Berth_area.prj": {
+        "bytes": 145,
+        "summary": null
+      },
+      "Harbour_Berth_area.cpg": {
+        "bytes": 5,
+        "summary": null
+      },
+      "Harbour_Berth_area.sbn": {
+        "bytes": 108,
+        "summary": null
+      },
+      "Harbour_Berth_area.sbx": {
+        "bytes": 108,
+        "summary": null
+      },
+      "Harbour_Berth_area.shp.xml": {
+        "bytes": 8383,
+        "summary": {
+          "exists": true,
+          "bytes": 8383,
+          "xml_root": "metadata",
+          "text_preview": "20260826 08060000 1.0 FALSE Harbour_Berth_area 002 0.000 file://\\\\OCS-VS-AGS02\\C$\\Users\\OCS.SVC.AGS\\AppData\\Local\\Temp\\encdirect\\enc_gp_harbour_gpserver\\j52aceb1012cf47b585e222d3b5e98779\\scratch\\zipfolder\\Harbour_Berth_area.shp Local Area Network Geographic GCS_WGS_1984 Angular Unit: Degree (0.017453) <GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.e"
+        }
+      }
+    },
+    "shapefile": {
+      "features": 0,
+      "crs": "EPSG:4326",
+      "columns": [
+        "OBJL",
+        "DRVAL1",
+        "OBJNAM",
+        "QUASOU",
+        "SOUACC",
+        "VERDAT",
+        "INFORM",
+        "PICREP",
+        "SCAMIN",
+        "SORDAT",
+        "SORIND",
+        "DSNM",
+        "SHAPE_AREA",
+        "SHAPE_LEN",
+        "geometry"
+      ],
+      "non_null_counts": {
+        "OBJL": 0,
+        "DRVAL1": 0,
+        "OBJNAM": 0,
+        "QUASOU": 0,
+        "SOUACC": 0,
+        "VERDAT": 0,
+        "INFORM": 0,
+        "PICREP": 0,
+        "SCAMIN": 0,
+        "SORDAT": 0,
+        "SORIND": 0,
+        "DSNM": 0,
+        "SHAPE_AREA": 0,
+        "SHAPE_LEN": 0,
+        "geometry": 0
+      }
+    }
+  },
+  {
+    "layer": "Harbour_Berth_line.shp",
+    "files": {
+      "Harbour_Berth_line.shp": {
+        "bytes": 100,
+        "summary": null
+      },
+      "Harbour_Berth_line.shx": {
+        "bytes": 100,
+        "summary": null
+      },
+      "Harbour_Berth_line.dbf": {
+        "bytes": 450,
+        "summary": null
+      },
+      "Harbour_Berth_line.prj": {
+        "bytes": 145,
+        "summary": null
+      },
+      "Harbour_Berth_line.cpg": {
+        "bytes": 5,
+        "summary": null
+      },
+      "Harbour_Berth_line.sbn": {
+        "bytes": 108,
+        "summary": null
+      },
+      "Harbour_Berth_line.sbx": {
+        "bytes": 108,
+        "summary": null
+      },
+      "Harbour_Berth_line.shp.xml": {
+        "bytes": 7931,
+        "summary": {
+          "exists": true,
+          "bytes": 7931,
+          "xml_root": "metadata",
+          "text_preview": "20260826 08060000 1.0 FALSE Harbour_Berth_line 002 0.000 file://\\\\OCS-VS-AGS02\\C$\\Users\\OCS.SVC.AGS\\AppData\\Local\\Temp\\encdirect\\enc_gp_harbour_gpserver\\j52aceb1012cf47b585e222d3b5e98779\\scratch\\zipfolder\\Harbour_Berth_line.shp Local Area Network Geographic GCS_WGS_1984 Angular Unit: Degree (0.017453) <GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www.e"
+        }
+      }
+    },
+    "shapefile": {
+      "features": 0,
+      "crs": "EPSG:4326",
+      "columns": [
+        "OBJL",
+        "DRVAL1",
+        "OBJNAM",
+        "QUASOU",
+        "SOUACC",
+        "VERDAT",
+        "INFORM",
+        "PICREP",
+        "SCAMIN",
+        "SORDAT",
+        "SORIND",
+        "DSNM",
+        "SHAPE_LEN",
+        "geometry"
+      ],
+      "non_null_counts": {
+        "OBJL": 0,
+        "DRVAL1": 0,
+        "OBJNAM": 0,
+        "QUASOU": 0,
+        "SOUACC": 0,
+        "VERDAT": 0,
+        "INFORM": 0,
+        "PICREP": 0,
+        "SCAMIN": 0,
+        "SORDAT": 0,
+        "SORIND": 0,
+        "DSNM": 0,
+        "SHAPE_LEN": 0,
+        "geometry": 0
+      }
+    }
+  },
+  {
+    "layer": "Harbour_Berth_point.shp",
+    "files": {
+      "Harbour_Berth_point.shp": {
+        "bytes": 8388,
+        "summary": null
+      },
+      "Harbour_Berth_point.shx": {
+        "bytes": 2468,
+        "summary": null
+      },
+      "Harbour_Berth_point.dbf": {
+        "bytes": 476386,
+        "summary": null
+      },
+      "Harbour_Berth_point.prj": {
+        "bytes": 145,
+        "summary": null
+      },
+      "Harbour_Berth_point.cpg": {
+        "bytes": 5,
+        "summary": null
+      },
+      "Harbour_Berth_point.sbn": {
+        "bytes": 3220,
+        "summary": null
+      },
+      "Harbour_Berth_point.sbx": {
+        "bytes": 348,
+        "summary": null
+      },
+      "Harbour_Berth_point.shp.xml": {
+        "bytes": 7699,
+        "summary": {
+          "exists": true,
+          "bytes": 7699,
+          "xml_root": "metadata",
+          "text_preview": "20260826 08060000 1.0 FALSE Harbour_Berth_point 002 0.000 file://\\\\OCS-VS-AGS02\\C$\\Users\\OCS.SVC.AGS\\AppData\\Local\\Temp\\encdirect\\enc_gp_harbour_gpserver\\j52aceb1012cf47b585e222d3b5e98779\\scratch\\zipfolder\\Harbour_Berth_point.shp Local Area Network Geographic GCS_WGS_1984 Angular Unit: Degree (0.017453) <GeographicCoordinateSystem xsi:type='typens:GeographicCoordinateSystem' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:typens='http://www"
+        }
+      }
+    },
+    "shapefile": {
+      "features": 296,
+      "crs": "EPSG:4326",
+      "columns": [
+        "OBJL",
+        "DRVAL1",
+        "OBJNAM",
+        "QUASOU",
+        "SOUACC",
+        "VERDAT",
+        "INFORM",
+        "PICREP",
+        "SCAMIN",
+        "SORDAT",
+        "SORIND",
+        "DSNM",
+        "geometry"
+      ],
+      "non_null_counts": {
+        "OBJL": 296,
+        "DRVAL1": 296,
+        "OBJNAM": 296,
+        "QUASOU": 0,
+        "SOUACC": 296,
+        "VERDAT": 296,
+        "INFORM": 0,
+        "PICREP": 0,
+        "SCAMIN": 296,
+        "SORDAT": 296,
+        "SORIND": 296,
+        "DSNM": 296,
+        "geometry": 296
+      }
+    }
+  }
+]

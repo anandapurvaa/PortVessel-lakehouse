@@ -1,0 +1,18 @@
+{
+  "process_date": "2024-01-04",
+  "created_at_utc": "2026-08-26T14:54:45.064058+00:00",
+  "files": [
+    {
+      "role": "ais",
+      "path": "C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\data\\fixtures\\ais_2024-01-04_sample.parquet",
+      "bytes": 8971029,
+      "sha256": "4accf3b6daa12c318f20f96e0d4d85d256d26a09c299b1ca2580e7c10eba840d"
+    },
+    {
+      "role": "reference",
+      "path": "C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\data\\reference\\normalized\\reference_features.ndjson",
+      "bytes": 2458692,
+      "sha256": "87535024aed6a4f5c5fc49a890c69a909e6be96810ecc0b5c9a50f097c0a712c"
+    }
+  ]
+}

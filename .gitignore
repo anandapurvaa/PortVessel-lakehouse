@@ -1,10 +1,37 @@
+# Python / Virtual Environments
 .venv/
+.env
+__pycache__/
+.pytest_cache/
+.ruff_cache/
 
-# Terraform local state and plugins
-.terraform/
+# Data Directories (keep structure with .gitkeep)
+data/raw/*
+data/extracted/*
+data/processed/*
+data/quarantine/*
+data/warehouse/*
+reports/*.json
+
+!data/raw/.gitkeep
+!data/extracted/.gitkeep
+!data/processed/.gitkeep
+!data/quarantine/.gitkeep
+!data/warehouse/.gitkeep
+
+# Local Databases & DuckDB files
+data/local/*.duckdb
+data/local/*.duckdb.wal
+*.duckdb
+*.duckdb.wal
+
+# Terraform (matches .terraform folders anywhere in the repo)
+**/.terraform/
 *.tfstate
 *.tfstate.*
 crash.log
-*.tfvars
-!example.tfvars
-.terraform.lock.hcl
+.tfstate.backup
+
+# OS Specific Files
+.DS_Store
+Thumbs.db
