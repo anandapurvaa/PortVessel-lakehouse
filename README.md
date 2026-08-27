@@ -2,7 +2,7 @@
 
 A production-style maritime geospatial data platform that converts public AIS vessel-position telemetry into quality-aware Port of Los Angeles (USLAX) operational analytics.
 
-The project ingests daily AIS source data, preserves immutable raw files, validates and loads vessel pings, applies geofences, reconstructs vessel states, sessionizes port calls, produces Gold-layer congestion marts, and serves the results through a deployed Plotly Dash dashboard.
+The project ingests daily AIS source data, preserves immutable raw files, validates and loads vessel pings, applies geofences, reconstructs vessel states, sessionizes port calls, produces Gold-layer congestion marts, and serves the results through a deployed Plotly Dash dashboard (https://portvessel-dashboard-dev-20298064017.europe-west3.run.app).
 
 > **Data scope:** The current dashboard covers USLAX geofenced AIS observations from January 2024 onward. Port-duration metrics use only fully observed calls. Anchorage and berth-proximity metrics use fully observed intervals for the relevant metric.
 >
