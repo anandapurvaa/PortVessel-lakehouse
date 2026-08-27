@@ -1,0 +1,739 @@
+:root {
+  --navy: #0a2540;
+  --navy-soft: #163b5c;
+  --teal: #007c83;
+  --teal-light: #35b9c5;
+  --aqua-bg: #e8f6f7;
+  --green: #208a5b;
+  --amber: #e8a317;
+  --orange: #e76f51;
+  --red: #c44536;
+  --ink: #213547;
+  --muted: #6f7e8b;
+  --line: #e5edf2;
+  --surface: #ffffff;
+  --canvas: #f5f8fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-navbar {
+  min-height: 76px;
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 4px 18px rgba(10, 37, 64, 0.05);
+  z-index: 1000;
+}
+
+.navbar-inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.brand-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 285px;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: linear-gradient(135deg, var(--navy), var(--teal));
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.brand-title {
+  color: var(--navy);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.brand-subtitle {
+  color: var(--muted);
+  margin-top: 0.08rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  gap: 0.3rem;
+}
+
+.nav-link-custom {
+  color: #587080;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 0.52rem 0.78rem;
+  font-size: 0.9rem;
+  font-weight: 650;
+  transition: 150ms ease;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom:focus {
+  color: var(--teal);
+  background: var(--aqua-bg);
+}
+
+.navbar-meta {
+  margin-left: auto;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.status-pill,
+.port-pill {
+  border-radius: 999px;
+  padding: 0.36rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 750;
+}
+
+.status-pill {
+  color: #08616a;
+  background: #e6f6f7;
+}
+
+.port-pill {
+  color: var(--navy);
+  background: #eef3f6;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.page-container {
+  width: min(100%, 1540px);
+  margin: 0 auto;
+  padding: 2.3rem 2rem 2.8rem;
+}
+
+.page-header {
+  margin-bottom: 1.85rem;
+}
+
+.eyebrow {
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-title {
+  color: var(--navy);
+  margin: 0.35rem 0 0.5rem;
+  font-size: clamp(1.75rem, 3vw, 2.42rem);
+  font-weight: 780;
+  letter-spacing: -0.035em;
+}
+
+.page-description {
+  max-width: 800px;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.scope-alert {
+  max-width: 1120px;
+  border: 1px solid #d5e9eb !important;
+  border-left: 4px solid var(--teal) !important;
+  background: #f2fbfc !important;
+  color: #315664 !important;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0.85rem 1rem;
+}
+
+.kpi-card,
+.section-card,
+.coverage-card {
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: var(--surface);
+  box-shadow: 0 5px 20px rgba(17, 51, 76, 0.055);
+}
+
+.kpi-card {
+  height: 100%;
+  overflow: hidden;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(17, 51, 76, 0.1);
+}
+
+.kpi-card .card-body {
+  min-height: 156px;
+  padding: 1.25rem 1.3rem;
+}
+
+.kpi-topline {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.kpi-label {
+  color: #617486;
+  font-size: 0.79rem;
+  font-weight: 720;
+  letter-spacing: 0.01em;
+}
+
+.kpi-icon {
+  display: grid;
+  place-items: center;
+  height: 34px;
+  width: 34px;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.kpi-value {
+  color: var(--navy);
+  font-size: 2rem;
+  font-weight: 790;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-top: 1.1rem;
+}
+
+.kpi-subtitle {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-top: 0.65rem;
+}
+
+.kpi-teal {
+  border-top: 4px solid var(--teal);
+}
+
+.kpi-teal .kpi-icon {
+  color: var(--teal);
+  background: #e3f5f6;
+}
+
+.kpi-navy {
+  border-top: 4px solid var(--navy);
+}
+
+.kpi-navy .kpi-icon {
+  color: var(--navy);
+  background: #eaf0f5;
+}
+
+.kpi-green {
+  border-top: 4px solid var(--green);
+}
+
+.kpi-green .kpi-icon {
+  color: var(--green);
+  background: #e8f5ee;
+}
+
+.kpi-amber {
+  border-top: 4px solid var(--amber);
+}
+
+.kpi-amber .kpi-icon {
+  color: #a46b00;
+  background: #fff5dc;
+}
+
+.section-card {
+  height: 100%;
+  overflow: visible;
+}
+
+.section-card-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding: 1.1rem 1.3rem 0.95rem;
+}
+
+.section-card-title {
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 760;
+}
+
+.section-card-subtitle {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-top: 0.28rem;
+}
+
+.section-card-body {
+  display: block;
+  min-height: 390px;
+  overflow: visible;
+  padding: 0.95rem 1rem 1rem;
+}
+
+/* Critical Dash / Plotly graph sizing rules. */
+.section-card-body > .dash-graph,
+.section-card-body > div > .dash-graph,
+.section-card-body .dash-graph,
+.section-card-body .dash-graph--pending {
+  display: block !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 360px !important;
+  min-height: 360px !important;
+}
+
+.section-card-body .js-plotly-plot,
+.section-card-body .plot-container,
+.section-card-body .svg-container {
+  display: block !important;
+  width: 100% !important;
+  height: 360px !important;
+  min-height: 360px !important;
+}
+
+/* The quality graph is deliberately a little taller. */
+.section-card-body .dash-graph:last-child,
+.section-card-body .dash-graph:last-child .js-plotly-plot,
+.section-card-body .dash-graph:last-child .plot-container,
+.section-card-body .dash-graph:last-child .svg-container {
+  min-height: 370px !important;
+}
+
+.coverage-card {
+  height: 100%;
+  background: linear-gradient(155deg, #ffffff 0%, #f4fbfb 100%);
+}
+
+.coverage-card .card-body {
+  padding: 1.35rem;
+}
+
+.coverage-title {
+  color: var(--navy);
+  margin: 0.4rem 0 0;
+  font-size: 1.15rem;
+  font-weight: 760;
+}
+
+.coverage-number {
+  color: var(--teal);
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  margin-top: 1.25rem;
+}
+
+.coverage-copy {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.quality-legend-item {
+  align-items: center;
+  color: #526878;
+  display: flex;
+  font-size: 0.78rem;
+  gap: 0.5rem;
+  margin: 0.55rem 0;
+}
+
+.legend-dot {
+  border-radius: 50%;
+  display: inline-block;
+  height: 9px;
+  width: 9px;
+}
+
+.legend-dot.green {
+  background: var(--green);
+}
+
+.legend-dot.amber {
+  background: var(--amber);
+}
+
+.legend-dot.red {
+  background: var(--red);
+}
+
+.coverage-alert {
+  font-size: 0.76rem;
+  line-height: 1.4;
+  margin: 1rem 0 0;
+  border-radius: 9px;
+}
+
+.filter-label {
+  color: #526878;
+  font-size: 0.79rem;
+  font-weight: 700;
+}
+
+.quality-dropdown .Select-control,
+.quality-dropdown .Select__control {
+  border-color: #d7e2e8 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  min-height: 38px;
+}
+
+.export-button {
+  background: var(--navy) !important;
+  border-color: var(--navy) !important;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  height: 38px;
+}
+
+.export-button:hover {
+  background: var(--teal) !important;
+  border-color: var(--teal) !important;
+}
+
+.section-spacer {
+  height: 1.25rem;
+}
+
+.dash-table-container {
+  width: 100%;
+  min-height: 420px;
+}
+
+.dash-table-container .dash-spreadsheet-container {
+  width: 100% !important;
+  min-height: 420px;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.empty-state {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 280px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.empty-icon {
+  color: var(--teal);
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.empty-state h5 {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.empty-state p {
+  font-size: 0.87rem;
+  max-width: 380px;
+}
+
+.app-footer {
+  border-top: 1px solid var(--line);
+  color: #73828d;
+  font-size: 0.76rem;
+  padding: 1rem 0;
+  background: #fff;
+}
+
+.app-footer .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 992px) {
+  .navbar-inner {
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .brand-link {
+    min-width: auto;
+  }
+
+  .navbar-meta {
+    display: none;
+  }
+
+  .page-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .top-navbar,
+  .navbar-inner {
+    min-height: auto;
+  }
+
+  .navbar-inner {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+  }
+
+  .nav-link-custom {
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+
+  .page-container {
+    padding-top: 1.5rem;
+  }
+
+  .section-card-body {
+    min-height: 330px;
+  }
+
+  .section-card-body > .dash-graph,
+  .section-card-body > div > .dash-graph,
+  .section-card-body .dash-graph,
+  .section-card-body .dash-graph--pending,
+  .section-card-body .js-plotly-plot,
+  .section-card-body .plot-container,
+  .section-card-body .svg-container {
+    height: 300px !important;
+    min-height: 300px !important;
+  }
+
+  .app-footer .container-fluid {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.chart-wrapper {
+  display: block;
+  width: 100%;
+  height: 360px;
+  min-width: 0;
+}
+
+.chart-wrapper .dash-graph,
+.chart-wrapper .js-plotly-plot,
+.chart-wrapper .plot-container,
+.chart-wrapper .svg-container {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 360px !important;
+}
+/* Anchorage page: keep the two visual cards equal and compact. */
+.anchorage-visual-card {
+  height: 100%;
+}
+
+.anchorage-visual-card .section-card-body {
+  min-height: 340px;
+  height: 340px;
+  overflow: hidden;
+}
+
+.anchorage-chart-wrapper {
+  display: block;
+  width: 100%;
+  height: 320px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.anchorage-chart-wrapper .dash-graph,
+.anchorage-chart-wrapper .js-plotly-plot,
+.anchorage-chart-wrapper .plot-container,
+.anchorage-chart-wrapper .svg-container {
+  display: block !important;
+  width: 100% !important;
+  height: 320px !important;
+  min-height: 320px !important;
+}
+
+.anchorage-table-card .section-card-body {
+  min-height: 0;
+  overflow-x: auto;
+}
+
+.anchorage-table-card .dash-spreadsheet-container {
+  min-height: 430px;
+}
+.anchorage-visual-card {
+  height: 100%;
+  min-height: 0;
+}
+
+.anchorage-visual-card .section-card-body {
+  height: 350px;
+  min-height: 350px;
+  padding: 0.75rem 0.9rem 0.5rem;
+  overflow: hidden;
+}
+
+.anchorage-chart-wrapper {
+  display: block;
+  width: 100%;
+  height: 320px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.anchorage-chart-wrapper .dash-graph,
+.anchorage-chart-wrapper .js-plotly-plot,
+.anchorage-chart-wrapper .plot-container,
+.anchorage-chart-wrapper .svg-container {
+  display: block !important;
+  width: 100% !important;
+  height: 320px !important;
+  min-height: 320px !important;
+}
+
+.anchorage-table-card .section-card-body {
+  min-height: 460px;
+  overflow-x: auto;
+}
+
+.anchorage-table-wrapper {
+  display: block;
+  width: 100%;
+  min-height: 420px;
+  overflow-x: auto;
+}
+
+.anchorage-table-wrapper .dash-table-container {
+  display: block !important;
+  width: 100% !important;
+  min-height: 420px !important;
+}
+
+.anchorage-table-wrapper .dash-spreadsheet-container {
+  display: block !important;
+  width: 100% !important;
+  min-height: 420px !important;
+}
+/* Persistent active-page navigation state. */
+.nav-link-custom.nav-link-active,
+.nav-link-custom.nav-link-active:hover,
+.nav-link-custom.nav-link-active:focus,
+.nav-link-custom.nav-link-active:active,
+.nav-link-custom.nav-link-active:visited {
+  color: var(--teal) !important;
+  background: var(--aqua-bg) !important;
+  border-color: #cfecef !important;
+  font-weight: 750 !important;
+  outline: none;
+}
+/* Port Calls Filters: override the global chart-card minimum height. */
+.port-calls-filter-card,
+.port-calls-filter-card .card-body,
+.port-calls-filter-card .section-card-body {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.port-calls-filter-card .section-card-body {
+  padding: 1rem 1.3rem 1.2rem !important;
+}
+
+/* Preserve a usable detail table area without stretching unrelated cards. */
+.port-calls-table-card .section-card-body {
+  min-height: 460px !important;
+  height: auto !important;
+  overflow-x: auto !important;
+}
+/* Overview: equal-width visual cards in the primary chart row. */
+.overview-visual-card {
+  height: 100%;
+  min-height: 0;
+}
+
+.overview-visual-card .section-card-body {
+  height: 390px;
+  min-height: 390px;
+  padding: 0.75rem 0.9rem 0.5rem;
+  overflow: hidden;
+}
+
+.overview-chart-wrapper {
+  display: block;
+  width: 100%;
+  height: 360px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.overview-chart-wrapper .dash-graph,
+.overview-chart-wrapper .js-plotly-plot,
+.overview-chart-wrapper .plot-container,
+.overview-chart-wrapper .svg-container {
+  display: block !important;
+  width: 100% !important;
+  height: 360px !important;
+  min-height: 360px !important;
+}
+
+.overview-quality-card .section-card-body {
+  min-height: 400px;
+  overflow: hidden;
+}

@@ -1,13 +1,34 @@
-FROM python:3.12-slim
+FROM python:3.11-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1
+    PYTHONUNBUFFERED=1 \
+    PORT=8080 \
+    PYTHONPATH=/app
 
 WORKDIR /app
 
-COPY requirements-bq-loader.txt .
-RUN pip install --no-cache-dir -r requirements-bq-loader.txt
+RUN useradd --create-home --shell /bin/bash appuser
 
-COPY scripts/load_processed_ais_to_bigquery.py .
+COPY requirements.txt ./
 
-ENTRYPOINT ["python", "load_processed_ais_to_bigquery.py"]
+RUN pip install --no-cache-dir --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
+
+COPY app.py ./
+COPY components ./components
+COPY data ./data
+COPY pages ./pages
+COPY assets ./assets
+
+RUN chown -R appuser:appuser /app
+
+USER appuser
+
+EXPOSE 8080
+
+CMD exec gunicorn \
+    --bind 0.0.0.0:${PORT} \
+    --workers 1 \
+    --threads 8 \
+    --timeout 120 \
+    app:server
