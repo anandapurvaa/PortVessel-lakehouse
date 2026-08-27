@@ -14,23 +14,32 @@ provider "google" {
   region  = var.region
 }
 
+resource "google_project_service" "required" {
+  for_each = toset([
+    "artifactregistry.googleapis.com",
+    "bigquery.googleapis.com",
+    "cloudbuild.googleapis.com",
+    "logging.googleapis.com",
+    "run.googleapis.com",
+    "storage.googleapis.com"
+  ])
+
+  project            = var.project_id
+  service            = each.value
+  disable_on_destroy = false
+}
+
 resource "google_storage_bucket" "raw" {
   name                        = local.raw_bucket
   location                    = var.region
   uniform_bucket_level_access = true
   force_destroy               = false
 
-  versioning {
-    enabled = true
-  }
+  versioning { enabled = true }
 
   lifecycle_rule {
-    condition {
-      age = 30
-    }
-    action {
-      type = "Delete"
-    }
+    condition { age = 30 }
+    action { type = "Delete" }
   }
 
   labels = {
@@ -38,6 +47,8 @@ resource "google_storage_bucket" "raw" {
     environment = var.environment
     layer       = "raw"
   }
+
+  depends_on = [google_project_service.required]
 }
 
 resource "google_storage_bucket" "processed" {
@@ -46,13 +57,11 @@ resource "google_storage_bucket" "processed" {
   uniform_bucket_level_access = true
   force_destroy               = false
 
+  versioning { enabled = true }
+
   lifecycle_rule {
-    condition {
-      age = 90
-    }
-    action {
-      type = "Delete"
-    }
+    condition { age = 90 }
+    action { type = "Delete" }
   }
 
   labels = {
@@ -60,6 +69,8 @@ resource "google_storage_bucket" "processed" {
     environment = var.environment
     layer       = "processed"
   }
+
+  depends_on = [google_project_service.required]
 }
 
 resource "google_bigquery_dataset" "staging" {
@@ -72,6 +83,8 @@ resource "google_bigquery_dataset" "staging" {
     environment = var.environment
     layer       = "staging"
   }
+
+  depends_on = [google_project_service.required]
 }
 
 resource "google_bigquery_dataset" "silver" {
@@ -84,6 +97,8 @@ resource "google_bigquery_dataset" "silver" {
     environment = var.environment
     layer       = "silver"
   }
+
+  depends_on = [google_project_service.required]
 }
 
 resource "google_bigquery_dataset" "gold" {
@@ -96,6 +111,8 @@ resource "google_bigquery_dataset" "gold" {
     environment = var.environment
     layer       = "gold"
   }
+
+  depends_on = [google_project_service.required]
 }
 
 resource "google_artifact_registry_repository" "containers" {
@@ -103,11 +120,15 @@ resource "google_artifact_registry_repository" "containers" {
   repository_id = "portvessel"
   description   = "PortVessel container images"
   format        = "DOCKER"
+
+  depends_on = [google_project_service.required]
 }
 
 resource "google_service_account" "batch" {
   account_id   = "portvessel-batch-${var.environment}"
   display_name = "PortVessel batch processor"
+
+  depends_on = [google_project_service.required]
 }
 
 resource "google_project_iam_member" "batch_storage" {
@@ -150,4 +171,16 @@ output "processed_bucket" {
 
 output "batch_service_account" {
   value = google_service_account.batch.email
+}
+
+output "staging_dataset_id" {
+  value = google_bigquery_dataset.staging.dataset_id
+}
+
+output "silver_dataset_id" {
+  value = google_bigquery_dataset.silver.dataset_id
+}
+
+output "gold_dataset_id" {
+  value = google_bigquery_dataset.gold.dataset_id
 }

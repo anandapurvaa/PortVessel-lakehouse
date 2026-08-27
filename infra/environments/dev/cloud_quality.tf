@@ -29,6 +29,10 @@ resource "google_cloud_run_v2_job" "quality" {
           name  = "QUALITY_DATASET"
           value = google_bigquery_dataset.staging.dataset_id
         }
+        env {
+          name  = "GCS_PROCESSED_BUCKET"
+          value = google_storage_bucket.processed.name
+        }
       }
     }
   }
@@ -48,4 +52,10 @@ resource "google_bigquery_dataset_iam_member" "workflow_quality_editor" {
 
 output "quality_job_name" {
   value = google_cloud_run_v2_job.quality.name
+}
+
+resource "google_storage_bucket_iam_member" "quality_processed_reader" {
+  bucket = google_storage_bucket.processed.name
+  role   = "roles/storage.objectViewer"
+  member = "serviceAccount:${google_service_account.workflow.email}"
 }

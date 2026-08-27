@@ -39,6 +39,7 @@ resource "google_storage_bucket_iam_member" "loader_processed_viewer" {
 resource "google_cloud_run_v2_job" "loader" {
   name     = var.loader_job_name
   location = var.region
+  project  = var.project_id
 
   template {
     template {
@@ -77,6 +78,10 @@ resource "google_cloud_run_v2_job" "loader" {
         env {
           name  = "BQ_LOCATION"
           value = var.region
+        }
+        env {
+          name  = "PIPELINE_NAME"
+          value = "portvessel_noaa_daily_ingestion"
         }
       }
     }

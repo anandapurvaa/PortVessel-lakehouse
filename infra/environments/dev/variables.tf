@@ -1,27 +1,25 @@
 variable "project_id" {
   type        = string
-  description = "GCP project ID"
+  description = "Existing GCP project ID"
 }
 
 variable "region" {
   type        = string
-  description = "GCP region"
-  default     = "europe-west3"
+  description = "GCP region for regional resources and BigQuery datasets"
 }
 
 variable "environment" {
-  type    = string
-  default = "dev"
-}
-
-variable "billing_account_id" {
   type        = string
-  description = "Billing account ID used only for validation outside Terraform"
-  default     = ""
+  description = "Deployment environment, for example dev or prod"
+
+  validation {
+    condition     = can(regex("^[a-z][a-z0-9-]{1,15}$", var.environment))
+    error_message = "environment must be 2-16 characters, starting with a letter, using lowercase letters, digits, or hyphens."
+  }
 }
 
-locals {
-  name_prefix = "portvessel-${var.environment}"
-  raw_bucket  = "${var.project_id}-portvessel-${var.environment}-raw"
-  proc_bucket = "${var.project_id}-portvessel-${var.environment}-processed"
+variable "workflow_name" {
+  type        = string
+  description = "Name of the daily orchestration workflow"
+  default     = "portvessel-daily-orchestration-dev"
 }
