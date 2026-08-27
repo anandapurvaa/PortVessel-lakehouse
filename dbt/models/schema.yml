@@ -121,8 +121,9 @@ models:
 
   - name: int_vessel_state_intervals
     description: >
-      Contiguous observed vessel state intervals derived from geofenced AIS pings.
+      Contiguous observed vessel-state intervals derived from geofenced AIS pings.
       Intervals split on state change, port change, or AIS gaps longer than three hours.
+      Censoring flags identify intervals that touch the available AIS source-window boundary.
     columns:
       - name: vessel_state_interval_id
         tests:
@@ -148,11 +149,22 @@ models:
         tests:
           - not_null
 
+      - name: duration_observability_status
+        description: >
+          Whether an interval duration is fully observed or censored by the start
+          or end of the AIS source window.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["observed", "partial", "left_censored", "right_censored", "both_censored"]
+
   - name: fct_port_calls
     description: >
-      Observed vessel visits to USLAX. Calls are derived from configured geofences
-      and split after more than six hours outside the observed port sequence.
-      They are operational estimates, not legal berth-call or demurrage records.
+      Observed vessel visits to USLAX, formed from geofenced in-port state intervals
+      and split after more than six hours between observed intervals. These are
+      operational estimates, not legal berth-call or demurrage records. Port-duration
+      values are populated only for calls that are fully observed and non-partial.
     columns:
       - name: port_call_id
         tests:
@@ -176,14 +188,17 @@ models:
           - not_null
 
       - name: port_call_quality_status
+        description: "Call-level observation status based on state-interval censoring and completeness."
         tests:
           - not_null
           - accepted_values:
               arguments:
-                values: ["observed", "partial", "invalid"]
+                values: ["observed", "partial", "left_censored", "right_censored", "both_censored", "invalid"]
 
   - name: fct_anchorage_dwell
-    description: "Observed anchorage intervals derived from USLAX geofenced AIS pings."
+    description: >
+      USLAX anchorage intervals derived from geofenced AIS pings. Anchorage dwell
+      duration is populated only when the full interval is observed.
     columns:
       - name: anchorage_dwell_id
         tests:
@@ -214,7 +229,11 @@ models:
                 values: ["observed", "partial"]
 
   - name: agg_port_congestion_daily
-    description: "Daily observed operational congestion metrics for USLAX."
+    description: >
+      Daily USLAX operational congestion metrics. Detected call counts include all
+      identified in-port sequences. Port-duration KPIs include only fully observed
+      calls; anchorage and berth-proximity KPIs include only their respective fully
+      observed dwell intervals.
     columns:
       - name: metric_date
         tests:
@@ -224,10 +243,32 @@ models:
         tests:
           - not_null
 
-      - name: observed_port_calls
+      - name: detected_port_calls
+        description: "All detected in-port call sequences, including partial and censored calls."
         tests:
           - not_null
 
-      - name: observed_vessels
+      - name: detected_vessels
+        description: "Distinct vessels with at least one detected port-call sequence."
+        tests:
+          - not_null
+
+      - name: complete_port_calls
+        description: "Calls eligible for full arrival-to-departure duration metrics."
+        tests:
+          - not_null
+
+      - name: observed_port_calls
+        description: "Calls whose overall observation status is observed."
+        tests:
+          - not_null
+
+      - name: port_calls_with_observed_anchorage_wait
+        description: "Calls with a fully observed anchorage dwell duration."
+        tests:
+          - not_null
+
+      - name: port_calls_with_observed_berth_proximity_dwell
+        description: "Calls with a fully observed berth-proximity dwell duration."
         tests:
           - not_null
