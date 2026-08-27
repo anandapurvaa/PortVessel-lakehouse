@@ -1,15 +1,44 @@
 version: 2
 
 sources:
+  - name: portvessel_staging
+    description: "Raw normalized AIS pings loaded by the PortVessel Cloud Run loader."
+    database: cloudprojects-506123
+    schema: portvessel_dev_staging
+    tables:
+      - name: ais_pings
+        description: "Normalized AIS pings prior to dbt cleansing and geospatial enrichment."
+        config:
+          loaded_at_field: ingested_at_utc
+          freshness:
+            warn_after:
+              count: 48
+              period: hour
+            error_after:
+              count: 168
+              period: hour
+        columns:
+          - name: record_hash
+            tests:
+              - not_null
+
+          - name: observed_at_utc
+            tests:
+              - not_null
+
+          - name: ingestion_run_id
+            tests:
+              - not_null
+
   - name: portvessel_gold
-    description: "Validated PortVessel gold tables loaded by the Cloud Run ingestion job."
+    description: "Validated PortVessel gold tables used by downstream marts."
     database: cloudprojects-506123
     schema: portvessel_dev_gold
     tables:
       - name: fct_anchorage_dwell
         description: "Observed anchorage dwell episodes derived from AIS pings."
-        loaded_at_field: loaded_at_utc
         config:
+          loaded_at_field: loaded_at_utc
           freshness:
             warn_after:
               count: 48
@@ -22,34 +51,48 @@ sources:
             tests:
               - not_null
               - unique
+
           - name: mmsi
             tests:
               - not_null
-          - name: entry_observed_at_utc
-            tests:
-              - not_null
-          - name: exit_observed_at_utc
+
+          - name: anchorage_entered_at_utc
             tests:
               - not_null
 
-      - name: fct_port_call
-        description: "Observed vessel port calls derived from AIS observations."
+          - name: anchorage_exited_at_utc
+            tests:
+              - not_null
+
+      - name: fct_port_calls
+        description: "Observed vessel port calls derived from configured geofences and AIS observations."
+        config:
+          loaded_at_field: loaded_at_utc
+          freshness:
+            warn_after:
+              count: 48
+              period: hour
+            error_after:
+              count: 168
+              period: hour
         columns:
           - name: port_call_id
             tests:
               - not_null
               - unique
+
           - name: mmsi
             tests:
               - not_null
+
           - name: arrival_observed_at_utc
             tests:
               - not_null
 
       - name: agg_port_congestion_daily
         description: "Daily observed congestion metrics by port."
-        loaded_at_field: loaded_at_utc
         config:
+          loaded_at_field: loaded_at_utc
           freshness:
             warn_after:
               count: 48
@@ -61,6 +104,7 @@ sources:
           - name: metric_date
             tests:
               - not_null
+
           - name: port_id
             tests:
               - not_null
@@ -72,6 +116,7 @@ sources:
             tests:
               - not_null
               - unique
+
           - name: operational_flag
             tests:
               - not_null

@@ -1,0 +1,13 @@
+portvessel:
+  target: cloud
+  outputs:
+    cloud:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GCP_PROJECT_ID') }}"
+      dataset: "{{ env_var('DBT_TARGET_DATASET', 'portvessel_dev') }}"
+      location: "{{ env_var('BQ_LOCATION', 'europe-west3') }}"
+      threads: 4
+      job_execution_timeout_seconds: 1800
+      job_retries: 1
+      priority: interactive

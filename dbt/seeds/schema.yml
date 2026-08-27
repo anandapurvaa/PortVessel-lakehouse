@@ -1,0 +1,74 @@
+version: 2
+
+seeds:
+  - name: geofences
+    description: >
+      Versioned MVP operational geofences for PortVessel. These initial USLAX
+      polygons are analyst-defined candidate boundaries and must not be presented
+      as official port, terminal, berth, or regulated anchorage limits.
+    config:
+      column_types:
+        geofence_id: string
+        port_id: string
+        port_name: string
+        zone_id: string
+        zone_name: string
+        zone_type: string
+        geometry_wkt: string
+        geometry_source: string
+        geometry_version: string
+        effective_from: date
+        effective_to: date
+        is_active: boolean
+    columns:
+      - name: geofence_id
+        tests:
+          - not_null
+          - unique
+      - name: port_id
+        tests:
+          - not_null
+      - name: zone_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["port_area", "anchorage", "berth"]
+      - name: geometry_wkt
+        tests:
+          - not_null
+  - name: uslax_berth_lines
+    description: >
+      Port of Los Angeles berth-line reference data converted from the downloaded
+      GeoJSON. AIS pings are classified as berth-proximate only when within the
+      configured distance threshold; this does not prove berth occupancy.
+    config:
+      column_types:
+        geofence_id: string
+        port_id: string
+        port_name: string
+        zone_id: string
+        zone_name: string
+        zone_type: string
+        berth_number: string
+        geometry_wkt: string
+        geometry_source: string
+        geometry_source_url: string
+        geometry_version: string
+        source_feature_id: string
+        source_sha256: string
+        source_retrieved_at_utc: timestamp
+        effective_from: date
+        effective_to: date
+        is_active: boolean
+    columns:
+      - name: geofence_id
+        tests:
+          - not_null
+          - unique
+      - name: berth_number
+        tests:
+          - not_null
+      - name: geometry_wkt
+        tests:
+          - not_null

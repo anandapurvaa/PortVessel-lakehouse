@@ -29,9 +29,55 @@ UNNEST([
   STRUCT('invalid_coordinates', 'validity', IF(invalid_coordinates = 0, 'PASS', 'FAIL'), CAST(invalid_coordinates AS FLOAT64), 0.0, 'Out-of-range coordinate count')
 ]);
 
-INSERT INTO `cloudprojects-506123.portvessel_dev_staging.data_quality_results`
-(check_id, run_id, pipeline_name, source_date, check_name, check_type, status, observed_value, expected_value, details, checked_at)
-SELECT GENERATE_UUID(), current_run_id, pipeline, run_date, check_name, check_type, status, observed_value, expected_value, details, CURRENT_TIMESTAMP()
-FROM checks;
+MERGE `cloudprojects-506123.portvessel_dev_staging.data_quality_results` AS target
+USING (
+  SELECT
+    current_run_id AS run_id,
+    pipeline AS pipeline_name,
+    run_date AS source_date,
+    check_name,
+    check_type,
+    status,
+    observed_value,
+    expected_value,
+    details
+  FROM checks
+) AS source
+ON target.run_id = source.run_id
+AND target.check_name = source.check_name
+WHEN MATCHED THEN UPDATE SET
+  pipeline_name = source.pipeline_name,
+  source_date = source.source_date,
+  check_type = source.check_type,
+  status = source.status,
+  observed_value = source.observed_value,
+  expected_value = source.expected_value,
+  details = source.details,
+  checked_at = CURRENT_TIMESTAMP()
+WHEN NOT MATCHED THEN INSERT (
+  check_id,
+  run_id,
+  pipeline_name,
+  source_date,
+  check_name,
+  check_type,
+  status,
+  observed_value,
+  expected_value,
+  details,
+  checked_at
+) VALUES (
+  GENERATE_UUID(),
+  source.run_id,
+  source.pipeline_name,
+  source.source_date,
+  source.check_name,
+  source.check_type,
+  source.status,
+  source.observed_value,
+  source.expected_value,
+  source.details,
+  CURRENT_TIMESTAMP()
+);
 
 ASSERT (SELECT COUNT(*) FROM checks WHERE status = 'FAIL') = 0 AS 'Data quality checks failed';

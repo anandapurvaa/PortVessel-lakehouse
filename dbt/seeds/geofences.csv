@@ -1,0 +1,3 @@
+geofence_id,port_id,port_name,zone_id,zone_name,zone_type,geometry_wkt,geometry_source,geometry_version,effective_from,effective_to,is_active
+USLAX_PORT_AREA_V1,USLAX,Port of Los Angeles,USLAX_PORT_AREA,Port of Los Angeles operational area,port_area,"POLYGON((-118.3000 33.7000,-118.1300 33.7000,-118.1300 33.8000,-118.3000 33.8000,-118.3000 33.7000))",MVP analyst-defined bounding polygon; replace with reviewed official boundary,v1,2024-01-01,,true
+USLAX_ANCHORAGE_V1,USLAX,Port of Los Angeles,USLAX_ANCHORAGE,Los Angeles anchorage candidate area,anchorage,"POLYGON((-118.3000 33.6950,-118.2150 33.6950,-118.2150 33.7350,-118.3000 33.7350,-118.3000 33.6950))",MVP analyst-defined candidate polygon; replace with NOAA ENC anchorage geometry,v1,2024-01-01,,true

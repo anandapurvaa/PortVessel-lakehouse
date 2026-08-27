@@ -1,5 +1,5 @@
 name: portvessel
-version: '1.0.0'
+version: "1.0.0"
 config-version: 2
 
 profile: portvessel
@@ -17,6 +17,15 @@ clean-targets:
 
 models:
   portvessel:
+    staging:
+      +schema: portvessel_dev_silver
+
+    intermediate:
+      +schema: portvessel_dev_silver
+
+    geospatial:
+      +schema: portvessel_dev_silver
+
     marts:
       +materialized: table
       +schema: portvessel_dev_marts

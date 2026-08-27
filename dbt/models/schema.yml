@@ -36,3 +36,198 @@ models:
           - dbt_utils.expression_is_true:
               arguments:
                 expression: "between 0 and 1"
+
+  - name: stg_ais_pings
+    description: "Cleaned, deduplicated AIS pings with explicit validation flags and geography points."
+    columns:
+      - name: record_hash
+        description: "Stable raw-record deduplication key."
+        tests:
+          - not_null
+          - unique
+
+      - name: observed_at_utc
+        tests:
+          - not_null
+
+      - name: observed_date
+        tests:
+          - not_null
+
+      - name: mmsi
+        tests:
+          - not_null:
+              config:
+                where: "is_analytics_eligible"
+
+      - name: ping_geography
+        tests:
+          - not_null:
+              config:
+                where: "is_analytics_eligible"
+
+      - name: is_analytics_eligible
+        tests:
+          - not_null
+
+  - name: dim_geofences
+    description: "Versioned active operational geofence dimension."
+    columns:
+      - name: geofence_id
+        tests:
+          - not_null
+          - unique
+
+      - name: port_id
+        tests:
+          - not_null
+
+      - name: zone_type
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["port_area", "anchorage", "berth"]
+
+      - name: zone_geography
+        tests:
+          - not_null:
+              config:
+                where: "zone_type in ('port_area', 'anchorage')"
+
+      - name: berth_line_geography
+        tests:
+          - not_null:
+              config:
+                where: "zone_type = 'berth'"
+
+  - name: int_ais_pings_geofenced
+    description: "Analytics-eligible AIS pings with one prioritized geofence assignment."
+    columns:
+      - name: record_hash
+        tests:
+          - not_null
+          - unique
+
+      - name: observed_date
+        tests:
+          - not_null
+
+      - name: zone_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["port_area", "anchorage", "berth", "outside"]
+
+  - name: int_vessel_state_intervals
+    description: >
+      Contiguous observed vessel state intervals derived from geofenced AIS pings.
+      Intervals split on state change, port change, or AIS gaps longer than three hours.
+    columns:
+      - name: vessel_state_interval_id
+        tests:
+          - not_null
+          - unique
+
+      - name: mmsi
+        tests:
+          - not_null
+
+      - name: vessel_state
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["outside", "port_area", "anchorage", "berth"]
+
+      - name: state_started_at_utc
+        tests:
+          - not_null
+
+      - name: state_ended_at_utc
+        tests:
+          - not_null
+
+  - name: fct_port_calls
+    description: >
+      Observed vessel visits to USLAX. Calls are derived from configured geofences
+      and split after more than six hours outside the observed port sequence.
+      They are operational estimates, not legal berth-call or demurrage records.
+    columns:
+      - name: port_call_id
+        tests:
+          - not_null
+          - unique
+
+      - name: mmsi
+        tests:
+          - not_null
+
+      - name: port_id
+        tests:
+          - not_null
+
+      - name: arrival_observed_at_utc
+        tests:
+          - not_null
+
+      - name: departure_observed_at_utc
+        tests:
+          - not_null
+
+      - name: port_call_quality_status
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["observed", "partial", "invalid"]
+
+  - name: fct_anchorage_dwell
+    description: "Observed anchorage intervals derived from USLAX geofenced AIS pings."
+    columns:
+      - name: anchorage_dwell_id
+        tests:
+          - not_null
+          - unique
+
+      - name: mmsi
+        tests:
+          - not_null
+
+      - name: port_id
+        tests:
+          - not_null
+
+      - name: anchorage_entered_at_utc
+        tests:
+          - not_null
+
+      - name: anchorage_exited_at_utc
+        tests:
+          - not_null
+
+      - name: anchorage_dwell_quality_status
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["observed", "partial"]
+
+  - name: agg_port_congestion_daily
+    description: "Daily observed operational congestion metrics for USLAX."
+    columns:
+      - name: metric_date
+        tests:
+          - not_null
+
+      - name: port_id
+        tests:
+          - not_null
+
+      - name: observed_port_calls
+        tests:
+          - not_null
+
+      - name: observed_vessels
+        tests:
+          - not_null

@@ -3,14 +3,16 @@ main:
   steps:
     - init:
         assign:
-          - project: ${args.project}
-          - region: ${args.region}
-          - ingestion_job: ${args.ingestion_job}
-          - loader_job: ${args.loader_job}
-          - quality_job: ${args.quality_job}
-          - cursor_dataset: ${args.cursor_dataset}
-          - cursor_table: ${args.cursor_table}
-          - pipeline_name: ${args.pipeline_name}
+          - project: ${default(map.get(args, "project"), "cloudprojects-506123")}
+          - region: ${default(map.get(args, "region"), "europe-west3")}
+          - ingestion_job: ${default(map.get(args, "ingestion_job"), "portvessel-ingestion-dev")}
+          - loader_job: ${default(map.get(args, "loader_job"), "portvessel-bq-loader-dev")}
+          - transform_job: ${default(map.get(args, "transform_job"), "portvessel-dbt-transform-dev")}
+          - quality_job: ${default(map.get(args, "quality_job"), "portvessel-quality-dev")}
+          - cursor_dataset: ${default(map.get(args, "cursor_dataset"), "portvessel_dev_staging")}
+          - cursor_table: ${default(map.get(args, "cursor_table"), "pipeline_cursor")}
+          - pipeline_name: ${default(map.get(args, "pipeline_name"), "portvessel_noaa_daily_ingestion")}
+          - processed_bucket: ${"cloudprojects-506123-portvessel-dev-processed"}
           - run_id: ${string(sys.now())}
 
     - get_cursor:
@@ -18,7 +20,7 @@ main:
         args:
           projectId: ${project}
           body:
-            location: europe-west3
+            location: ${region}
             useLegacySql: false
             parameterMode: NAMED
             query: ${"SELECT CAST(next_source_date AS STRING) AS source_date FROM `" + project + "." + cursor_dataset + "." + cursor_table + "` WHERE pipeline_name=@pipeline_name AND status='ready' LIMIT 1"}
@@ -34,6 +36,11 @@ main:
         switch:
           - condition: ${len(cursor_result.rows) == 0}
             next: fail_no_cursor
+        next: set_source_date
+
+    - set_source_date:
+        assign:
+          - source_date: ${cursor_result.rows[0].f[0].v}
         next: run_ingestion
 
     - fail_no_cursor:
@@ -48,7 +55,7 @@ main:
               containerOverrides:
                 - env:
                     - name: SOURCE_DATE
-                      value: ${cursor_result.rows[0].f[0].v}
+                      value: ${source_date}
                     - name: RUN_ID
                       value: ${run_id}
         result: ingestion_result
@@ -63,10 +70,45 @@ main:
               containerOverrides:
                 - env:
                     - name: SOURCE_DATE
-                      value: ${cursor_result.rows[0].f[0].v}
+                      value: ${source_date}
                     - name: RUN_ID
                       value: ${run_id}
+                    - name: GCS_PROCESSED_BUCKET
+                      value: ${processed_bucket}
+                    - name: GCP_PROJECT_ID
+                      value: ${project}
+                    - name: BQ_LOCATION
+                      value: ${region}
+                    - name: BQ_DATASET
+                      value: ${cursor_dataset}
+                    - name: BQ_TABLE
+                      value: "ais_pings"
+                    - name: AUDIT_DATASET
+                      value: ${cursor_dataset}
+                    - name: AUDIT_TABLE
+                      value: "ingestion_run_audit"
+                    - name: PIPELINE_NAME
+                      value: ${pipeline_name}
         result: loader_result
+        next: run_transform
+
+    - run_transform:
+        call: googleapis.run.v2.projects.locations.jobs.run
+        args:
+          name: ${"projects/" + project + "/locations/" + region + "/jobs/" + transform_job}
+          body:
+            overrides:
+              containerOverrides:
+                - env:
+                    - name: SOURCE_DATE
+                      value: ${source_date}
+                    - name: RUN_ID
+                      value: ${run_id}
+                    - name: GCP_PROJECT_ID
+                      value: ${project}
+                    - name: BQ_LOCATION
+                      value: ${region}
+        result: transform_result
         next: run_quality
 
     - run_quality:
@@ -78,9 +120,15 @@ main:
               containerOverrides:
                 - env:
                     - name: SOURCE_DATE
-                      value: ${cursor_result.rows[0].f[0].v}
+                      value: ${source_date}
                     - name: RUN_ID
                       value: ${run_id}
+                    - name: GCP_PROJECT_ID
+                      value: ${project}
+                    - name: BQ_LOCATION
+                      value: ${region}
+                    - name: QUALITY_DATASET
+                      value: ${cursor_dataset}
         result: quality_result
         next: advance_cursor
 
@@ -89,16 +137,29 @@ main:
         args:
           projectId: ${project}
           body:
-            location: europe-west3
+            location: ${region}
             useLegacySql: false
-            query: ${"UPDATE `" + project + "." + cursor_dataset + "." + cursor_table + "` SET next_source_date=DATE_ADD(DATE('" + cursor_result.rows[0].f[0].v + "'), INTERVAL 1 DAY), last_run_id='" + run_id + "', updated_at=CURRENT_TIMESTAMP() WHERE pipeline_name='" + pipeline_name + "' AND next_source_date=DATE('" + cursor_result.rows[0].f[0].v + "') AND status='ready'"}
+            parameterMode: NAMED
+            query: ${"UPDATE `" + project + "." + cursor_dataset + "." + cursor_table + "` SET next_source_date=DATE_ADD(DATE('" + source_date + "'), INTERVAL 1 DAY), last_run_id=@run_id, updated_at=CURRENT_TIMESTAMP() WHERE pipeline_name=@pipeline_name AND next_source_date=DATE('" + source_date + "') AND status='ready'"}
+            queryParameters:
+              - name: run_id
+                parameterType:
+                  type: STRING
+                parameterValue:
+                  value: ${run_id}
+              - name: pipeline_name
+                parameterType:
+                  type: STRING
+                parameterValue:
+                  value: ${pipeline_name}
         result: cursor_update
 
     - done:
         return:
           status: completed
-          source_date: ${cursor_result.rows[0].f[0].v}
+          source_date: ${source_date}
           ingestion: ${ingestion_result}
           loader: ${loader_result}
+          transform: ${transform_result}
           quality: ${quality_result}
           cursor_update: ${cursor_update}
