@@ -1,0 +1,8 @@
+select
+  port_call_id,
+  mmsi,
+  port_id,
+  arrival_observed_at_utc,
+  departure_observed_at_utc
+from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_port_calls`
+where departure_observed_at_utc < arrival_observed_at_utc

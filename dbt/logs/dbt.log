@@ -19932,3 +19932,275 @@ where observed_vessels is null
 [0m02:22:56.863476 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA4CB54B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA4F8EA0C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA4F8B2E40>]}
 [0m02:22:56.863476 [debug] [MainThread]: Flushing usage events
 [0m02:22:57.517669 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:26:02.760600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71A105BB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71A107170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71A104B90>]}
+
+
+============================== 03:26:02.763604 | 237fca78-a6b0-453e-b6ef-743ffaf0b803 ==============================
+[0m03:26:02.763604 [info ] [MainThread]: Running with dbt=1.12.3
+[0m03:26:02.763604 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'c:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'invocation_command': 'dbt ', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'c:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m03:26:02.879789 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '237fca78-a6b0-453e-b6ef-743ffaf0b803', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71C3FB0B0>]}
+[0m03:26:02.947067 [debug] [MainThread]: Set downloads directory='C:\Users\magic\AppData\Local\Temp\dbt-downloads-lmxt21r6'
+[0m03:26:02.947067 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m03:26:03.266700 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m03:26:03.267698 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m03:26:03.526148 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m03:26:03.531147 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m03:26:04.333227 [info ] [MainThread]: Installed from version 1.4.1
+[0m03:26:04.334227 [info ] [MainThread]: Up to date!
+[0m03:26:04.334227 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '237fca78-a6b0-453e-b6ef-743ffaf0b803', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71C3FB440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71C6FB7D0>]}
+[0m03:26:04.336228 [debug] [MainThread]: Command `cli deps` succeeded at 03:26:04.336228 after 1.69 seconds
+[0m03:26:04.336228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B7179DDCA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71A65C4A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71A8CE210>]}
+[0m03:26:04.336228 [debug] [MainThread]: Flushing usage events
+[0m03:26:05.073817 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m03:27:19.574857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FCD7DDA60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FCD1E5580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FCD799310>]}
+
+
+============================== 03:27:19.577858 | a4a0451d-7604-489a-8838-1d26dc77a44f ==============================
+[0m03:27:19.577858 [info ] [MainThread]: Running with dbt=1.12.3
+[0m03:27:19.577858 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt test --select path:tests', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\magic\\Projects\\PortVessel-lakehouse\\dbt\\logs'}
+[0m03:27:20.441261 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a4a0451d-7604-489a-8838-1d26dc77a44f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FCAD46C30>]}
+[0m03:27:20.489237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a4a0451d-7604-489a-8838-1d26dc77a44f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011F81BDD220>]}
+[0m03:27:20.490237 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m03:27:20.824205 [debug] [MainThread]: checksum: 5f143da5afd1a6b6298bff390d2cac426bc2fa3cddb0281a2f93c038cc305c8b, vars: {}, profile: portvessel, target: dev, version: 1.12.3
+[0m03:27:20.997017 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 5 files added, 0 files changed.
+[0m03:27:20.998016 [debug] [MainThread]: Partial parsing: added file: portvessel://tests\assert_port_call_non_negative_durations.sql
+[0m03:27:20.998016 [debug] [MainThread]: Partial parsing: added file: portvessel://tests\assert_uslax_calls_exist_when_geofenced_pings_exist.sql
+[0m03:27:20.998016 [debug] [MainThread]: Partial parsing: added file: portvessel://tests\assert_port_call_temporal_order.sql
+[0m03:27:20.998016 [debug] [MainThread]: Partial parsing: added file: portvessel://tests\assert_anchorage_dwell_non_negative_duration.sql
+[0m03:27:20.998016 [debug] [MainThread]: Partial parsing: added file: portvessel://tests\assert_anchorage_dwell_temporal_order.sql
+[0m03:27:21.165648 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a4a0451d-7604-489a-8838-1d26dc77a44f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011F827950D0>]}
+[0m03:27:21.276202 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m03:27:21.278197 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m03:27:21.298514 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m03:27:21.317826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a4a0451d-7604-489a-8838-1d26dc77a44f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011F828DE6F0>]}
+[0m03:27:21.318827 [info ] [MainThread]: Found 9 models, 2 seeds, 85 data tests, 5 sources, 678 macros
+[0m03:27:21.318827 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a4a0451d-7604-489a-8838-1d26dc77a44f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011F8266DD00>]}
+[0m03:27:21.321823 [info ] [MainThread]: 
+[0m03:27:21.322823 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m03:27:21.322823 [info ] [MainThread]: 
+[0m03:27:21.322823 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m03:27:21.326825 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123_portvessel_dev_gold'
+[0m03:27:21.327824 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:27:21.327824 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123_portvessel_dev_silver'
+[0m03:27:21.328827 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123_portvessel_dev_marts'
+[0m03:27:21.328827 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:27:21.329826 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:27:21.329826 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_cloudprojects-506123_portvessel_dev'
+[0m03:27:21.330823 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m03:27:23.122277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a4a0451d-7604-489a-8838-1d26dc77a44f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011F81E7B950>]}
+[0m03:27:23.123276 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m03:27:23.126278 [debug] [Thread-1 (]: Began running node test.portvessel.assert_anchorage_dwell_non_negative_duration
+[0m03:27:23.127277 [debug] [Thread-2 (]: Began running node test.portvessel.assert_anchorage_dwell_temporal_order
+[0m03:27:23.127277 [debug] [Thread-3 (]: Began running node test.portvessel.assert_port_call_non_negative_durations
+[0m03:27:23.128276 [debug] [Thread-4 (]: Began running node test.portvessel.assert_port_call_temporal_order
+[0m03:27:23.127277 [info ] [Thread-1 (]: 1 of 5 START test assert_anchorage_dwell_non_negative_duration ................. [RUN]
+[0m03:27:23.128276 [info ] [Thread-2 (]: 2 of 5 START test assert_anchorage_dwell_temporal_order ........................ [RUN]
+[0m03:27:23.129277 [info ] [Thread-3 (]: 3 of 5 START test assert_port_call_non_negative_durations ...................... [RUN]
+[0m03:27:23.129277 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.portvessel.assert_anchorage_dwell_non_negative_duration'
+[0m03:27:23.130277 [debug] [Thread-2 (]: Acquiring new bigquery connection 'test.portvessel.assert_anchorage_dwell_temporal_order'
+[0m03:27:23.129277 [info ] [Thread-4 (]: 4 of 5 START test assert_port_call_temporal_order .............................. [RUN]
+[0m03:27:23.130277 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.portvessel.assert_port_call_non_negative_durations'
+[0m03:27:23.131277 [debug] [Thread-1 (]: Began compiling node test.portvessel.assert_anchorage_dwell_non_negative_duration
+[0m03:27:23.131277 [debug] [Thread-2 (]: Began compiling node test.portvessel.assert_anchorage_dwell_temporal_order
+[0m03:27:23.131277 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.portvessel.assert_port_call_temporal_order'
+[0m03:27:23.132277 [debug] [Thread-3 (]: Began compiling node test.portvessel.assert_port_call_non_negative_durations
+[0m03:27:23.137277 [debug] [Thread-1 (]: Writing injected SQL for node "test.portvessel.assert_anchorage_dwell_non_negative_duration"
+[0m03:27:23.138278 [debug] [Thread-2 (]: Writing injected SQL for node "test.portvessel.assert_anchorage_dwell_temporal_order"
+[0m03:27:23.139278 [debug] [Thread-4 (]: Began compiling node test.portvessel.assert_port_call_temporal_order
+[0m03:27:23.140568 [debug] [Thread-3 (]: Writing injected SQL for node "test.portvessel.assert_port_call_non_negative_durations"
+[0m03:27:23.141568 [debug] [Thread-4 (]: Writing injected SQL for node "test.portvessel.assert_port_call_temporal_order"
+[0m03:27:23.142565 [debug] [Thread-1 (]: Began executing node test.portvessel.assert_anchorage_dwell_non_negative_duration
+[0m03:27:23.160127 [debug] [Thread-1 (]: Writing runtime sql for node "test.portvessel.assert_anchorage_dwell_non_negative_duration"
+[0m03:27:23.160127 [debug] [Thread-2 (]: Began executing node test.portvessel.assert_anchorage_dwell_temporal_order
+[0m03:27:23.161127 [debug] [Thread-4 (]: Began executing node test.portvessel.assert_port_call_temporal_order
+[0m03:27:23.162127 [debug] [Thread-2 (]: Writing runtime sql for node "test.portvessel.assert_anchorage_dwell_temporal_order"
+[0m03:27:23.162127 [debug] [Thread-3 (]: Began executing node test.portvessel.assert_port_call_non_negative_durations
+[0m03:27:23.163127 [debug] [Thread-4 (]: Writing runtime sql for node "test.portvessel.assert_port_call_temporal_order"
+[0m03:27:23.164130 [debug] [Thread-3 (]: Writing runtime sql for node "test.portvessel.assert_port_call_non_negative_durations"
+[0m03:27:23.165128 [debug] [Thread-1 (]: On test.portvessel.assert_anchorage_dwell_non_negative_duration: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.assert_anchorage_dwell_non_negative_duration"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+  anchorage_dwell_id,
+  mmsi,
+  port_id,
+  anchorage_dwell_minutes
+from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_anchorage_dwell`
+where anchorage_dwell_minutes < 0
+  
+  
+      
+    ) dbt_internal_test
+[0m03:27:23.165128 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m03:27:23.166127 [debug] [Thread-2 (]: On test.portvessel.assert_anchorage_dwell_temporal_order: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.assert_anchorage_dwell_temporal_order"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+  anchorage_dwell_id,
+  mmsi,
+  port_id,
+  anchorage_entered_at_utc,
+  anchorage_exited_at_utc
+from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_anchorage_dwell`
+where anchorage_exited_at_utc < anchorage_entered_at_utc
+  
+  
+      
+    ) dbt_internal_test
+[0m03:27:23.166127 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m03:27:23.167127 [debug] [Thread-3 (]: On test.portvessel.assert_port_call_non_negative_durations: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.assert_port_call_non_negative_durations"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+  port_call_id,
+  mmsi,
+  port_id,
+  port_duration_minutes,
+  anchorage_wait_minutes,
+  berth_dwell_minutes
+from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_port_calls`
+where port_duration_minutes < 0
+   or anchorage_wait_minutes < 0
+   or berth_dwell_minutes < 0
+  
+  
+      
+    ) dbt_internal_test
+[0m03:27:23.168130 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m03:27:23.169127 [debug] [Thread-4 (]: On test.portvessel.assert_port_call_temporal_order: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.assert_port_call_temporal_order"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select
+  port_call_id,
+  mmsi,
+  port_id,
+  arrival_observed_at_utc,
+  departure_observed_at_utc
+from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_port_calls`
+where departure_observed_at_utc < arrival_observed_at_utc
+  
+  
+      
+    ) dbt_internal_test
+[0m03:27:23.169127 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m03:27:23.968037 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:5bf49024-310d-41aa-9795-ee7df0a8b4bc&page=queryresults
+[0m03:27:23.976043 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:9f4e1b52-2cd7-40e3-9594-5f81e3874476&page=queryresults
+[0m03:27:23.980042 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:04c2c28b-4b4f-4f79-9ac6-6fcab6f3d8da&page=queryresults
+[0m03:27:23.995580 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:365d720c-5873-4d05-a407-013d2f9aac28&page=queryresults
+[0m03:27:24.118713 [debug] [Thread-2 (]: SQL status: OK in 0.150 seconds
+[0m03:27:24.123713 [debug] [Thread-3 (]: SQL status: OK in 0.128 seconds
+[0m03:27:24.173884 [debug] [Thread-4 (]: SQL status: OK in 0.198 seconds
+[0m03:27:24.174884 [debug] [Thread-1 (]: SQL status: OK in 0.194 seconds
+[0m03:27:24.442753 [info ] [Thread-1 (]: 1 of 5 PASS assert_anchorage_dwell_non_negative_duration ....................... [[32mPASS[0m in 1.31s]
+[0m03:27:24.443753 [debug] [Thread-1 (]: Finished running node test.portvessel.assert_anchorage_dwell_non_negative_duration
+[0m03:27:24.444753 [debug] [Thread-1 (]: Began running node test.portvessel.assert_uslax_calls_exist_when_geofenced_pings_exist
+[0m03:27:24.444753 [info ] [Thread-1 (]: 5 of 5 START test assert_uslax_calls_exist_when_geofenced_pings_exist .......... [RUN]
+[0m03:27:24.444753 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.portvessel.assert_anchorage_dwell_non_negative_duration, now test.portvessel.assert_uslax_calls_exist_when_geofenced_pings_exist)
+[0m03:27:24.445755 [debug] [Thread-1 (]: Began compiling node test.portvessel.assert_uslax_calls_exist_when_geofenced_pings_exist
+[0m03:27:24.446753 [debug] [Thread-1 (]: Writing injected SQL for node "test.portvessel.assert_uslax_calls_exist_when_geofenced_pings_exist"
+[0m03:27:24.447753 [debug] [Thread-1 (]: Began executing node test.portvessel.assert_uslax_calls_exist_when_geofenced_pings_exist
+[0m03:27:24.449755 [debug] [Thread-1 (]: Writing runtime sql for node "test.portvessel.assert_uslax_calls_exist_when_geofenced_pings_exist"
+[0m03:27:24.450753 [info ] [Thread-2 (]: 2 of 5 PASS assert_anchorage_dwell_temporal_order .............................. [[32mPASS[0m in 1.32s]
+[0m03:27:24.451753 [debug] [Thread-1 (]: On test.portvessel.assert_uslax_calls_exist_when_geofenced_pings_exist: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "portvessel", "target_name": "dev", "node_id": "test.portvessel.assert_uslax_calls_exist_when_geofenced_pings_exist"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  with geofenced_ping_dates as (
+
+  select distinct observed_date as metric_date
+  from `cloudprojects-506123`.`portvessel_dev_silver`.`int_ais_pings_geofenced`
+  where port_id = 'USLAX'
+
+),
+
+port_call_dates as (
+
+  select
+    arrival_date as metric_date,
+    count(*) as port_call_count
+  from `cloudprojects-506123`.`portvessel_dev_gold`.`fct_port_calls`
+  where port_id = 'USLAX'
+  group by arrival_date
+
+)
+
+select
+  p.metric_date,
+  coalesce(c.port_call_count, 0) as port_call_count
+from geofenced_ping_dates p
+left join port_call_dates c
+  using (metric_date)
+where coalesce(c.port_call_count, 0) = 0
+  
+  
+      
+    ) dbt_internal_test
+[0m03:27:24.451753 [debug] [Thread-2 (]: Finished running node test.portvessel.assert_anchorage_dwell_temporal_order
+[0m03:27:24.452756 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m03:27:24.476193 [info ] [Thread-4 (]: 4 of 5 PASS assert_port_call_temporal_order .................................... [[32mPASS[0m in 1.34s]
+[0m03:27:24.476193 [debug] [Thread-4 (]: Finished running node test.portvessel.assert_port_call_temporal_order
+[0m03:27:24.502617 [info ] [Thread-3 (]: 3 of 5 PASS assert_port_call_non_negative_durations ............................ [[32mPASS[0m in 1.37s]
+[0m03:27:24.502617 [debug] [Thread-3 (]: Finished running node test.portvessel.assert_port_call_non_negative_durations
+[0m03:27:25.105709 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cloudprojects-506123&j=bq:europe-west3:6a2b2359-926b-4395-8698-1e99ffea7952&page=queryresults
+[0m03:27:25.300828 [debug] [Thread-1 (]: SQL status: OK in 0.195 seconds
+[0m03:27:25.481459 [info ] [Thread-1 (]: 5 of 5 PASS assert_uslax_calls_exist_when_geofenced_pings_exist ................ [[32mPASS[0m in 1.04s]
+[0m03:27:25.482461 [debug] [Thread-1 (]: Finished running node test.portvessel.assert_uslax_calls_exist_when_geofenced_pings_exist
+[0m03:27:25.483458 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m03:27:25.484459 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m03:27:25.484459 [debug] [MainThread]: Connection 'list_cloudprojects-506123_portvessel_dev_gold' was properly closed.
+[0m03:27:25.484459 [debug] [MainThread]: Connection 'list_cloudprojects-506123_portvessel_dev_silver' was properly closed.
+[0m03:27:25.484459 [debug] [MainThread]: Connection 'list_cloudprojects-506123_portvessel_dev_marts' was properly closed.
+[0m03:27:25.484459 [debug] [MainThread]: Connection 'list_cloudprojects-506123_portvessel_dev' was properly closed.
+[0m03:27:25.485463 [debug] [MainThread]: Connection 'test.portvessel.assert_uslax_calls_exist_when_geofenced_pings_exist' was properly closed.
+[0m03:27:25.485463 [debug] [MainThread]: Connection 'test.portvessel.assert_anchorage_dwell_temporal_order' was properly closed.
+[0m03:27:25.485463 [debug] [MainThread]: Connection 'test.portvessel.assert_port_call_non_negative_durations' was properly closed.
+[0m03:27:25.485463 [debug] [MainThread]: Connection 'test.portvessel.assert_port_call_temporal_order' was properly closed.
+[0m03:27:25.486460 [info ] [MainThread]: 
+[0m03:27:25.486460 [info ] [MainThread]: Finished running 5 data tests in 0 hours 0 minutes and 4.16 seconds (4.16s).
+[0m03:27:25.487460 [debug] [MainThread]: Command end result
+[0m03:27:25.536422 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\manifest.json
+[0m03:27:25.539740 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\semantic_manifest.json
+[0m03:27:25.542741 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\osi_document.json
+[0m03:27:25.547741 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\magic\Projects\PortVessel-lakehouse\dbt\target\run_results.json
+[0m03:27:25.547741 [info ] [MainThread]: 
+[0m03:27:25.548741 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m03:27:25.548741 [info ] [MainThread]: 
+[0m03:27:25.549740 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=5
+[0m03:27:25.549740 [debug] [MainThread]: Command `dbt test` succeeded at 03:27:25.549740 after 6.08 seconds
+[0m03:27:25.550740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FCD9BCD40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FCD9BC470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011FCD9BF260>]}
+[0m03:27:25.550740 [debug] [MainThread]: Flushing usage events
+[0m03:27:26.204946 [debug] [MainThread]: An error was encountered while trying to flush usage events

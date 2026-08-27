@@ -1,0 +1,11 @@
+select
+  port_call_id,
+  mmsi,
+  port_id,
+  port_duration_minutes,
+  anchorage_wait_minutes,
+  berth_dwell_minutes
+from {{ ref('fct_port_calls') }}
+where port_duration_minutes < 0
+   or anchorage_wait_minutes < 0
+   or berth_dwell_minutes < 0

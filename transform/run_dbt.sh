@@ -14,4 +14,5 @@ dbt build --select \
   int_vessel_state_intervals \
   fct_port_calls \
   fct_anchorage_dwell \
-  agg_port_congestion_daily
+  agg_port_congestion_daily \
+  path:tests
