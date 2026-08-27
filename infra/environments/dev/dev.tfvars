@@ -5,4 +5,4 @@ ingestion_image = "europe-west3-docker.pkg.dev/cloudprojects-506123/portvessel/i
 loader_image    = "europe-west3-docker.pkg.dev/cloudprojects-506123/portvessel/bq-loader:v2"
 quality_image   = "europe-west3-docker.pkg.dev/cloudprojects-506123/portvessel/quality:v6"
 alert_email     = "rk899866@gmail.com"
-transform_image = "europe-west3-docker.pkg.dev/cloudprojects-506123/portvessel/dbt-transform:v2"
+transform_image = "europe-west3-docker.pkg.dev/cloudprojects-506123/portvessel/dbt-transform:v3"
