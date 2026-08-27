@@ -27,6 +27,9 @@ with anchorage_intervals as (
         observed_duration_minutes,
         has_multiple_pings,
         is_duration_observed,
+        is_left_censored,
+        is_right_censored,
+        duration_observability_status,
         latest_ingestion_run_id
     from {{ ref('int_vessel_state_intervals') }}
     where vessel_state = 'anchorage'
@@ -43,7 +46,6 @@ final as (
             cast(anchorage_entered_at_utc as string), '|',
             coalesce(zone_id, 'UNKNOWN')
         ))) as anchorage_dwell_id,
-
         mmsi,
         imo,
         vessel_name,
@@ -51,31 +53,26 @@ final as (
         port_name,
         zone_id,
         zone_name,
-
         anchorage_entered_at_utc,
         anchorage_exited_at_utc,
         entry_date,
-
-        timestamp_diff(
-            anchorage_exited_at_utc,
-            anchorage_entered_at_utc,
-            minute
-        ) as anchorage_dwell_minutes,
-
+        case
+            when duration_observability_status = 'observed'
+                then timestamp_diff(anchorage_exited_at_utc, anchorage_entered_at_utc, minute)
+        end as anchorage_dwell_minutes,
         ping_count,
         observed_duration_minutes,
         has_multiple_pings,
         is_duration_observed,
-
+        is_left_censored,
+        is_right_censored,
+        duration_observability_status,
         case
-            when not has_multiple_pings then 'partial'
-            when not is_duration_observed then 'partial'
-            else 'observed'
+            when duration_observability_status = 'observed' then 'observed'
+            else 'partial'
         end as anchorage_dwell_quality_status,
-
         latest_ingestion_run_id,
         current_timestamp() as loaded_at_utc
-
     from anchorage_intervals
 
 )
